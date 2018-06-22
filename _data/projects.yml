@@ -1,9 +1,9 @@
 - name: Personal website
   time: march 18 - april 18
-  url: http://www.mihaidobri.com
+  url: http://www.georgemihaila.com
   tagline: personal website / portfolio / blog
   tools: ruby, jekyll, sass, html
-  description:   You are here! Thank you for checking my project page
+  description:   AI might be the future.
   github:
-    url: mihaidobri/mihaidobri.github.io
+    url: gmihaila/gmihaila.github.io
     branch: master

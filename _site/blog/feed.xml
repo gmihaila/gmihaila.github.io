@@ -3,20 +3,20 @@
 	xmlns:atom="http://www.w3.org/2005/Atom"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/">
 	<channel>
-		<title>Mihai Dobri</title>
+		<title>George Mihaila</title>
 		<description>
-			
-				Mihai Dobri's homepage
-			
+
+				George Mihaila's homepage
+
 		</description>
 		<link>http://localhost:4000</link>
 		<atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml" />
-		
+
 			<item>
 				<title>Required Reading For the Absolute Beginner</title>
-				
+
 					<category>testing></category>
-				
+
 				<description>Read the following book…
 
 </description>
@@ -26,7 +26,7 @@
 					<link>/img/thumbnails/</link>
 				</image>
 				<content type="html">
-					
+
 					<p>Read the following book…</p>
 
 <p>The kind of Exploratory testing you need to know in modern environments :
@@ -62,10 +62,10 @@
 				<link>http://localhost:4000/blog/required-reading</link>
 				<guid isPermaLink="true">http://localhost:4000/blog/required-reading</guid>
 			</item>
-		
+
 			<item>
 				<title>First post</title>
-				
+
 				<description>Hello and welcome to the blog.
 
 </description>
@@ -75,7 +75,7 @@
 					<link>/img/thumbnails/</link>
 				</image>
 				<content type="html">
-					
+
 					<p>Hello and welcome to the blog.</p>
 
 <p><em>Have a wonderful day</em>,</p>
@@ -87,6 +87,6 @@
 				<link>http://localhost:4000/blog/first-post</link>
 				<guid isPermaLink="true">http://localhost:4000/blog/first-post</guid>
 			</item>
-		
+
 	</channel>
 </rss>
