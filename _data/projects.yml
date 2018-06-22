@@ -1,0 +1,9 @@
+- name: Personal website
+  time: march 18 - april 18
+  url: http://www.mihaidobri.com
+  tagline: personal website / portfolio / blog
+  tools: ruby, jekyll, sass, html
+  description:   You are here! Thank you for checking my project page
+  github:
+    url: mihaidobri/mihaidobri.github.io
+    branch: master
