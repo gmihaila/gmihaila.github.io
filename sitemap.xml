@@ -1,7 +1,3 @@
----
-layout:
----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -9,25 +5,80 @@ layout:
 	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-	{% for post in site.posts %}
+	
 		<url>
-			<loc>{{ site.url }}{{ post.url }}</loc>
-			{% if post.lastmod == null %}
-				<lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-			{% else %}
-				<lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
-			{% endif %}
+			<loc>http://localhost:4000/blog/required-reading</loc>
+			
+				<lastmod>2018-03-22T13:06:00-04:00</lastmod>
+			
 			<changefreq>weekly</changefreq>
 			<priority>0.9</priority>
 		</url>
-	{% endfor %}
-	{% for page in site.pages %}
-		{% if page.sitemap != null %}
+	
+		<url>
+			<loc>http://localhost:4000/blog/first-post</loc>
+			
+				<lastmod>2017-06-27T18:43:00-04:00</lastmod>
+			
+			<changefreq>weekly</changefreq>
+			<priority>0.9</priority>
+		</url>
+	
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
 			<url>
-				<loc>{{ site.url }}{{ page.url }}</loc>
-				<changefreq>{{ page.sitemap.changefreq }}</changefreq>
-				<priority>{{ page.sitemap.priority }}</priority>
+				<loc>http://localhost:4000/blog/tags/</loc>
+				<changefreq>weekly</changefreq>
+				<priority>0.6</priority>
 			 </url>
-		{% endif %}
-	{% endfor %}
+		
+	
+		
+			<url>
+				<loc>http://localhost:4000/blog/</loc>
+				<changefreq>weekly</changefreq>
+				<priority>0.7</priority>
+			 </url>
+		
+	
+		
+			<url>
+				<loc>http://localhost:4000/projects/</loc>
+				<changefreq>monthly</changefreq>
+				<priority>1.0</priority>
+			 </url>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
 </urlset>
