@@ -1,0 +1,48 @@
+/*
+ * Insert vendor prefixes for a property.
+ *
+ * $property : A CSS property.
+ * $value : The value corresponding to the property `$property`.
+ */
+@mixin vendor($property, $value)
+	-webkit-#{$property}: $value
+	-moz-#{$property}: $value
+	-ms-#{$property}: $value
+	-o-#{$property}: $value
+	#{$property}: $value
+
+/*
+ * Insert Fontspring bulletproof font statements.
+ *
+ * $name: The root name of each font file; each one is assumed to be located in
+ *      `/fonts/$name/`. Also the value of the `font-family` name assigned to
+ *      the font.
+ */
+@mixin font($name)
+	$path: "../fonts/" + $name + "/" + $name
+	@font-face
+		font-family: $name
+		src: url($path)
+		src: url($path) format("embedded-opentype"), url($path + ".eot?#iefix") format("woff"), url($path + ".woff") format("truetype"), url($path + ".ttf") format("svg")
+		font-weight: normal
+		font-style: normal
+
+/*
+ * Insert a CSS ease-out transition.
+ *
+ * $time : The time the transition should last.
+ */
+@mixin transition($time)
+	@include vendor(transition, all $time ease-out)
+
+/*
+ * Add portable opacity styling.
+ *
+ * $opacity : The desired opacity level.
+ */
+@mixin opacity($opacity)
+	@include vendor(opacity, $opacity)
+	filter: alpha(opacity=$opacity)
+
+.t3
+	@include transition(0.3s)

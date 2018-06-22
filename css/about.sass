@@ -1,0 +1,65 @@
+---
+---
+
+@import mixins
+
+@include font("social_media")
+
+div#about
+	text-align: center
+
+	div
+		margin-top: 2%
+		display: inline-block
+		vertical-align: top
+
+		&#left
+			margin-bottom: 20px
+			margin-right: 40px
+			min-width: 100px
+			width: 20%
+			max-width: 150px
+
+			img
+				@include vendor(border-radius, 100px)
+
+				display: block
+				width: 100%
+
+		&#right
+			text-align: left
+			width: 60%
+
+			h1
+				font-size: 1.4em
+
+			p
+				margin-top: 0px
+
+			ul
+				font-size: 1.1em
+
+		div#links
+			display: block
+			font-family: social_media
+			font-size: 1.4em
+			margin-left: auto
+			margin-right: auto
+			margin-top: 30px
+			text-align: center
+			width: 70%
+
+			div
+				display: inline-block
+				min-width: 30px
+				padding-bottom: 10px
+				width: 33.3%
+
+				#github:before
+					content: "\e800"
+
+				#linkedin:before
+					content: "\e801"
+
+				#stackoverflow:before
+					content: "\e802"

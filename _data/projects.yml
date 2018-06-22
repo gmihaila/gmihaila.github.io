@@ -1,0 +1,9 @@
+- name: Personal website
+  time: march 18 - june 18
+  url: http://www.georgemihaila.com
+  tagline: personal website / portfolio
+  tools: ruby, jekyll, sass, html
+  description:   Maybe AI is the future.
+  github:
+    url: gmihaila/gmihaila.github.io
+    branch: master

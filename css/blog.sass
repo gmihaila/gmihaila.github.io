@@ -1,0 +1,64 @@
+---
+---
+
+@import variables
+@import tag_cloud
+
+ul#posts
+	margin-top: 20px
+	padding-bottom: 10px
+
+	li.post
+		border-top: 1px solid #ccc
+		margin-bottom: 50px
+		padding-top: 10px
+
+		>div.meta
+			display: inline-block
+			line-height: 1.8em
+			width: 100%
+
+			div
+				display: inline-block
+				margin-right: 3%
+
+				&.thumbnail
+					$imageSize: 70px
+
+					height: $imageSize
+					min-width: $imageSize
+					width: 10%
+
+					img
+						height: $imageSize
+						width: $imageSize
+						width: 100%
+
+			@media (max-width: 560px)
+				div.thumbnail
+					display: none
+
+			div.text
+				vertical-align: top
+				width: 100%
+
+				>a
+					font-size: 1.8em
+					font-family: $roboto-slab
+
+				>span
+					color: $grey
+					float: right
+
+				>div
+					display: block
+
+					div.tags
+						color: $colour-primary
+						font-size: 0.5em
+
+			div.summary
+				color: $colour-highlight
+
+		>div.excerpt
+			font-size: 1.0em
