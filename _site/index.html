@@ -3,15 +3,15 @@
 <html>
 	<head>
 		<title>
-			{{ page.title }} | Mihai Dobri
+			about | Mihai Dobri
 		</title>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="description" content="{{ page.description }}">
+		<meta name="description" content="About Mihai Dobri.">
 		<meta name="viewport" content="initial-scale=1">
 
 		<style>
-			div#header li#{{ page.title }} a {
+			div#header li#about a {
 				color: #ff4040;
 				font-weight: bold;
 			}
@@ -21,33 +21,18 @@
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
 
 		<!-- Page-specific stylesheets.  -->
-		{% if page.stylesheet %}
-			<link rel="stylesheet" type="text/css" href="/css/{{ page.title }}.css">
-		{% endif %}
-		{% if page.title != "home" %}
+		
+			<link rel="stylesheet" type="text/css" href="/css/about.css">
+		
+		
 			<link rel="stylesheet" type="text/css" href="/css/header.css">
-		{% endif %}
-		{% if page.code %}
-			<link rel="stylesheet" type="text/css" href="/css/code_color_scheme.css">
-			<link rel="stylesheet" type="text/css" href="/css/code.css">
-		{% endif %}
+		
+		
 
 		<!-- MathJax configuration. -->
-		{% if page.math %}
-			<script src="http://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local">
-			</script>
-			<script>
-				MathJax.Hub.Config({
-					jax: ["input/TeX", "output/HTML-CSS"],
-					"HTML-CSS": {
-						linebreaks: {automatic: true, width: "container"}
-					},
-					tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-				});
-			</script>
-		{% endif %}
+		
 
-		{{ page.head }}
+		
 
 		<!-- Bill. -->
 		<script>
@@ -73,10 +58,56 @@
 		<![endif]-->
 
 		<div id="main">
-			{% if page.title != "home" %}
-				{% include header.html %}
-			{% endif %}
-			{{ content }}
+			
+				<div id="header">
+	<h2 id="maintitle">M.D.</h2>
+	<ul>
+		<li id="about"><a href="/">about</a></li>
+		<li id="projects"><a href="/projects">projects</a></li>
+		<li id="blog"><a href="/blog">blog</a></li>		
+		<li id="cv"><a href="/cv/CV.pdf">cv</a></li>
+		<li id="contact"><a href="mailto:dobrimihai@yahoo.com">contact</a></li>
+	</ul>
+</div>
+
+			
+			<div id="about">
+	<div id="left">
+		<img src="" alt="Mihai Dobri's photo">
+	</div
+	><div id="middle">
+	</div
+	><div id="right">
+		<h2>Welcome</h2>
+
+    <p>
+      George Mihaila
+		</p>
+
+		<p>
+			
+		</p>
+		
+		<p>
+			AI
+		</p>
+		
+
+		<p>
+		
+		</p>
+
+    <p>
+          
+    </p>
+
+		<div id="links">
+			<div><a id="github" href="https://github.com/gmihaila"></a></div>
+			<div><a id="linkedin" href="http://www.linkedin.com/"></a></div>
+		</div>
+	</div>
+</div>
+
 		</div>
 
 	</body>

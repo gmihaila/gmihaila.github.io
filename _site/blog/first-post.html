@@ -3,15 +3,15 @@
 <html>
 	<head>
 		<title>
-			{{ page.title }} | Mihai Dobri
+			First post | Mihai Dobri
 		</title>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="description" content="{{ page.description }}">
+		<meta name="description" content="">
 		<meta name="viewport" content="initial-scale=1">
 
 		<style>
-			div#header li#{{ page.title }} a {
+			div#header li#First post a {
 				color: #ff4040;
 				font-weight: bold;
 			}
@@ -21,33 +21,16 @@
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
 
 		<!-- Page-specific stylesheets.  -->
-		{% if page.stylesheet %}
-			<link rel="stylesheet" type="text/css" href="/css/{{ page.title }}.css">
-		{% endif %}
-		{% if page.title != "home" %}
+		
+		
 			<link rel="stylesheet" type="text/css" href="/css/header.css">
-		{% endif %}
-		{% if page.code %}
-			<link rel="stylesheet" type="text/css" href="/css/code_color_scheme.css">
-			<link rel="stylesheet" type="text/css" href="/css/code.css">
-		{% endif %}
+		
+		
 
 		<!-- MathJax configuration. -->
-		{% if page.math %}
-			<script src="http://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local">
-			</script>
-			<script>
-				MathJax.Hub.Config({
-					jax: ["input/TeX", "output/HTML-CSS"],
-					"HTML-CSS": {
-						linebreaks: {automatic: true, width: "container"}
-					},
-					tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-				});
-			</script>
-		{% endif %}
+		
 
-		{{ page.head }}
+		
 
 		<!-- Bill. -->
 		<script>
@@ -73,10 +56,50 @@
 		<![endif]-->
 
 		<div id="main">
-			{% if page.title != "home" %}
-				{% include header.html %}
-			{% endif %}
-			{{ content }}
+			
+				<div id="header">
+	<h2 id="maintitle">M.D.</h2>
+	<ul>
+		<li id="about"><a href="/">about</a></li>
+		<li id="projects"><a href="/projects">projects</a></li>
+		<li id="blog"><a href="/blog">blog</a></li>		
+		<li id="cv"><a href="/cv/CV.pdf">cv</a></li>
+		<li id="contact"><a href="mailto:dobrimihai@yahoo.com">contact</a></li>
+	</ul>
+</div>
+
+			
+			<div id="meta">
+	<h1>First post</h1>
+	<span>27 Jun 2017</span>
+	<div id="tags">
+		<span>tags:</span>
+		
+		<a href="/blog/tags#"></a>
+	</div>
+</div>
+
+<div id="post">
+	
+		<p>Hello and welcome to the blog.</p>
+
+<p><em>Have a wonderful day</em>,</p>
+
+<p><strong>Mihai</strong></p>
+
+	
+</div>
+
+
+
+	<script src="/js/smooth-scroll/dist/js/bind-polyfill.min.js"></script>
+<script src="/js/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+<script>
+	smoothScroll.init({offset: 30});
+</script>
+
+
+
 		</div>
 
 	</body>

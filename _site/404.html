@@ -3,15 +3,15 @@
 <html>
 	<head>
 		<title>
-			{{ page.title }} | Mihai Dobri
+			404 | Mihai Dobri
 		</title>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="description" content="{{ page.description }}">
+		<meta name="description" content="">
 		<meta name="viewport" content="initial-scale=1">
 
 		<style>
-			div#header li#{{ page.title }} a {
+			div#header li#404 a {
 				color: #ff4040;
 				font-weight: bold;
 			}
@@ -21,33 +21,18 @@
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
 
 		<!-- Page-specific stylesheets.  -->
-		{% if page.stylesheet %}
-			<link rel="stylesheet" type="text/css" href="/css/{{ page.title }}.css">
-		{% endif %}
-		{% if page.title != "home" %}
+		
+			<link rel="stylesheet" type="text/css" href="/css/404.css">
+		
+		
 			<link rel="stylesheet" type="text/css" href="/css/header.css">
-		{% endif %}
-		{% if page.code %}
-			<link rel="stylesheet" type="text/css" href="/css/code_color_scheme.css">
-			<link rel="stylesheet" type="text/css" href="/css/code.css">
-		{% endif %}
+		
+		
 
 		<!-- MathJax configuration. -->
-		{% if page.math %}
-			<script src="http://cdn.mathjax.org/mathjax/2.4-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local">
-			</script>
-			<script>
-				MathJax.Hub.Config({
-					jax: ["input/TeX", "output/HTML-CSS"],
-					"HTML-CSS": {
-						linebreaks: {automatic: true, width: "container"}
-					},
-					tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-				});
-			</script>
-		{% endif %}
+		
 
-		{{ page.head }}
+		
 
 		<!-- Bill. -->
 		<script>
@@ -73,10 +58,30 @@
 		<![endif]-->
 
 		<div id="main">
-			{% if page.title != "home" %}
-				{% include header.html %}
-			{% endif %}
-			{{ content }}
+			
+				<div id="header">
+	<h2 id="maintitle">M.D.</h2>
+	<ul>
+		<li id="about"><a href="/">about</a></li>
+		<li id="projects"><a href="/projects">projects</a></li>
+		<li id="blog"><a href="/blog">blog</a></li>		
+		<li id="cv"><a href="/cv/CV.pdf">cv</a></li>
+		<li id="contact"><a href="mailto:dobrimihai@yahoo.com">contact</a></li>
+	</ul>
+</div>
+
+			
+			<div class="error">
+	<span class="error">
+		puts
+		<span id="dark">(</span
+		><span id="light">"</span
+		><b>404</b><span id="light">"</span
+		><span id="dark">)</span
+		><span id="light">;</span
+	></span>
+</div>
+
 		</div>
 
 	</body>
