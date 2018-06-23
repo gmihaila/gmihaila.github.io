@@ -16,8 +16,8 @@
   div#about div#right h1{font-size:1.4em}
   div#about div#right p{margin-top:0px}
   div#about div#right ul{font-size:1.1em}
-  div#about div div#links{display:block;font-family:social_media;font-size:1.4em;margin-left:auto;margin-right:auto;margin-top:30px;text-align:center;width:90%}
-  div#about div div#links div{display:inline-block;min-width:30px;padding-bottom:10px;width:33.3%}
+  div#about div div#links{display:block;font-family:social_media;font-size:1.4em;margin-left:auto;margin-right:auto;margin-top:30px;text-align:center;width:100%}
+  div#about div div#links div{display:inline-block;min-width:50px;padding-bottom:10px;width:33.3%}
   div#about div div#links div #website:before{content: ""}
   div #github:before{content:""}
   div#about div div#links div #linkedin:before{content:""}
