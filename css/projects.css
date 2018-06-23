@@ -1,1 +1,24 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);.t3{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}@font-face{font-family:"projects";src:url("../fonts/projects/projects");src:url("../fonts/projects/projects") format("embedded-opentype"),url("../fonts/projects/projects.eot?#iefix") format("woff"),url("../fonts/projects/projects.woff") format("truetype"),url("../fonts/projects/projects.ttf") format("svg");font-weight:normal;font-style:normal}div#projects{padding-bottom:50px}div.project{margin:50px 0}div.project>div.text,div.project>img{display:inline-block;vertical-align:top}div.project>h1{display:inline-block;font-size:1.5em;margin-bottom:4px;vertical-align:middle}div.project>h1>a{padding-left:10px;font-size:.8em;font-weight:normal}div.project>span,div.project>div.meta>span{color:#484848;font-size:1.1em;margin-bottom:4px}div.project>span.separator{color:#000;margin:0 5px}div.project>div.meta{color:#484848;font-size:.9em;margin-bottom:3px}div.project>div.meta span.time{font-weight:bold;letter-spacing:.05em}div.project>div.meta span.toolstack{color:#000}div.project>div.description p{margin-top:0px}div.project>div.description ul{list-style:disc inside;margin-left:24px;padding-left:2em;text-indent:-2em}div.project>div.description sup{font-size:.7em;vertical-align:super;line-height:0}div.project>div.links{font-family:projects;margin-top:14px;text-align:center;width:100%}div.project>div.links#links_1>div{width:100%}div.project>div.links#links_2>div{width:50%}div.project>div.links#links_3>div{width:33.33%}div.project>div.links div{display:inline-block;font-size:.95em;min-width:150px;text-align:center}div.project>div.links div.website:before{content:""}div.project>div.links div.download:before{content:""}div.project>div.links div.github:before{content:""}div.project>div.links div a{font-family:"Source Sans Pro";padding-left:5px}
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+.t3{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}
+@font-face{font-family:"projects";src:url("../fonts/projects/projects");src:url("../fonts/projects/projects") format("embedded-opentype"),url("../fonts/projects/projects.eot?#iefix") format("woff"),url("../fonts/projects/projects.woff") format("truetype"),url("../fonts/projects/projects.ttf") format("svg");font-weight:normal;font-style:normal}
+div#projects{padding-bottom:50px}
+div.project{margin:50px 0}
+div.project>div.text,div.project>img{display:inline-block;vertical-align:top}
+div.project>h1{display:inline-block;font-size:1.5em;margin-bottom:4px;vertical-align:middle}
+div.project>h1>a{padding-left:10px;font-size:.8em;font-weight:normal}
+div.project>span,div.project>div.meta>span{color:#484848;font-size:1.1em;margin-bottom:4px}
+div.project>span.separator{color:#000;margin:0 5px}
+div.project>div.meta{color:#484848;font-size:.9em;margin-bottom:3px}
+div.project>div.meta span.time{font-weight:bold;letter-spacing:.05em}
+div.project>div.meta span.toolstack{color:#000}
+div.project>div.description p{margin-top:0px}
+div.project>div.description ul{list-style:disc inside;margin-left:24px;padding-left:2em;text-indent:-2em}
+div.project>div.description sup{font-size:.7em;vertical-align:super;line-height:0}
+div.project>div.links{font-family:projects;margin-top:14px;text-align:center;width:100%}
+div.project>div.links#links_1>div{width:100%}div.project>div.links#links_2>div{width:50%}
+div.project>div.links#links_3>div{width:33.33%}div.project>div.links div{display:inline-block;font-size:.95em;min-width:150px;text-align:center}
+div.project>div.links div.website:before{content:""}
+div.project>div.links div.download:before{content:""}
+div.project>div.links div.github:before{content:""}
+div.project>div.links div a{font-family:"Source Sans Pro";padding-left:5px}

@@ -1,1 +1,29 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);.t3,section#comments .post-action>input{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}div#header li#blog a{color:#000;font-weight:bold}div#meta{margin-bottom:30px}div#meta span{bottom:0;color:#484848}div#meta div#tags span{color:#000}div#post{margin-bottom:50px}div#post #toc{margin-bottom:40px;width:100%}div#post #toc .tocnumber{color:#000}div#post #toc .toctext{float:right}div#post #toc .toc_level-1>a{font-size:1.5em}div#post #toc .toc_level-2{border-bottom:1px dashed #bbb;margin-bottom:4px}div#post #toc ul{list-style-type:none;margin-left:0px}div#post #toc ul ul{margin-left:40px}div#post #toc #toctitle{display:none}div#post ol>li,div#post ul>li{margin-bottom:10px}div#post ul{list-style:disc outside none;margin-left:40px}div#post img{display:block;margin:28px auto;max-width:100%}div#post sup{font-size:.8em;line-height:0}div#post p#mathjax-warning{color:red;font-size:1.1em}div#post div.quote{border-left:4px solid #ccc;color:#333;font-size:.9em;font-style:italic;padding:5px 0 0 40px;padding-bottom:2em;width:80%}div#post div.quote div{color:#666;margin-top:1em;float:right;font-style:normal;font-weight:bold}h1#related-posts{margin-top:80px}section#comments{margin-bottom:150px}section#comments .input-wrapper{margin-right:10px}section#comments .post-action>input{background-color:#000;color:#fff;font-size:.9em;padding:4px 30px}section#comments .post-action>input:hover{background-color:#000}section#comments #comments-noscript{color:red}
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+.t3,section#comments .post-action>input{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}
+div#header li#blog a{color:#000;font-weight:bold}
+div#meta{margin-bottom:30px}
+div#meta span{bottom:0;color:#484848}
+div#meta div#tags span{color:#000}
+div#post{margin-bottom:50px}
+div#post #toc{margin-bottom:40px;width:100%}
+div#post #toc .tocnumber{color:#000}
+div#post #toc .toctext{float:right}
+div#post #toc .toc_level-1>a{font-size:1.5em}
+div#post #toc .toc_level-2{border-bottom:1px dashed #bbb;margin-bottom:4px}
+div#post #toc ul{list-style-type:none;margin-left:0px}
+div#post #toc ul ul{margin-left:40px}
+div#post #toc #toctitle{display:none}
+div#post ol>li,div#post ul>li{margin-bottom:10px}
+div#post ul{list-style:disc outside none;margin-left:40px}
+div#post img{display:block;margin:28px auto;max-width:100%}
+div#post sup{font-size:.8em;line-height:0}
+div#post p#mathjax-warning{color:red;font-size:1.1em}
+div#post div.quote{border-left:4px solid #ccc;color:#333;font-size:.9em;font-style:italic;padding:5px 0 0 40px;padding-bottom:2em;width:80%}
+div#post div.quote div{color:#666;margin-top:1em;float:right;font-style:normal;font-weight:bold}
+h1#related-posts{margin-top:80px}
+section#comments{margin-bottom:150px}
+section#comments .input-wrapper{margin-right:10px}
+section#comments .post-action>input{background-color:#000;color:#fff;font-size:.9em;padding:4px 30px}
+section#comments .post-action>input:hover{background-color:#000}
+section#comments #comments-noscript{color:red}
