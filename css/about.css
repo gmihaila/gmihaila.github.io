@@ -1,4 +1,4 @@
-.t3{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;
+/* .t3{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;
   -ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}
 
   @font-face{font-family:"social_media";
@@ -21,4 +21,4 @@
   div#about div div#links div #website:before{content: ""}
   div #github:before{content:""}
   /* div#about div div#links div #linkedin:before{content:""} */
-  div#about div div#links div #stackoverflow:before{content:""}
+  div#about div div#links div #stackoverflow:before{content:""} */
