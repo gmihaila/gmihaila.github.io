@@ -16,13 +16,6 @@
   div#about div#right h1{font-size:1.4em}
   div#about div#right p{margin-top:0px}
   div#about div#right ul{font-size:1.1em}
-  div#about div div#links{display:block;font-family:social_media;font-size:1.9em;margin-left:auto;margin-right:auto;
-    margin-top:30px;text-align:center;width:100%}
-
-  div#about div div#links div #website:before{content:""}
-  div #github:before{content:""}
-  div#about div div#links div #linkedin:before{content:""}
-  div#about div div#links div #stackoverflow:before{content:""}
 
   /* Twitter */
 .fa-twitter {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
@@ -31,16 +24,20 @@
 .fa-linkedin-square {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
   border-radius: 90%;}
   /* GitHub */
-.fa-github-square {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
+.fa-github-square {background: black;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
   border-radius: 90%;}
+  /* Globe */
 .fa-globe {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
   border-radius: 90%;}
-.fa-medium {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
+  /* Medium */
+.fa-medium {background: #D2F1EF;color: black;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
   border-radius: 90%;}
+  /* dropbox */
 .fa-dropbox {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
   border-radius: 90%;}
-
+  /* Skype */
 .fa-skype {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
-  border-radius: 90%;}
-
-.fa-envelope {color: black;font-size:0.7em;text-align:center;padding-top: 10px}
+  border-radius: 90%}
+  /* Email */
+.fa-envelope {background: #55ACEE;color: white;padding: 10px;font-size: 20px;width: 20px;text-align:center;text-decoration:none;
+  border-radius: 90%}
