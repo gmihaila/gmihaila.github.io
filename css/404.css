@@ -1,0 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+div.error{padding-top:10%;text-align:center}div.error span.error{color:#000;
+  font-size:5.5em}div.error span.error span#light{color:#aaa}div.error span.error span#dark{color:#484848}

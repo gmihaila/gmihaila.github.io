@@ -1,0 +1,24 @@
+/* .t3{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;
+  -ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}
+
+  @font-face{font-family:"social_media";
+  src:url("../fonts/social_media/social_media");src:url("../fonts/social_media/social_media")
+  format("embedded-opentype"),url("../fonts/social_media/social_media.eot?#iefix")
+  format("woff"),url("../fonts/social_media/social_media.woff")
+  format("truetype"),url("../fonts/social_media/social_media.ttf")
+  format("svg");font-weight:normal;font-style:normal}
+
+  div#about{text-align:center}
+  div#about div{margin-top:2%;display:inline-block;vertical-align:top}
+  div#about div#left{margin-bottom:20px;margin-right:40px;min-width:100px;width:20%;max-width:150px}
+  div#about div#left img{-webkit-border-radius:100px;-moz-border-radius:100px;-ms-border-radius:100px;-o-border-radius:100px;border-radius:100px;display:block;width:100%}
+  div#about div#right{text-align:left;width:60%}
+  div#about div#right h1{font-size:1.4em}
+  div#about div#right p{margin-top:0px}
+  div#about div#right ul{font-size:1.1em}
+  /* div#about div div#links{display:inline-block;font-family:social_media;font-size:1.4em;margin-left:auto;margin-right:auto;margin-top:30px;text-align:center;width:20%}
+  div#about div div#links div{display:inline-block;min-width:30px;padding-bottom:10px;width:33.3%} */
+  div#about div div#links div #website:before{content: ""}
+  div #github:before{content:""}
+  /* div#about div div#links div #linkedin:before{content:""} */
+  div#about div div#links div #stackoverflow:before{content:""} */
