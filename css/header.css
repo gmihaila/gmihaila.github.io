@@ -1,1 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);div#header{border-bottom:1px solid #000;margin-bottom:30px;padding-top:30px;padding-bottom:20px;text-align:center}div#header #maintitle{margin-bottom:20px}div#header ul>li{display:inline-block;text-align:center;min-width:60px;width:16%}
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+div#header{border-bottom:1px solid #000;margin-bottom:30px;padding-top:30px;padding-bottom:20px;text-align:center}
+div#header #maintitle{margin-bottom:20px}
+div#header ul>li{display:inline-block;text-align:center;min-width:60px;width:16%}

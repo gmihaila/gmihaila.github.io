@@ -1,1 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);.t3,a{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}html,body{height:100%;padding:0;margin:0;background-color:#fff}div#main{font-family:"Open Sans",sans-serif;font-size:1em;line-height:1.34em;height:100%;margin-left:auto;margin-right:auto;max-width:700px;padding:0 18px}a{color:#484848;text-decoration:none}a:hover{color:#3873b3}ul{list-style:none;padding:0;margin:0}h1,h2,h3,h4,h5,h6{color:#000;font-family:"Roboto Slab",serif;line-height:1.1em;margin:0;margin-bottom:10px}
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+.t3,a{-webkit-transition:all .3s ease-out;-moz-transition:all .3s ease-out;-ms-transition:all .3s ease-out;-o-transition:all .3s ease-out;transition:all .3s ease-out}
+html,body{height:100%;padding:0;margin:0;background-color:#fff}
+div#main{font-family:"Open Sans",sans-serif;font-size:1em;line-height:1.34em;height:100%;margin-left:auto;margin-right:auto;max-width:700px;padding:0 18px}
+a{color:#484848;text-decoration:none}
+a:hover{color:#3873b3}
+ul{list-style:none;padding:0;margin:0}
+h1,h2,h3,h4,h5,h6{color:#000;font-family:"Roboto Slab",serif;line-height:1.1em;margin:0;margin-bottom:10px}
