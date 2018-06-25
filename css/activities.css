@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+div#cloud{margin-left:auto;margin-right:auto;text-align:center;width:100%;max-width:300px}
+div#cloud a{padding:8px}
+div#cloud span>a{padding:0}ul#posts{margin-top:20px;padding-bottom:10px}
+ul#posts li.post{border-top:1px solid #ccc;margin-bottom:50px;padding-top:10px}
+ul#posts li.post>div.meta{display:inline-block;line-height:1.8em;width:100%}
+ul#posts li.post>div.meta div{display:inline-block;margin-right:3%}
+ul#posts li.post>div.meta div.thumbnail{height:70px;min-width:70px;width:10%}
+ul#posts li.post>div.meta div.thumbnail img{height:70px;width:70px;width:100%}
+@media (max-width: 560px){ul#posts li.post>div.meta div.thumbnail{display:none}}
+ul#posts li.post>div.meta div.text{vertical-align:top;width:100%}
+ul#posts li.post>div.meta div.text>a{font-size:1.8em;font-family:"Roboto Slab",serif}
+ul#posts li.post>div.meta div.text>span{color:#484848;float:right}
+ul#posts li.post>div.meta div.text>div{display:block}
+ul#posts li.post>div.meta div.text>div div.tags{color:#000;font-size:.5em}
+ul#posts li.post>div.meta div.summary{color:#484848}
+ul#posts li.post>div.excerpt{font-size:1em}

@@ -1,1 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);div#cloud{margin-left:auto;margin-right:auto;text-align:center;width:100%;max-width:300px}div#cloud a{padding:8px}div#cloud span>a{padding:0}div#cloud{margin-bottom:20px}h1.tag-name{border-top:1px solid #aaa;font-size:1.3em;margin-top:30px;padding-top:10px}ul{margin:0;margin-bottom:40px}span.date{color:#000;float:right}
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,400);
+div#cloud{margin-left:auto;margin-right:auto;text-align:center;width:100%;max-width:300px}
+div#cloud a{padding:8px}
+div#cloud span>a{padding:0}
+div#cloud{margin-bottom:20px}
+h1.tag-name{border-top:1px solid #aaa;font-size:1.3em;margin-top:30px;padding-top:10px}
+ul{margin:0;margin-bottom:40px}
+span.date{color:#000;float:right}
