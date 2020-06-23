@@ -1,10 +1,13 @@
-!!! danger "Working on my new website"
+!!! danger "Work in progess!"
 
 # George's Documentation
 
 ## About me
 
-![Profile Picture](images/georgem.jpeg){:style="float: right;margin-right: 7px;margin-top: 7px;"}
+
+<div>
+<img src="images/georgem.jpeg" alt="drawing" style="float: right;margin-right: 7px;margin-top: 7px;"  width="220"/>
+</div>
 
 PhD candidate Computer Science
 
