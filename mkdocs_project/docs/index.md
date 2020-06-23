@@ -5,20 +5,9 @@
 ## About me
 
 
-<div>
-<img src="images/georgem.jpeg" alt="drawing" style="float: right;margin-right: 7px;margin-top: 7px;"  width="220"/>
-</div>
-
-PhD candidate Computer Science
-
-University of North Texas
-
-* Natural Language Processing
-* Dialogue Generation
-* Computer Vision
-* Machine Learning
-* Reinforcement Learning
-* High Performance Computing
+_ | _
+------------ | -------------
+![](images/georgem.jpeg)  | **PhD candidate Computer Science** <br/><br/> **University of North Texas** <br/><br/> **Love working with:** <br/>  *1. Natural Language Processing* <br/> *2. Dialogue Generation* <br/> *3. Reinforcement Learning* <br/> *4. Computer Vision* <br/> *5. Machine Learning* <br/>   *6. High Performance Computing*
 
 
 ## Jobs
