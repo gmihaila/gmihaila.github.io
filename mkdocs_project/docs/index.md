@@ -2,21 +2,21 @@
 
 # George's Documentation
 
-## About me
 
-
-_ | _
+**About Me** | &nbsp; 
 ------------ | -------------
 ![](images/georgem.jpeg)  | **PhD candidate Computer Science** <br/><br/> **University of North Texas** <br/><br/> **Love working with:** <br/>  *1. Natural Language Processing* <br/> *2. Dialogue Generation* <br/> *3. Reinforcement Learning* <br/> *4. Computer Vision* <br/> *5. Machine Learning* <br/>   *6. High Performance Computing*
 
 
 ## Jobs
 
-* State Farm - Data Scientist Intern 2020.
-* University of North Texas  - High Performance Computing Data Science Research Assistant .
-* University of North Texas - Researcher Natural Language Processing - Dialogue Generation.
+* **State Farm:** - *Data Scientist Intern Summer 2020.*
 
-## Current book
+* **University of North Texas:** - *High Performance Computing Research Assistant.*
+    
+* **University of North Texas:** - *Research Natural Language Processing.*
+
+## Reading book
 
 [How Not to Be Wrong: The Power of Mathematical Thinking](https://www.amazon.com/dp/0143127535/ref=cm_sw_em_r_mt_dp_U_9UQ4EbJG0NDEX) 
 

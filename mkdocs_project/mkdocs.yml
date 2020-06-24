@@ -5,9 +5,7 @@ nav:
     
     - Activities: activities/activities.md
     
-    - Things:
-        - Machine Learning: things/machine_learning.md
-        - Python: things/python.md
+    - Things: things/things.md
         
     - Resume: resume/resume.md
 
