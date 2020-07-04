@@ -17,14 +17,25 @@ Use as current folder `gmihaila.github.io`:
 
 * Build website and move files:
   ```bash
-  mkdocs build --config-file mkdocs_project/mkdocs.yml
-  cp -rf mkdocs_project/site/* .
-  rm -rf mkdocs_project/site
+  mkdocs build --config-file website_mkdocs_project/mkdocs.yml
+  cp -rf website_mkdocs_project/site/* .
+  rm -rf website_mkdocs_project/site
   ```
 
 * Push to GitHub:
 
   ```bash
+  git add --all
+  git commit -m "Updates to Website"
+  git push origin master
+  ```
+  
+* All in one:
+
+  ```bash
+  mkdocs build --config-file website_mkdocs_project/mkdocs.yml
+  cp -rf website_mkdocs_project/site/* .
+  rm -rf website_mkdocs_project/site
   git add --all
   git commit -m "Updates to Website"
   git push origin master
