@@ -17,9 +17,9 @@ Use as current folder `gmihaila.github.io`:
 
 * Build website and move files:
   ```bash
-  mkdocs build --config-file website_mkdocs_project/mkdocs.yml
-  cp -rf website_mkdocs_project/site/* .
-  rm -rf website_mkdocs_project/site
+  mkdocs build --config-file docs/mkdocs.yml
+  mv docs/site/* .
+  rm -r docs/site
   ```
 
 * Push to GitHub:
@@ -33,9 +33,9 @@ Use as current folder `gmihaila.github.io`:
 * All in one:
 
   ```bash
-  mkdocs build --config-file website_mkdocs_project/mkdocs.yml
-  cp -rf website_mkdocs_project/site/* .
-  rm -rf website_mkdocs_project/site
+  mkdocs build --config-file docs/mkdocs.yml
+  mv docs/site/* .
+  rm -r docs/site
   git add --all
   git commit -m "Updates to Website"
   git push origin master
