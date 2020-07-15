@@ -1,13 +1,8 @@
-!!! danger "Work in progess!"
-
-# Resume
+# **:newspaper: Resume [ `pdf` ](George_Mihaila_Resume.pdf)**
 
 
 
-
-## Check [ `.pdf` ](George_Mihaila_Resume.pdf) version
-
-## Summary
+## **:zap: Summary**
 
 **Interest areas:** Reinforcement Learning, Computer Vision, Big Data, Scaling Machine Learning, Parallel Processing.
 
@@ -23,9 +18,11 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 * Being a PhD student set me up to work with **little guidance** and being **self-taught**.
 * **How I like to takle problems:** always start small and with good understating of the problem, build something simple that works and keep adding and testing on that until reaching the goal.
 
-## Experience
+-------------------------
 
-### Data Scientist Intern
+## **:briefcase: Experience**
+
+### **Data Scientist Intern**
 
 **State Farm | Enterprise &Data Analytics**
 
@@ -36,7 +33,7 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 *May 2020 – July 2020*
 
-### Data Scientist – Machine Learning Engineer
+### **Data Scientist – Machine Learning Engineer**
 
 **University of North Texas (UNT) | Research Information Technology**
 
@@ -48,7 +45,7 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 *Sep 2018 - May 2020*
 
 
-### Machine Learning Engineer Intern
+### **Machine Learning Engineer Intern**
 
 **State Farm | Enterprise &Data Analytics**
 
@@ -60,7 +57,7 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 *May 2019 – July 2019*
 
 
-### Data Scientist Intern
+### **Data Scientist Intern**
 
 **State Farm | Enterprise &Data Analytics**
 
@@ -72,7 +69,7 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 *May 2018 – August 2018*
 
 
-### Teaching Assistant – Computer Science
+### **Teaching Assistant – Computer Science**
 
 **University of North Texas (UNT) | Department of Computer Science**
 
@@ -83,7 +80,7 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 *Sep 2017 – May 2018*
 
 
-### Artificial Intelligence – Machine Learning Researcher
+### **Artificial Intelligence – Machine Learning Researcher**
 
 **University of North Texas (UNT) | Department of Computer Science**
 
@@ -93,19 +90,20 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 *Jan 2017 - Present*
 
+-------------------------
 
-## Education
+## **:mortar_board: Education**
 
-### PhD in Computer Science
+### **:scroll: PhD in Computer Science**
 
 **University of North Texas (UNT) | Department of Computer Science**
 
 * Focus on Natural Language Processing, Deep Generative Modeling, Companionable Robots, Persona Detection.
 
-*May 2019- Present*
+*May 2019 - Present*
 
 
-### Masters in Computer Science
+### **:scroll: Masters in Computer Science**
 
 **University of North Texas (UNT) | Department of Computer Science**
 
@@ -113,7 +111,9 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 *May 2019*
 
-## Skills
+-------------------------
+
+## **:fishing_pole_and_fish: Skills**
 
 ![](https://progress-bar.dev/95/?title=Python)
 
@@ -127,12 +127,14 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 ![](https://progress-bar.dev/70/?title=Hadoop,PySpark)
 
+-------------------------
 
-## Reference
+## **:busts_in_silhouette: Reference**
 
-**[Dr. Rodney D. Nielsen](https://www.cse.unt.edu/~Nielsen/)**
+### **[Dr. Rodney D. Nielsen](https://www.cse.unt.edu/~Nielsen/)**
 
-Associate Professor - Director HiLT Lab University of North Texas – Computer Science Engineer
+**Associate Professor - Director HiLT Lab University of North Texas – Computer Science Engineer**
 
-*Rodney.Nielsen@UNT.edu*
+:mailbox_with_mail: Email: *Rodney.Nielsen@UNT.edu*
 
+<br>

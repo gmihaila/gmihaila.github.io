@@ -14,7 +14,7 @@ nav:
     
     - Activities: activities/activities.md
     
-    - Useful: useful/useful.md
+    - Useful Code: useful/useful.md
         
     - Resume: resume/resume.md
 
@@ -97,8 +97,8 @@ theme:
     features:
         - instant
     palette:
-        primary: drac-purple
-        accent: drac-purple
+        primary: black
+        accent: black
     font:
         text: Roboto
         code: Roboto Mono

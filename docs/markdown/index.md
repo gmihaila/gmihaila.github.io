@@ -1,30 +1,48 @@
-!!! danger "Work in progess!"
-
-# :bookmark_tabs: George's Website
+# **About me :speech_balloon:**
 
 
-**About Me** | &nbsp; 
------------- | -------------
-![](images/georgem.jpeg)  | **PhD Candidate Computer Science** <br/><br/> **University of North Texas** <br/><br/> **Love working with:** <br/>  *1. Natural Language Processing* <br/> *2. Dialogue Generation* <br/> *3. Reinforcement Learning* <br/> *4. Computer Vision* <br/> *5. Machine Learning* <br/>   *6. High Performance Computing*
+![george_handsome](images/georgem.jpeg)
 
+George is a PhD candidate at University of North Texas, in the Department of Computer Science. He received his Bachelors Degree in Electrical Engineering in his home-country, Romania, and he got his Masters Degree in Computer Science in the United States. 
 
-## :nut_and_bolt: Jobs
+He worked three summers for State Farm as a Data Scientist (DS) and Machine Learning (ML) Engineer, and he has more than 4 years of experience in Natural Language Processing (NLP), Computer Vision (CV), Deep Learning (DL) and Reinforcement Learning (RL). 
 
-* **State Farm:** - *Data Scientist Intern Summer 2020.*
+He is currently working towards his doctoral thesis in casual dialog generation with persona.
 
-* **University of North Texas:** - *High Performance Computing Research Assistant.*
+**Competencies:** *Data Science, parallel computing,  Tensorflow2.0, PyTorch, Python, R, Java, Matlab.*
+
+-------------------------
+
+## **:briefcase: Current Position**
+
+### **Data Scientist Intern**
+
+**State Farm | Enterprise &Data Analytics**
+
+*May 2020 – July 2020*
     
-* **University of North Texas:** - *Research Natural Language Processing.*
+### **Artificial Intelligence – Machine Learning Researcher**
 
-## :books: Reading
+**University of North Texas (UNT) | Department of Computer Science**
+
+*Jan 2017 - Present*
+
+-------------------------
+
+## **:books: Reading**
 
 [How Not to Be Wrong: The Power of Mathematical Thinking](https://www.amazon.com/dp/0143127535/ref=cm_sw_em_r_mt_dp_U_9UQ4EbJG0NDEX) by [Jordan Ellenberg](https://www.amazon.com/Jordan-Ellenberg/e/B001K8IUCG/ref=dp_byline_cont_book_1)
 
+-------------------------
 
+## **Contact**
 
-## :calling: Contact
+:cat: GitHub: [gmihaila](https://github.com/gmihaila){:target="_blank"}
 
-* [github.com/gmihaila](https://github.com/gmihaila)
-* [linkedin.com/in/mihailageorge](https://www.linkedin.com/in/mihailageorge)
-* [georgemihaila@my.unt.edu.com](mailto:georgemihaila@my.unt.edu.com?subject=GitHub%20Website)
-* [schedule meeting](https://calendly.com/georgemihaila)
+:necktie: LinkedIn: [mihailageorge](https://www.linkedin.com/in/mihailageorge){:target="_blank"}
+
+:mailbox_with_mail: Email: [georgemihaila@my.unt.edu.com](mailto:georgemihaila@my.unt.edu.com?subject=GitHub%20Website)
+
+:busts_in_silhouette: Schedule meeting: [calendly.com/georgemihaila](https://calendly.com/georgemihaila){:target="_blank"}
+
+<br>

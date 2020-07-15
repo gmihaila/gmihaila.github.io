@@ -1,12 +1,10 @@
-!!! danger "Work in progess!"
+# **:surfer: Activities**
 
-# Activities
+## **[GPU Technology Conference (GTC)](https://www.nvidia.com/en-us/gtc/)**
 
-## [GPU Technology Conference (GTC)](https://www.nvidia.com/en-us/gtc/) 
+:computer: **[Code](https://github.com/gmihaila/gtc2020_instructor_training){:target="_blank"}** | :movie_camera: **[Slides](https://gmihaila.github.io/presentations/gtc2020.html){:target="_blank"}**
 
-**[Code](https://github.com/gmihaila/gtc2020_instructor_training)** | **[Slides](https://gmihaila.github.io/presentations/gtc2020.html)**
-
-**march 20-22, 2020** |
+:calendar: **march 20-22, 2020** |
 *San Jose California*
 
 * GPUs in Natural Language Processing
@@ -16,12 +14,14 @@
 
 **Duration:** *1 Hour 45 Minutes*
 
-## Find New Sentiments in Text Data
+-------------------------
 
-**[Code](https://github.com/gmihaila/unt_hpc/tree/master/workshops/march_3_2019)** | 
-**[Slides](https://gmihaila.github.io/presentations/find_new_sentiment.html)**
+## **Find New Sentiments in Text Data**
 
-**march 03, 2020** |
+:computer: **[Code](https://github.com/gmihaila/unt_hpc/tree/master/workshops/march_3_2019){:target="_blank"}** | 
+:movie_camera: **[Slides](https://gmihaila.github.io/presentations/find_new_sentiment.html){:target="_blank"}**
+
+:calendar: **march 3, 2020** |
 *University of North Texas DP F223*
 
 * Using text embedding and clustering methods to find new sentiments in text data.
@@ -33,12 +33,14 @@
 
 **Duration:** *1 Hour 15 Minutes*
 
-## Intro to using Git Lab
+-------------------------
 
-**[Info](https://unt-rits.github.io/)** | 
-**[Slides](https://gmihaila.github.io/presentations/talon_gitlab_intro.html)**
+## **Intro to using Git Lab**
 
-**may 3, 2019** |
+:computer: **[Info](https://unt-rits.github.io/){:target="_blank"}** | 
+:movie_camera: **[Slides](https://gmihaila.github.io/presentations/talon_gitlab_intro.html){:target="_blank"}**
+
+:calendar: **may 3, 2019** |
 *University of North Texas DP F285*
 
 * How to use UNT HPC GitLab server
@@ -46,12 +48,14 @@
 
 **Duration:** *1 Hour 15 Minutes*
 
-## Intro to Word Embeddings - NLP Tools on Talon
+-------------------------
 
-**[Info](https://unt-rits.github.io/)** | 
-**[Slides](https://gmihaila.github.io/presentations/talon_word_emb_intro.html)**
+## **Intro to Word Embeddings - NLP Tools on Talon**
 
-**may 2, 2019** |
+:computer: **[Info](https://unt-rits.github.io/){:target="_blank"}** | 
+:movie_camera: **[Slides](https://gmihaila.github.io/presentations/talon_word_emb_intro.html){:target="_blank"}**
+
+:calendar: **may 2, 2019** |
 *University of North Texas DP F223*
 
 * Natural Language Processing on Talon HPC
@@ -59,12 +63,14 @@
 
 **Duration:** *1 Hour 15 Minutes*
 
-## Using Python and Jupyter Notebooks on Talon
+-------------------------
 
-**[Info](https://unt-rits.github.io/)** | 
-**[Slides](https://gmihaila.github.io/presentations/talon_python_jupyter.html)**
+## **Using Python and Jupyter Notebooks on Talon**
 
-**may 1, 2019** |
+:computer: **[Info](https://unt-rits.github.io/){:target="_blank"}** | 
+:movie_camera: **[Slides](https://gmihaila.github.io/presentations/talon_python_jupyter.html){:target="_blank"}**
+
+:calendar: **may 1, 2019** |
 *University of North Texas DP F223*
 
 * Hands on work on Talon UNT HPC
@@ -72,12 +78,14 @@
 
 **Duration:** *1 Hour 15 Minutes*
 
-## Machine Learning - Neural Networks on Talon
+-------------------------
 
-**[Info](https://unt-rits.github.io)** | 
-**[Slides](https://gmihaila.github.io/presentations/deep_learning_workshop.html)**
+## **Machine Learning - Neural Networks on Talon**
 
-**november 30, 2018** |
+:computer: **[Info](https://unt-rits.github.io){:target="_blank"}** | 
+:movie_camera: **[Slides](https://gmihaila.github.io/presentations/deep_learning_workshop.html){:target="_blank"}**
+
+:calendar: **november 30, 2018** |
 *University of North Texas GAB 535*
 
 
@@ -86,3 +94,4 @@
 
 **Duration:** *1 Hour 15 Minutes*
 
+<br>
