@@ -17,7 +17,7 @@ He is currently working towards his doctoral thesis in casual dialog generation 
 
 ### **Data Scientist Intern**
 
-**State Farm | Enterprise &Data Analytics**
+**State Farm | Enterprise Data & Analytics**
 
 *May 2020 – July 2020*
     

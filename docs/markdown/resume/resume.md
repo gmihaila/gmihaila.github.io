@@ -24,12 +24,12 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 ### **Data Scientist Intern**
 
-**State Farm | Enterprise &Data Analytics**
+**State Farm | Enterprise Data & Analytics**
 
-* Align machine learning & AI research to bussiness needs.
-* Developed test models for Reinforcement Learning using popular algorithms like Deep Q-Network and environments like OpenAI Gym.
-* Developed finance model using Reinforcement Learning along with custom environment in Gym.
-* Bult the first Reinforcement Learning framework with models and environments adaptable to bussiness needs.
+* Align machine learning and artificial inteligence research to bussiness needs.
+* Created a Reinforcement Learning (RL) proof of concept application.
+* Built a framework around RL that makes it expandable into other business areas.
+* Created custom data environments to easily train and deploy RL models.
 
 *May 2020 – July 2020*
 
@@ -37,22 +37,20 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 **University of North Texas (UNT) | Research Information Technology**
 
-* Data Science & Machine Learning support for UNT academic research projects.
-* Server maintenance, IT support for UNT High Performance Computing (HPC). 
-* Install and maintain latest deep learning frameworks on HPC.
-* Create and maintain code templates for parallel processing and GPU usage.
+* Supported research project data science and Machine Learning (ML) needs.
+* Maintain latest ML frameworks for UNT’s High Performance Computing (HPC).
+* Created workshops and tutorials about cloud computing HPC services.
 
 *Sep 2018 - May 2020*
 
 
 ### **Machine Learning Engineer Intern**
 
-**State Farm | Enterprise &Data Analytics**
+**State Farm | Enterprise Data & Analytics**
 
-* Automated exploratory data analysis plots generation and red flag data anomalies. 
-* Automated building of baseline machine learning models.
-* Built and deploy Python package for these automations.
-* Help reduce machine learning models deployment time from 6 months to 3 weeks.
+* Automated model risk validation reducing deployment timeline by 90%.
+* Deployed Python package for automated model building and data analysis.
+* Built a user interface for automated model comparison with CI/CD pipeline.
 
 *May 2019 – July 2019*
 
@@ -61,10 +59,9 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 **State Farm | Enterprise &Data Analytics**
 
-* Contribute on deep learning GPU models on Machine Learning Platform.
-* Improved Deep Learning text models with state-of-the-art tools.
-* Developed deep learning model from scratch for Optical Character Recognition (OCR) with over 75% accuracy using advanced training technique.
-* Won the annual Hack Day with project involving machine learning, big data pipeline architecture, chatbot, OCR, fraud detection with savings of $5 mil/year.
+* Introduced GPUs in ML tutorials that speed up training by over 50%.
+* Increased model performance used in claims process by 5% using text data.
+* Built Deep Learning Optical Character Recognition with over 75% accuracy.
 
 *May 2018 – August 2018*
 
@@ -73,9 +70,8 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 **University of North Texas (UNT) | Department of Computer Science**
 
-* Computer Programming lab assistant, peer mentor and grader.
-* Debugging code and assisting students in C/C++ programming projects.
-* Grading coding assignments and exams.
+* Built and debugged C/C++ coding assignments and exams.
+* Assisted Computer Science students as a peer mentor and grader.
 
 *Sep 2017 – May 2018*
 
@@ -84,9 +80,8 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 **University of North Texas (UNT) | Department of Computer Science**
 
-* Applying Deep Learning in Natural Language Processing (NLP).
-* Main research project: General Purpose Dialogue Generation with Persona.
-* Working with state-of-the-art NLP, Computer Vision, Deep Learning frameworks: TensorFlow, Keras, PyTorch and GPU tools.
+* Built state of the art Deep Learning models in Natural Language Processing. 
+* Implement concepts from research papers related to state of the art chatbots.
 
 *Jan 2017 - Present*
 
@@ -98,18 +93,18 @@ For example, imagine a chatbot from the TV Series Friends that talks like your f
 
 **University of North Texas (UNT) | Department of Computer Science**
 
-* Focus on Natural Language Processing, Deep Generative Modeling, Companionable Robots, Persona Detection.
+Focus on Natural Language Processing, Deep Generative Modeling, Companionable Robots, Persona Detection.
 
-*May 2019 - Present*
+*May 2019 - Present* | *GPA 4.0*
 
 
 ### **:scroll: Masters in Computer Science**
 
 **University of North Texas (UNT) | Department of Computer Science**
 
-* Specialized in Machine Learning, Natural Language Processing, Big Data, Data Mining, Computer Vision and Deep Reinforcement Learning.
+Specialized in Machine Learning, Natural Language Processing, Big Data, Data Mining, Computer Vision and Deep Reinforcement Learning.
 
-*May 2019*
+*May 2019* | *GPA 3.9*
 
 -------------------------
 
