@@ -19,7 +19,7 @@ Use as current folder `gmihaila.github.io`:
   ```bash
   mkdocs build --config-file docs/mkdocs.yml
   mv docs/site/* .
-  rm -r docs/site
+  rm -rf docs/site
   ```
 
 * Push to GitHub:
