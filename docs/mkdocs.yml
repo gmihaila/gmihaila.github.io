@@ -15,6 +15,10 @@ nav:
     - Activities: activities/activities.md
     
     - Useful Code: useful/useful.md
+    
+    - Tutorial Notebooks:
+    
+        - Pretrain Transformers: tutorial_notebooks/pretrain_transformer.md
         
     - Resume: resume/resume.md
 
