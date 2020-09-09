@@ -17,9 +17,9 @@ He is currently working towards his doctoral thesis in casual dialog generation 
 
 ### **Data Scientist Intern**
 
-**State Farm | Enterprise Data & Analytics**
+**Teaching Assistant | University of North Texas**
 
-*May 2020 – July 2020*
+*August 2020 – Present*
     
 ### **Artificial Intelligence – Machine Learning Researcher**
 
