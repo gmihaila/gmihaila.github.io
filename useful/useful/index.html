@@ -320,6 +320,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pytorch-dataset" class="md-nav__link">
+    PyTorch Dataset
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -512,6 +519,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#pytorch-dataset" class="md-nav__link">
+    PyTorch Dataset
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -609,6 +623,29 @@
 <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/%m/%Y %H:%M:%S&quot;</span><span class="p">)</span>
 </code></pre></div>
 <strong>Details:</strong> More details <a href="https://www.programiz.com/python-programming/datetime/current-datetime">here</a></p>
+<h2 id="pytorch-dataset"><strong>PyTorch Dataset</strong><a class="headerlink" href="#pytorch-dataset" title="Permanent link"></a></h2>
+<p>Code sample on how to create a PyTorch Dataset. The <code>__len__(self)</code> function needs to return the number of examples in your dataset and <code>_getitem__(self,item)</code> will use the index <code>item</code> to select an example from your dataset:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span>
+
+<span class="k">class</span> <span class="nc">PyTorchDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;PyTorch Dataset.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
+    <span class="k">return</span>
+
+  <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> 
+
+  <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+    <span class="k">return</span>
+
+<span class="c1"># create pytorch dataset</span>
+<span class="n">pytorch_dataset</span> <span class="o">=</span> <span class="n">PyTorchDataset</span><span class="p">()</span>
+<span class="c1"># move pytorch dataset into dataloader</span>
+<span class="n">pytorch_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">pytorch_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<strong>Details:</strong> Find more details <a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html">here</a></p>
 <p><br></p>
                 
               

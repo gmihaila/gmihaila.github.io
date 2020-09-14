@@ -121,4 +121,33 @@ now.strftime("%d/%m/%Y %H:%M:%S")
 ```
 **Details:** More details [here](https://www.programiz.com/python-programming/datetime/current-datetime)
 
+
+## **PyTorch Dataset**
+
+Code sample on how to create a PyTorch Dataset. The `__len__(self)` function needs to return the number of examples in your dataset and `_getitem__(self,item)` will use the index `item` to select an example from your dataset:
+
+```python
+from torch.utils.data import Dataset, DataLoader
+
+class PyTorchDataset(Dataset):
+  """PyTorch Dataset.
+  """
+
+  def __init__(self,):
+    return
+
+  def __len__(self):
+    return 
+
+  def __getitem__(self, item):
+    return
+
+# create pytorch dataset
+pytorch_dataset = PyTorchDataset()
+# move pytorch dataset into dataloader
+pytorch_dataloader = DataLoader(pytorch_dataset, batch_size=32, shuffle=True)
+```
+**Details:** Find more details [here](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html)
+
+
 <br>
