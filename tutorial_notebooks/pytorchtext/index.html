@@ -1,0 +1,941 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="George's Website along with a Collection of Useful Snippets for Python Machine Learning">
+      
+      
+        <link rel="canonical" href="https://github.com/gmihaila/gmihaila.github.io/tutorial_notebooks/pytorchtext/">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.1">
+    
+    
+      
+        <title>PytorchText - George's Awesome Website</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a676eddb.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.b302131d.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+      <link rel="manifest" href="../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+      <link rel="stylesheet" href="../../assets/pymdownx-extras/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="black" data-md-color-accent="black">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pytorchtext" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://github.com/gmihaila/gmihaila.github.io" title="George's Awesome Website" class="md-header-nav__button md-logo" aria-label="George's Awesome Website">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,2L14,6.5V17.5L19,13V2M6.5,5C4.55,5 2.45,5.4 1,6.5V21.16C1,21.41 1.25,21.66 1.5,21.66C1.6,21.66 1.65,21.59 1.75,21.59C3.1,20.94 5.05,20.5 6.5,20.5C8.45,20.5 10.55,20.9 12,22C13.35,21.15 15.8,20.5 17.5,20.5C19.15,20.5 20.85,20.81 22.25,21.56C22.35,21.61 22.4,21.59 22.5,21.59C22.75,21.59 23,21.34 23,21.09V6.5C22.4,6.05 21.75,5.75 21,5.5V7.5L21,13V19C19.9,18.65 18.7,18.5 17.5,18.5C15.8,18.5 13.35,19.15 12,20V13L12,8.5V6.5C10.55,5.4 8.45,5 6.5,5V5Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            George's Awesome Website
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              PytorchText
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/gmihaila/machine_learning_things/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Machine Learning Things
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://github.com/gmihaila/gmihaila.github.io" title="George's Awesome Website" class="md-nav__button md-logo" aria-label="George's Awesome Website">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,2L14,6.5V17.5L19,13V2M6.5,5C4.55,5 2.45,5.4 1,6.5V21.16C1,21.41 1.25,21.66 1.5,21.66C1.6,21.66 1.65,21.59 1.75,21.59C3.1,20.94 5.05,20.5 6.5,20.5C8.45,20.5 10.55,20.9 12,22C13.35,21.15 15.8,20.5 17.5,20.5C19.15,20.5 20.85,20.81 22.25,21.56C22.35,21.61 22.4,21.59 22.5,21.59C22.75,21.59 23,21.34 23,21.09V6.5C22.4,6.05 21.75,5.75 21,5.5V7.5L21,13V19C19.9,18.65 18.7,18.5 17.5,18.5C15.8,18.5 13.35,19.15 12,20V13L12,8.5V6.5C10.55,5.4 8.45,5 6.5,5V5Z" /></svg>
+
+    </a>
+    George's Awesome Website
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gmihaila/machine_learning_things/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Machine Learning Things
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../activities/activities/" title="Activities" class="md-nav__link">
+      Activities
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../useful/useful/" title="Useful Code" class="md-nav__link">
+      Useful Code
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Tutorial Notebooks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorial Notebooks" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Tutorial Notebooks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        PytorchText
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="PytorchText" class="md-nav__link md-nav__link--active">
+      PytorchText
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-on-how-to-batch-text-sequences-with-bucketiterator" class="md-nav__link">
+    Example on how to batch text sequences with BucketIterator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-notebook" class="md-nav__link">
+    How to use this notebook?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installs" class="md-nav__link">
+    Installs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imports" class="md-nav__link">
+    Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helper-functions" class="md-nav__link">
+    Helper Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-data-to-tsv" class="md-nav__link">
+    Convert data to .tsv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorchtext-setup" class="md-nav__link">
+    PyTorchText Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorchText Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-data-fields" class="md-nav__link">
+    Setup data fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucket-iterator" class="md-nav__link">
+    Bucket Iterator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-batch" class="md-nav__link">
+    Sample batch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-loop-example" class="md-nav__link">
+    Train Loop Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pretrain_transformer/" title="Pretrain Transformers" class="md-nav__link">
+      Pretrain Transformers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Finetune Transformers" class="md-nav__link">
+      Finetune Transformers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Finetune Transformers with PytorchText" class="md-nav__link">
+      Finetune Transformers with PytorchText
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../resume/resume/" title="Resume" class="md-nav__link">
+      Resume
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-on-how-to-batch-text-sequences-with-bucketiterator" class="md-nav__link">
+    Example on how to batch text sequences with BucketIterator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-notebook" class="md-nav__link">
+    How to use this notebook?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installs" class="md-nav__link">
+    Installs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#imports" class="md-nav__link">
+    Imports
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helper-functions" class="md-nav__link">
+    Helper Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convert-data-to-tsv" class="md-nav__link">
+    Convert data to .tsv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorchtext-setup" class="md-nav__link">
+    PyTorchText Setup
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorchText Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-data-fields" class="md-nav__link">
+    Setup data fields
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucket-iterator" class="md-nav__link">
+    Bucket Iterator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-batch" class="md-nav__link">
+    Sample batch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#train-loop-example" class="md-nav__link">
+    Train Loop Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gmihaila/machine_learning_things/tree/master/docs/src/markdown/tutorial_notebooks/pytorchtext.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="pytorchtext">PyTorchText<a class="headerlink" href="#pytorchtext" title="Permanent link"></a></h1>
+<p><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/pytorchtext.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+<a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/pytorchtext.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a>
+<a href="https://www.dropbox.com/s/bzsg91p4nx8ldsf/pytorchtext.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a>
+<a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a></p>
+<h2 id="example-on-how-to-batch-text-sequences-with-bucketiterator">Example on how to batch text sequences with <strong>BucketIterator</strong><a class="headerlink" href="#example-on-how-to-batch-text-sequences-with-bucketiterator" title="Permanent link"></a></h2>
+<p>This notebook is an example of using <strong>pytorchtext</strong> powerful <strong>BucketIterator</strong> function which allows grouping examples of similar lengths to provide the most optimal batching method.</p>
+<p>The batching problem provides a lot of gain for recurrent models (RNN, GRU, LSTM) and transformers models (bert, roBerta, gpt2, xlnet, etc.). Basically any model that can deal with variable input batches.</p>
+<p>I will not train any model in this notebook. There are other notebooks where I use this batching method to train models.</p>
+<p>The purpose is to use an example datasets and batch it using <strong>torchtext</strong> with <strong>BucketIterator</strong> and show how it groups text sequences of similar length in batches.</p>
+<p><br></p>
+<h2 id="how-to-use-this-notebook">How to use this notebook?<a class="headerlink" href="#how-to-use-this-notebook" title="Permanent link"></a></h2>
+<p>I am using the <a href="http://ai.stanford.edu/~amaas/data/sentiment/">Large Movie Review Dataset v1.0</a> dataset which contains <strong>positive sentiments</strong> and <strong>negative sentiments</strong> of movie review. This dataset requires using <em>Supervised Training</em> with <em>Binary Classification</em>.</p>
+<p>The code is made with reusability in mind. It can be easily adapted for other text datasets and other NLP tasks. </p>
+<p>Comments should provide enough guidance to easily adapt this notebook to your needs.</p>
+<p>This code is designed mostly for <strong>classification tasks</strong> in mind, but it can be adapted for <strong>dialogue generation tasks</strong>.</p>
+<p><br></p>
+<p><strong>Notes:</strong>
+ * This notebooks is a code adaptation of a few sources I foudn online: <a href="https://pytorch.org/tutorials/beginner/torchtext_translation_tutorial.html">torchtext_translation_tutorial</a>, <a href="https://github.com/pytorch/text">pytorch/text - GitHub</a>, <a href="https://torchtext.readthedocs.io/en/latest/index.html#">torchtext documentation</a> and <a href="https://mlexplained.com/2018/02/08/a-comprehensive-tutorial-to-torchtext/">A Comprehensive Introduction to Torchtext</a>.</p>
+<p><br></p>
+<h2 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link"></a></h2>
+<p>Download the IMDB Movie Reviews sentiment dataset and unzip it locally.</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># download the dataset</span>
+!wget -q -nc http://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz
+<span class="c1"># unzip it</span>
+!tar -zxf /content/aclImdb_v1.tar.gz
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div></p>
+<p><br></p>
+<h2 id="installs">Installs<a class="headerlink" href="#installs" title="Permanent link"></a></h2>
+<p>I will use <a href="https://ftfy.readthedocs.io/en/latest/">ftfy</a> to fix any bad Unicode there might be in the text data files. </p>
+<p>Since we don't know for sure of anything is wrong with the text files its safer to run all text through ftfy.</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># install ftfy to fix any text encoding issues</span>
+!pip install -q ftfy
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><span class="p">|</span>████████████████████████████████<span class="p">|</span> 71kB <span class="m">1</span>.9MB/s 
+ Building wheel <span class="k">for</span> ftfy <span class="o">(</span>setup.py<span class="o">)</span> ... <span class="k">done</span>
+</code></pre></div></p>
+<p><br></p>
+<h2 id="imports">Imports<a class="headerlink" href="#imports" title="Permanent link"></a></h2>
+<p>Import python all needed python packages. </p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span> <span class="nn">ftfy</span> <span class="kn">import</span> <span class="n">fix_text</span>
+<span class="kn">from</span> <span class="nn">torchtext</span> <span class="kn">import</span> <span class="n">data</span>
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div></p>
+<p><br></p>
+<h2 id="helper-functions">Helper Functions<a class="headerlink" href="#helper-functions" title="Permanent link"></a></h2>
+<p>I've created the <strong>file_tsv</strong> function in order to concatenate all text files into a single <code>.tsv</code> file.</p>
+<p>Since I'll use the <strong>TabularDataset</strong> from <code>pytorch.data</code> I need to pass tabular format file. </p>
+<p>For text data I find the Tab Separated Values format easier to deal with - don't need to import pandas for this.</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">file_tsv</span><span class="p">(</span><span class="n">partition_path</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="s1">&#39;./&#39;</span><span class="p">):</span>
+<span class="sd">&quot;&quot;&quot;Parse each file in partition and keep track of sentiments.</span>
+<span class="sd">Create a list of paris [tag, text]</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="c1"># list of all examples in format [tag, text]</span>
+<span class="n">examples</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">partition_path</span><span class="p">)</span>
+<span class="c1"># for each sentiment</span>
+<span class="k">for</span> <span class="n">sentiment</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">([</span><span class="s1">&#39;pos&#39;</span><span class="p">,</span> <span class="s1">&#39;neg&#39;</span><span class="p">]):</span>
+  <span class="c1"># find path for sentiment</span>
+  <span class="n">sentiment_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">partition_path</span><span class="p">,</span> <span class="n">sentiment</span><span class="p">)</span>
+  <span class="c1"># get all files from path sentiment</span>
+  <span class="n">files_names</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">sentiment_path</span><span class="p">)</span>
+  <span class="c1"># for each file in path sentiment</span>
+  <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">files_names</span><span class="p">:</span>
+    <span class="c1"># get file content</span>
+    <span class="n">file_content</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sentiment_path</span><span class="p">,</span> <span class="n">file_name</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="c1"># fix any format errors</span>
+    <span class="n">file_content</span> <span class="o">=</span> <span class="n">fix_text</span><span class="p">(</span><span class="n">file_content</span><span class="p">)</span>
+    <span class="c1"># append sentiment and file content</span>
+    <span class="n">examples</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">sentiment</span><span class="p">,</span> <span class="n">file_content</span><span class="p">])</span>
+<span class="c1"># create a TSV file with same format `sentiment  text`</span>
+<span class="n">examples</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="si">%s</span><span class="se">\t</span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">example</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">example</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">examples</span><span class="p">]</span>
+<span class="c1"># create file name</span>
+<span class="n">tsv_filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">partition_path</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_pos_neg_</span><span class="si">%d</span><span class="s1">.tsv&#39;</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">examples</span><span class="p">)</span>
+<span class="c1"># write to file</span>
+<span class="n">io</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">save_path</span><span class="p">,</span> <span class="n">tsv_filename</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">examples</span><span class="p">))</span>
+
+<span class="k">return</span> <span class="n">tsv_filename</span>
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div></p>
+<p><br></p>
+<h2 id="convert-data-to-tsv">Convert data to <code>.tsv</code><a class="headerlink" href="#convert-data-to-tsv" title="Permanent link"></a></h2>
+<p>I will call the <strong>file_tsv</strong> function for each of the two partitions <strong>train</strong> and <strong>test</strong>. </p>
+<p>The function will return the path where the <code>.tsv</code> file is saved so we can use it later in pytorchtext.</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># path where to save tsv file</span>
+<span class="n">data_path</span> <span class="o">=</span> <span class="s1">&#39;/content&#39;</span>
+
+<span class="c1"># convert train files to tsv file </span>
+<span class="n">train_filename</span> <span class="o">=</span> <span class="n">file_tsv</span><span class="p">(</span><span class="n">partition_path</span><span class="o">=</span><span class="s1">&#39;/content/aclImdb/train&#39;</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="n">data_path</span><span class="p">)</span>
+
+<span class="c1"># convert test files to tsv file</span>
+<span class="n">test_filename</span> <span class="o">=</span> <span class="n">file_tsv</span><span class="p">(</span><span class="n">partition_path</span><span class="o">=</span><span class="s1">&#39;/content/aclImdb/test&#39;</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="n">data_path</span><span class="p">)</span>
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>/content/aclImdb/train
+<span class="m">100</span>% <span class="p">|</span>████████████████████████████████<span class="p">|</span> <span class="m">2</span>/2 <span class="o">[</span><span class="m">00</span>:39&lt;<span class="m">00</span>:00, <span class="m">19</span>.80s/it<span class="o">]</span>
+
+/content/aclImdb/test
+<span class="m">100</span>% <span class="p">|</span>████████████████████████████████<span class="p">|</span> <span class="m">2</span>/2 <span class="o">[</span><span class="m">00</span>:19&lt;<span class="m">00</span>:00, <span class="m">9</span>.97s/it<span class="o">]</span>
+</code></pre></div></p>
+<p><br></p>
+<h2 id="pytorchtext-setup">PyTorchText Setup<a class="headerlink" href="#pytorchtext-setup" title="Permanent link"></a></h2>
+<p>Here I will setup the dataset to be processed by PyTrochText. I will try to add as many useful comments as possible to make the code very easy to adapt to other projects.</p>
+<h3 id="setup-data-fields">Setup data fields<a class="headerlink" href="#setup-data-fields" title="Permanent link"></a></h3>
+<p>Here I setup data fields for PyTorchText. We have to tell the library how to handle each column of the <code>.tsv</code> file. For this we need to create <code>data.Field</code> objects for each column.</p>
+<p>The tokenizer for text column is a simple split on white-space tokenizer. Depending on the project, it can be changed to any tokenizer. It needs to take as input text and output a list.</p>
+<p>The label tokenizer is not actually a tokenizer. It just encodes the <strong>pos</strong>into <strong>1</strong> and <strong>neg</strong> into <strong>0</strong>.</p>
+<p>Since we have two <code>.tsv</code> files it's great that we can use the <code>.split</code> function from <strong>TabularDataset</strong> to handle two files at the same time one for train and the other one for test.</p>
+<p>Find more details about <strong>torchtext.data</strong> functionality <a href="https://torchtext.readthedocs.io/en/latest/data.html#dataset-batch-and-example">here</a>.</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># text tokenizer function - simple white-space split</span>
+<span class="n">text_tokenizer</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="c1"># label tokenizer - encode labels to int 0:negative and 1:positive</span>
+<span class="n">label_tokenizer</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">&#39;neg&#39;</span> <span class="k">else</span> <span class="mi">1</span>
+
+<span class="c1"># data fiels for text column - invoke tokenizer</span>
+<span class="n">TEXT</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">sequential</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tokenize</span><span class="o">=</span><span class="n">text_tokenizer</span><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># data field for labels - invoke tokenize label encoder</span>
+<span class="n">LABEL</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Field</span><span class="p">(</span><span class="n">sequential</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tokenize</span><span class="o">=</span><span class="n">label_tokenizer</span><span class="p">,</span> <span class="n">use_vocab</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># create data fields at tuples of description variable and data fiels</span>
+<span class="n">datafields</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="n">LABEL</span><span class="p">),</span>
+              <span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="n">TEXT</span><span class="p">)]</span>
+
+<span class="c1"># since we have have tab separated data we use TabularDataset</span>
+<span class="n">train_split</span><span class="p">,</span> <span class="n">test_split</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">TabularDataset</span><span class="o">.</span><span class="n">splits</span><span class="p">(</span>
+                                                <span class="n">path</span><span class="o">=</span><span class="n">data_path</span><span class="p">,</span> <span class="c1"># path to data</span>
+                                                <span class="n">train</span><span class="o">=</span><span class="n">train_filename</span><span class="p">,</span> 
+                                                <span class="n">validation</span><span class="o">=</span><span class="n">test_filename</span><span class="p">,</span>
+                                                <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;tsv&#39;</span><span class="p">,</span>
+                                                <span class="n">skip_header</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="c1"># important</span>
+                                                <span class="n">fields</span><span class="o">=</span><span class="n">datafields</span><span class="p">)</span>
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div></p>
+<p><br></p>
+<h3 id="bucket-iterator">Bucket Iterator<a class="headerlink" href="#bucket-iterator" title="Permanent link"></a></h3>
+<p>Here is where the magic happens! We pass in the <strong>train_split</strong> and <strong>test_split</strong> TabularDatasets splits into <strong>BucketIterator</strong> to create the actual batches.</p>
+<p>It's very nice that pytorchtext can handle splits! We need to tell the BucketIterator the batch size for both our splits.</p>
+<p>The <strong>sort_key</strong> parameter is very important. It is used to order text sequences in batches. Since we want to batch sequence of text with similar length, we will use a simple function that returns the length of our text (<code>len(x.text)</code>).</p>
+<p>It is important to keep <code>sort=False</code> and <code>sort_with_batch=True</code> to sort the batches only and not the whole dataset.</p>
+<p>Find more details in the pytorchtext <strong>BucketIterator</strong> documentation <a href="https://torchtext.readthedocs.io/en/latest/data.html#bucketiterator">here</a> - look at the <strong>BPTTIterator</strong> because it has same parameters except the <strong>bptt_len</strong> argument.</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># batch size used for train</span>
+<span class="n">train_batch_size</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="c1"># batch size used for test</span>
+<span class="n">test_batch_size</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="c1"># bucket similar length text sequences together to create batches</span>
+<span class="n">train_iterator</span><span class="p">,</span> <span class="n">val_iterator</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">BucketIterator</span><span class="o">.</span><span class="n">splits</span><span class="p">(</span>
+    <span class="p">(</span><span class="n">train_split</span><span class="p">,</span> <span class="n">test_split</span><span class="p">),</span> <span class="c1"># datasets for iterator to draw data from</span>
+    <span class="n">batch_sizes</span><span class="o">=</span><span class="p">(</span><span class="n">train_batch_size</span><span class="p">,</span> <span class="n">test_batch_size</span><span class="p">),</span>
+    <span class="n">device</span><span class="o">=</span><span class="s1">&#39;cpu&#39;</span><span class="p">,</span> <span class="c1"># if we want to load batches on specific device</span>
+    <span class="n">sort_key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">text</span><span class="p">),</span> <span class="c1"># what function should use to group batches</span>
+    <span class="n">repeat</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># repeat the iterator for multiple epochs(DON&#39;T TRUST)</span>
+    <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="c1"># avoid sorting all data using sort_key</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="c1"># if data needs to be shuffled each time batches are created</span>
+    <span class="n">sort_within_batch</span><span class="o">=</span><span class="kc">True</span> <span class="c1"># only sort each batch using sort_key (better to use)</span>
+    <span class="p">)</span>
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div></p>
+<p><br></p>
+<h3 id="sample-batch">Sample batch<a class="headerlink" href="#sample-batch" title="Permanent link"></a></h3>
+<p>Now let's see how a batch looks like!</p>
+<p>The print format is: <code>label sequence_length  tokenized_text</code>.</p>
+<p>We see the labels as <strong>0</strong> and <strong>1</strong> values along with the length of tokens for that text sequence and along with the list of tokens from that sequence.</p>
+<p>It looks like the lengths of sequences for this batches are very close together! This actually works!</p>
+<p><strong>Note:</strong>
+I would call <code>.create_batches()</code> after each epoch. The <code>repeat=True</code> in <strong>BucketIterator</strong> should allow more epochs to run but I don't trust it!</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># create batches - needs to be called after each epoch</span>
+<span class="n">train_iterator</span><span class="o">.</span><span class="n">create_batches</span><span class="p">()</span>
+
+<span class="c1"># loop through each batch</span>
+<span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">train_iterator</span><span class="o">.</span><span class="n">batches</span><span class="p">:</span>
+  <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">batch</span><span class="p">))</span>
+
+  <span class="c1"># print each example</span>
+  <span class="k">for</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">example</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example</span><span class="o">.</span><span class="n">text</span><span class="p">),</span> <span class="n">example</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+  
+  <span class="k">break</span>
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><span class="m">10</span>
+<span class="m">0</span> <span class="m">212</span> <span class="o">[</span><span class="s1">&#39;Sometimes&#39;</span>, <span class="s1">&#39;a&#39;</span>, <span class="s1">&#39;premise&#39;</span>...
+<span class="m">1</span> <span class="m">212</span> <span class="o">[</span><span class="s2">&quot;I&#39;ve&quot;</span>, <span class="s1">&#39;loved&#39;</span>, <span class="s1">&#39;all&#39;</span>, <span class="s1">&#39;of...</span>
+<span class="s1">0 213 [&#39;</span>Apparently<span class="s1">&#39;, &#39;</span>most<span class="s1">&#39;, &#39;</span>view...
+<span class="m">0</span> <span class="m">214</span> <span class="o">[</span><span class="s1">&#39;This&#39;</span>, <span class="s1">&#39;movie&#39;</span>, <span class="s1">&#39;had&#39;</span>, <span class="s1">&#39;th...</span>
+<span class="s1">1 215 [&#39;</span>This<span class="s1">&#39;, &#39;</span>is<span class="s1">&#39;, &#39;</span>the<span class="s1">&#39;, &#39;</span>Neil<span class="s1">&#39;...</span>
+<span class="s1">0 215 [&#39;</span>Hanna-Barbera<span class="s1">&#39;, &#39;</span>sucks<span class="s1">&#39;, &#39;</span>...
+...
+</code></pre></div></p>
+<p><br></p>
+<h2 id="train-loop-example">Train Loop Example<a class="headerlink" href="#train-loop-example" title="Permanent link"></a></h2>
+<p>Now let's print a list of lengths of each sequence in a batch, to see if the <strong>BucketIterator</strong> works as promised.</p>
+<p>We can see how nicely examples of similar length are grouped together by length in a single batch.</p>
+<p>After each epoch, new batches of similar length are generated when <code>shuffle=True</code>.</p>
+<p>It looks like we have setup everything we need to train a model!</p>
+<p><strong>Code Cell:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># example of number of epochs</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># loop through each epoch</span>
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epochs</span><span class="p">):</span>
+  <span class="c1"># create batches - needs to be called after each epoch</span>
+  <span class="n">train_iterator</span><span class="o">.</span><span class="n">create_batches</span><span class="p">()</span>
+
+  <span class="c1"># get each batch</span>
+  <span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">train_iterator</span><span class="o">.</span><span class="n">batches</span><span class="p">:</span>
+    <span class="c1"># put all example.text of batch in single array</span>
+    <span class="n">batch_text</span> <span class="o">=</span> <span class="p">[</span><span class="n">example</span><span class="o">.</span><span class="n">text</span> <span class="k">for</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">]</span>
+    <span class="c1"># put all example.label of batch in single array</span>
+    <span class="n">batch_label</span> <span class="o">=</span> <span class="p">[</span><span class="n">example</span><span class="o">.</span><span class="n">label</span> <span class="k">for</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">batch</span><span class="p">]</span>
+    <span class="c1"># get maximum sequence length in batch - used for padding</span>
+    <span class="n">max_sequence_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">batch_text</span><span class="p">])</span>
+
+    <span class="c1"># CODE HERE TO FEED BATCHES TO MODEL</span>
+    
+    <span class="nb">print</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">batch_text</span><span class="p">])</span>
+</code></pre></div>
+<strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><span class="o">[</span><span class="m">200</span>, <span class="m">200</span>, <span class="m">200</span>, <span class="m">201</span>, <span class="m">201</span>, <span class="m">203</span>, <span class="m">203</span>, <span class="m">203</span>, <span class="m">203</span>, <span class="m">203</span><span class="o">]</span>
+<span class="o">[</span><span class="m">127</span>, <span class="m">127</span>, <span class="m">127</span>, <span class="m">127</span>, <span class="m">127</span>, <span class="m">127</span>, <span class="m">128</span>, <span class="m">128</span>, <span class="m">128</span>, <span class="m">128</span><span class="o">]</span>
+<span class="o">[</span><span class="m">213</span>, <span class="m">214</span>, <span class="m">214</span>, <span class="m">214</span>, <span class="m">216</span>, <span class="m">216</span>, <span class="m">216</span>, <span class="m">216</span>, <span class="m">217</span>, <span class="m">217</span><span class="o">]</span>
+<span class="o">[</span><span class="m">238</span>, <span class="m">238</span>, <span class="m">239</span>, <span class="m">240</span>, <span class="m">240</span>, <span class="m">241</span>, <span class="m">241</span>, <span class="m">241</span>, <span class="m">241</span>, <span class="m">241</span><span class="o">]</span>
+<span class="o">[</span><span class="m">197</span>, <span class="m">197</span>, <span class="m">198</span>, <span class="m">198</span>, <span class="m">198</span>, <span class="m">198</span>, <span class="m">199</span>, <span class="m">199</span>, <span class="m">200</span>, <span class="m">200</span><span class="o">]</span>
+<span class="o">[</span><span class="m">354</span>, <span class="m">355</span>, <span class="m">355</span>, <span class="m">357</span>, <span class="m">359</span>, <span class="m">360</span>, <span class="m">360</span>, <span class="m">360</span>, <span class="m">360</span>, <span class="m">361</span><span class="o">]</span>
+<span class="o">[</span><span class="m">251</span>, <span class="m">252</span>, <span class="m">256</span>, <span class="m">257</span>, <span class="m">258</span>, <span class="m">259</span>, <span class="m">260</span>, <span class="m">260</span>, <span class="m">260</span>, <span class="m">260</span><span class="o">]</span>
+<span class="o">[</span><span class="m">148</span>, <span class="m">148</span>, <span class="m">148</span>, <span class="m">148</span>, <span class="m">148</span>, <span class="m">148</span>, <span class="m">149</span>, <span class="m">149</span>, <span class="m">149</span>, <span class="m">149</span><span class="o">]</span>
+<span class="o">[</span><span class="m">122</span>, <span class="m">122</span>, <span class="m">122</span>, <span class="m">122</span>, <span class="m">123</span>, <span class="m">123</span>, <span class="m">123</span>, <span class="m">123</span>, <span class="m">123</span>, <span class="m">123</span><span class="o">]</span>
+<span class="o">[</span><span class="m">223</span>, <span class="m">223</span>, <span class="m">226</span>, <span class="m">227</span>, <span class="m">227</span>, <span class="m">228</span>, <span class="m">228</span>, <span class="m">229</span>, <span class="m">229</span>, <span class="m">229</span><span class="o">]</span>
+<span class="o">[</span><span class="m">89</span>, <span class="m">89</span>, <span class="m">90</span>, <span class="m">91</span>, <span class="m">92</span>, <span class="m">93</span>, <span class="m">94</span>, <span class="m">94</span>, <span class="m">94</span>, <span class="m">94</span><span class="o">]</span>
+<span class="o">[</span><span class="m">131</span>, <span class="m">131</span>, <span class="m">132</span>, <span class="m">132</span>, <span class="m">132</span>, <span class="m">132</span>, <span class="m">132</span>, <span class="m">133</span>, <span class="m">133</span>, <span class="m">133</span><span class="o">]</span>
+...
+</code></pre></div></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../useful/useful/" title="Useful Code" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Useful Code
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../pretrain_transformer/" title="Pretrain Transformers" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Pretrain Transformers
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          Copyright &copy; 2015 - 2020 <a href="https://github.com/gmihaila"  target="_blank" rel="noopener">George Mihaila</a>
+<br>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        with emoji by
+        <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">
+          Twemoji
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/gmihaila" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/in/mihailageorge" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.c51dfa35.min.js"></script>
+      <script src="../../assets/javascripts/bundle.eaaa3931.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.58d22e8e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../assets/pymdownx-extras/extra.js"></script>
+      
+    
+  </body>
+</html>

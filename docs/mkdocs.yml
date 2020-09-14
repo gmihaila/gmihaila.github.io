@@ -17,9 +17,15 @@ nav:
     - Useful Code: useful/useful.md
     
     - Tutorial Notebooks:
-    
+
+        - PytorchText: tutorial_notebooks/pytorchtext.md
+
         - Pretrain Transformers: tutorial_notebooks/pretrain_transformer.md
         
+        - Finetune Transformers: tutorial_notebooks/
+        
+        - Finetune Transformers with PytorchText: tutorial_notebooks/
+                
     - Resume: resume/resume.md
 
 

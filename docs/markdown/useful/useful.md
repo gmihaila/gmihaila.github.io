@@ -9,19 +9,9 @@
 <br>
 
 
-### **Read FIle**
+## **Read FIle**
 
 One liner to read any file:
-
-```python
-io.open("my_file.txt", mode='w', encoding='utf-8').write("Your text!")
-```
-**Details:** `import io`
-
-
-### **Write File**
-
-One liner to write a string to a file:
 
 ```python
 io.open("my_file.txt", mode='r', encoding='utf-8').read()
@@ -29,7 +19,17 @@ io.open("my_file.txt", mode='r', encoding='utf-8').read()
 **Details:** `import io`
 
 
-### **Debug**
+## **Write File**
+
+One liner to write a string to a file:
+
+```python
+io.open("my_file.txt", mode='w', encoding='utf-8').write("Your text!")
+```
+**Details:** `import io`
+
+
+## **Debug**
 
 Start debugging after this line: 
 ```python
@@ -38,7 +38,7 @@ import pdb; pdb.set_trace()
 **Details:** use  `dir()` to see all current variables, `locals()` to see variables and their values and  `globals()` to see all global variables with values.
 
 
-### **Pip Install GitHub**
+## **Pip Install GitHub**
 
 Install library directly from GitHub using pip:
 ```bash
@@ -47,7 +47,7 @@ pip install git+github_url
 **Details:** add `@version_number` at the end to use a certain version to install.
 
 
-### **Parse Argument**
+## **Parse Argument**
 Parse arguments given when running a `.py` file.
 ```python
 parser = argparse.ArgumentParser(description='Description')
@@ -58,7 +58,7 @@ args = parser.parse_args()
 **Details:** `import argparse` and use `python script.py --argument something` when running script.
 
 
-### **Doctest**
+## **Doctest**
 
 How to run a simple unittesc using function documentaiton. Useful when need to do unittest inside notebook:
 ```python
@@ -75,66 +75,50 @@ doctest.testmod(verbose=True)
 ```
 **Details:** [ml_things]()
 
-### ** **
+## **PyTorch Device**
+
+How to setup `device` in PyTorch to detect if GPU is available. If there is no GPU available it will default to CPU.
 
 ```python
-
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 ```
 
-### ** **
+## **Fix Text**
+
+I use this package everytime I read text data from a source I don't trust. Since text data is always messy, I always use it. It is great in fixing any bad Unicode.
 
 ```python
-
+fix_text(text="Text to be fixed")
 ```
+**Details:** Install it `pip install ftfy` and import it `from ftfy import fix_text`.
 
-### ** **
+## **Current Date**
+
+How to get current date in Python. I use this when need to name log files:
+```python
+from datetime import date
+
+today = date.today()
+
+# dd/mm/YY in string format
+today.strftime("%d/%m/%Y")
+```
+**Details:** More details [here](https://www.programiz.com/python-programming/datetime/current-datetime)
+
+
+## **Current Time**
+
+Get current time in Python:
 
 ```python
+from datetime import datetime
 
+# datetime object containing current date and time
+now = datetime.now()
+
+# dd/mm/YY H:M:S
+now.strftime("%d/%m/%Y %H:%M:%S")
 ```
-### **Quick file handling**
-
-**Sample:**
-
-```python
-import io
-
-# Write to `my_file.txt`
-io.open("my_file.txt", mode='w', encoding='utf-8').write("Hello!"))
-
-# Read from `my_file.txt`
-io.open("my_file.txt", mode='r', encoding='utf-8').read()
-
-```
-**Details:** [machine_learning_things/master/file_handling](https://github.com/gmihaila/machine_learning_things/tree/master/file_%20handling)
-
-
-### **:construction: ... Workign to add more things ... :construction:**
-
-### 
-
-**Sample:**
-
-```python
-
-```
-
-**Details:**[machine_learning_things/]()
-
-<br>
-
-## **Machine Learning :robot:**
-
-### **:construction: ... Workign to add more things ... :construction:**
-
-### 
-
-**Sample:**
-
-```python
-
-```
-
-**Details:**[machine_learning_things/]()
+**Details:** More details [here](https://www.programiz.com/python-programming/datetime/current-datetime)
 
 <br>

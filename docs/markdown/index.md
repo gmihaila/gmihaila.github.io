@@ -15,9 +15,9 @@ He is currently working towards his doctoral thesis in casual dialog generation 
 
 ## **:briefcase: Current Position**
 
-### **Data Scientist Intern**
+### **Teaching Assistant**
 
-**Teaching Assistant | University of North Texas**
+**Computer Science | University of North Texas**
 
 *August 2020 – Present*
     
