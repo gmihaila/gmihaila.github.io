@@ -75,13 +75,7 @@ doctest.testmod(verbose=True)
 ```
 **Details:** [ml_things]()
 
-## **PyTorch Device**
 
-How to setup `device` in PyTorch to detect if GPU is available. If there is no GPU available it will default to CPU.
-
-```python
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-```
 
 ## **Fix Text**
 
@@ -122,7 +116,23 @@ now.strftime("%d/%m/%Y %H:%M:%S")
 **Details:** More details [here](https://www.programiz.com/python-programming/datetime/current-datetime)
 
 
-## **PyTorch Dataset**
+
+## **Remove Punctuation**
+
+The fastest way to remove punctuation in Python3:
+
+```python
+table = str.maketrans(dict.fromkeys(string.punctuation))
+"string. With. Punctuation?".translate(table) 
+```
+**Details:** Import `string`. Code adapted from StackOverflow [Remove punctuation from Unicode formatted strings](https://stackoverflow.com/questions/11066400/remove-punctuation-from-unicode-formatted-strings/11066687#11066687).
+
+
+## **PyTorch**
+
+Code snippets related to [PyTorch](https://pytorch.org/docs/stable/index.html):
+
+### **Dataset**
 
 Code sample on how to create a PyTorch Dataset. The `__len__(self)` function needs to return the number of examples in your dataset and `_getitem__(self,item)` will use the index `item` to select an example from your dataset:
 
@@ -149,5 +159,14 @@ pytorch_dataloader = DataLoader(pytorch_dataset, batch_size=32, shuffle=True)
 ```
 **Details:** Find more details [here](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html)
 
+
+### **PyTorch Device**
+
+How to setup `device` in PyTorch to detect if GPU is available. If there is no GPU available it will default to CPU.
+
+```python
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+```
+**Details:** Adapted from Stack Overflow [How to check if pytorch is using the GPU?](https://stackoverflow.com/questions/48152674/how-to-check-if-pytorch-is-using-the-gpu).
 
 <br>

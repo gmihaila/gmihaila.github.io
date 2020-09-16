@@ -293,13 +293,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytorch-device" class="md-nav__link">
-    PyTorch Device
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#fix-text" class="md-nav__link">
     Fix Text
   </a>
@@ -321,9 +314,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytorch-dataset" class="md-nav__link">
-    PyTorch Dataset
+  <a href="#remove-punctuation" class="md-nav__link">
+    Remove Punctuation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    PyTorch
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch-device" class="md-nav__link">
+    PyTorch Device
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -492,13 +512,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytorch-device" class="md-nav__link">
-    PyTorch Device
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#fix-text" class="md-nav__link">
     Fix Text
   </a>
@@ -520,9 +533,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pytorch-dataset" class="md-nav__link">
-    PyTorch Dataset
+  <a href="#remove-punctuation" class="md-nav__link">
+    Remove Punctuation
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pytorch" class="md-nav__link">
+    PyTorch
+  </a>
+  
+    <nav class="md-nav" aria-label="PyTorch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pytorch-device" class="md-nav__link">
+    PyTorch Device
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -592,11 +632,6 @@
 <span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <strong>Details:</strong> <a href="">ml_things</a></p>
-<h2 id="pytorch-device"><strong>PyTorch Device</strong><a class="headerlink" href="#pytorch-device" title="Permanent link"></a></h2>
-<p>How to setup <code>device</code> in PyTorch to detect if GPU is available. If there is no GPU available it will default to CPU.</p>
-<div class="highlight"><pre><span></span><code><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
-</code></pre></div>
-
 <h2 id="fix-text"><strong>Fix Text</strong><a class="headerlink" href="#fix-text" title="Permanent link"></a></h2>
 <p>I use this package everytime I read text data from a source I don't trust. Since text data is always messy, I always use it. It is great in fixing any bad Unicode.</p>
 <p><div class="highlight"><pre><span></span><code><span class="n">fix_text</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;Text to be fixed&quot;</span><span class="p">)</span>
@@ -623,7 +658,15 @@
 <span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/%m/%Y %H:%M:%S&quot;</span><span class="p">)</span>
 </code></pre></div>
 <strong>Details:</strong> More details <a href="https://www.programiz.com/python-programming/datetime/current-datetime">here</a></p>
-<h2 id="pytorch-dataset"><strong>PyTorch Dataset</strong><a class="headerlink" href="#pytorch-dataset" title="Permanent link"></a></h2>
+<h2 id="remove-punctuation"><strong>Remove Punctuation</strong><a class="headerlink" href="#remove-punctuation" title="Permanent link"></a></h2>
+<p>The fastest way to remove punctuation in Python3:</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">table</span> <span class="o">=</span> <span class="nb">str</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+<span class="s2">&quot;string. With. Punctuation?&quot;</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> 
+</code></pre></div>
+<strong>Details:</strong> Import <code>string</code>. Code adapted from StackOverflow <a href="https://stackoverflow.com/questions/11066400/remove-punctuation-from-unicode-formatted-strings/11066687#11066687">Remove punctuation from Unicode formatted strings</a>.</p>
+<h2 id="pytorch"><strong>PyTorch</strong><a class="headerlink" href="#pytorch" title="Permanent link"></a></h2>
+<p>Code snippets related to <a href="https://pytorch.org/docs/stable/index.html">PyTorch</a>:</p>
+<h3 id="dataset"><strong>Dataset</strong><a class="headerlink" href="#dataset" title="Permanent link"></a></h3>
 <p>Code sample on how to create a PyTorch Dataset. The <code>__len__(self)</code> function needs to return the number of examples in your dataset and <code>_getitem__(self,item)</code> will use the index <code>item</code> to select an example from your dataset:</p>
 <p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span><span class="p">,</span> <span class="n">DataLoader</span>
 
@@ -646,6 +689,11 @@
 <span class="n">pytorch_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">pytorch_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 <strong>Details:</strong> Find more details <a href="https://pytorch.org/tutorials/beginner/data_loading_tutorial.html">here</a></p>
+<h3 id="pytorch-device"><strong>PyTorch Device</strong><a class="headerlink" href="#pytorch-device" title="Permanent link"></a></h3>
+<p>How to setup <code>device</code> in PyTorch to detect if GPU is available. If there is no GPU available it will default to CPU.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
+</code></pre></div>
+<strong>Details:</strong> Adapted from Stack Overflow <a href="https://stackoverflow.com/questions/48152674/how-to-check-if-pytorch-is-using-the-gpu">How to check if pytorch is using the GPU?</a>.</p>
 <p><br></p>
                 
               
