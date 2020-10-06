@@ -16,6 +16,13 @@ Main page is built with [MkDocs](https://www.mkdocs.org/) and [Material for MkDo
 Use as current folder `gmihaila.github.io`:
 
 * Build website and move files:
+
+<!---
+mkdocs build --config-file docs/mkdocs.yml
+cp -rf docs/site/* .
+rm -rf docs/site
+-->
+
   ```bash
   mkdocs build --config-file docs/mkdocs.yml
   cp -rf docs/site/* .
@@ -23,6 +30,12 @@ Use as current folder `gmihaila.github.io`:
   ```
 
 * Push to GitHub:
+
+<!---
+git add --all
+git commit -m "Updates to Website"
+git push origin master
+-->
 
   ```bash
   git add --all
