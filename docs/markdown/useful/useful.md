@@ -128,6 +128,48 @@ table = str.maketrans(dict.fromkeys(string.punctuation))
 **Details:** Import `string`. Code adapted from StackOverflow [Remove punctuation from Unicode formatted strings](https://stackoverflow.com/questions/11066400/remove-punctuation-from-unicode-formatted-strings/11066687#11066687).
 
 
+## **Class Instances from Dictionary**
+
+Create class instances from dictionary. Very handy when working with notebooks and need to pass arguments as class instances.
+
+```python
+# Create dictionary of arguments.
+my_args = dict(argument_one=23, argument_two=False)
+# Convert dicitonary to class instances.
+my_args = type('allMyArguments', (object,), my_args)
+```
+
+**Details:** Code adapted from StackOverflow [Creating class instance properties from a dictionary?](https://stackoverflow.com/a/1639215/11281368)
+
+
+## **List of Lists into Flat List**
+
+Given a list of lists convert it to a single flat size list. It is the fasest way to conserve each elemnt type.
+
+```python
+l = [[1,2,3],[4,5,6], [7], [8,9], ['this', 'is']]
+
+functools.reduce(operator.concat, l)
+```
+**Details:** Import `operator, functools`. Code adapted from StackOverflow [How to make a flat list out of list of lists?](https://stackoverflow.com/a/45323085/11281368)
+
+
+## **Pickle and Unpickle**
+
+Save python objects into binary using pickle. Load python objects from binary files using pickle.
+
+```python
+a = {'hello': 'world'}
+
+with open('filename.pickle', 'wb') as handle:
+    pickle.dump(a, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+with open('filename.pickle', 'rb') as handle:
+    b = pickle.load(handle)
+```
+**Details:** Import `pickle`. Code adapted from StackOverflow [How can I use pickle to save a dict?](https://stackoverflow.com/a/11218504/11281368)
+
+
 ## **PyTorch**
 
 Code snippets related to [PyTorch](https://pytorch.org/docs/stable/index.html):

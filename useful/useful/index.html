@@ -321,6 +321,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#class-instances-from-dictionary" class="md-nav__link">
+    Class Instances from Dictionary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-lists-into-flat-list" class="md-nav__link">
+    List of Lists into Flat List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pickle-and-unpickle" class="md-nav__link">
+    Pickle and Unpickle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pytorch" class="md-nav__link">
     PyTorch
   </a>
@@ -540,6 +561,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#class-instances-from-dictionary" class="md-nav__link">
+    Class Instances from Dictionary
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-of-lists-into-flat-list" class="md-nav__link">
+    List of Lists into Flat List
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pickle-and-unpickle" class="md-nav__link">
+    Pickle and Unpickle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pytorch" class="md-nav__link">
     PyTorch
   </a>
@@ -664,6 +706,33 @@
 <span class="s2">&quot;string. With. Punctuation?&quot;</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">table</span><span class="p">)</span> 
 </code></pre></div>
 <strong>Details:</strong> Import <code>string</code>. Code adapted from StackOverflow <a href="https://stackoverflow.com/questions/11066400/remove-punctuation-from-unicode-formatted-strings/11066687#11066687">Remove punctuation from Unicode formatted strings</a>.</p>
+<h2 id="class-instances-from-dictionary"><strong>Class Instances from Dictionary</strong><a class="headerlink" href="#class-instances-from-dictionary" title="Permanent link"></a></h2>
+<p>Create class instances from dictionary. Very handy when working with notebooks and need to pass arguments as class instances.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create dictionary of arguments.</span>
+<span class="n">my_args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">argument_one</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">argument_two</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1"># Convert dicitonary to class instances.</span>
+<span class="n">my_args</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s1">&#39;allMyArguments&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nb">object</span><span class="p">,),</span> <span class="n">my_args</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>Details:</strong> Code adapted from StackOverflow <a href="https://stackoverflow.com/a/1639215/11281368">Creating class instance properties from a dictionary?</a></p>
+<h2 id="list-of-lists-into-flat-list"><strong>List of Lists into Flat List</strong><a class="headerlink" href="#list-of-lists-into-flat-list" title="Permanent link"></a></h2>
+<p>Given a list of lists convert it to a single flat size list. It is the fasest way to conserve each elemnt type.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">l</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;this&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">]]</span>
+
+<span class="n">functools</span><span class="o">.</span><span class="n">reduce</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">concat</span><span class="p">,</span> <span class="n">l</span><span class="p">)</span>
+</code></pre></div>
+<strong>Details:</strong> Import <code>operator, functools</code>. Code adapted from StackOverflow <a href="https://stackoverflow.com/a/45323085/11281368">How to make a flat list out of list of lists?</a></p>
+<h2 id="pickle-and-unpickle"><strong>Pickle and Unpickle</strong><a class="headerlink" href="#pickle-and-unpickle" title="Permanent link"></a></h2>
+<p>Save python objects into binary using pickle. Load python objects from binary files using pickle.</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span><span class="p">:</span> <span class="s1">&#39;world&#39;</span><span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">handle</span><span class="p">,</span> <span class="n">protocol</span><span class="o">=</span><span class="n">pickle</span><span class="o">.</span><span class="n">HIGHEST_PROTOCOL</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="p">)</span>
+</code></pre></div>
+<strong>Details:</strong> Import <code>pickle</code>. Code adapted from StackOverflow <a href="https://stackoverflow.com/a/11218504/11281368">How can I use pickle to save a dict?</a></p>
 <h2 id="pytorch"><strong>PyTorch</strong><a class="headerlink" href="#pytorch" title="Permanent link"></a></h2>
 <p>Code snippets related to <a href="https://pytorch.org/docs/stable/index.html">PyTorch</a>:</p>
 <h3 id="dataset"><strong>Dataset</strong><a class="headerlink" href="#dataset" title="Permanent link"></a></h3>
