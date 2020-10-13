@@ -116,7 +116,6 @@ now.strftime("%d/%m/%Y %H:%M:%S")
 **Details:** More details [here](https://www.programiz.com/python-programming/datetime/current-datetime)
 
 
-
 ## **Remove Punctuation**
 
 The fastest way to remove punctuation in Python3:
@@ -168,6 +167,16 @@ with open('filename.pickle', 'rb') as handle:
     b = pickle.load(handle)
 ```
 **Details:** Import `pickle`. Code adapted from StackOverflow [How can I use pickle to save a dict?](https://stackoverflow.com/a/11218504/11281368)
+
+## **Notebook Input Variables**
+
+How to ask user for input value to a variable. In the case of a password variable how to ask for a password variable.
+
+```python
+
+```
+**Details:**
+
 
 
 ## **PyTorch**
