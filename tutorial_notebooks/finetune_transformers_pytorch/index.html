@@ -704,7 +704,7 @@ Building wheel <span class="k">for</span> ftfy <span class="o">(</span>setup.py<
 <ul>
 <li><code>set_seed(123)</code> - Always good to set a fixed seed for reproducibility.</li>
 <li><code>epochs</code> - Number of training epochs (authors recommend between 2 and 4).</li>
-<li><code>batches</code> - Number of batches - depending on the max sequence length and GPU memory. For 512 sequence length a batch of 10 USUALY works without cuda memory issues. For small sequence length can try batch of 32 or higher.</li>
+<li><code>batch_size</code> - Number of batches - depending on the max sequence length and GPU memory. For 512 sequence length a batch of 10 USUALY works without cuda memory issues. For small sequence length can try batch of 32 or higher.</li>
 <li><code>max_length</code> - Pad or truncate text sequences to a specific length. I will set it to 60 to speed up training.</li>
 <li><code>device</code> - Look for gpu to use. Will use <code>cpu</code> by default if no <code>gpu</code> found.</li>
 <li><code>model_name_or_path</code> - Name of transformers model - will use already pretrained model. Path of transformer model - will load your own model from local disk. I always like to start off with <code>bert-base-cased</code>: <em>12-layer, 768-hidden, 12-heads, 109M parameters. Trained on cased English text.</em></li>
@@ -736,7 +736,7 @@ Building wheel <span class="k">for</span> ftfy <span class="o">(</span>setup.py<
 <span class="c1"># Number of batches - depending on the max sequence length and GPU memory.</span>
 <span class="c1"># For 512 sequence length batch of 10 works without cuda memory issues.</span>
 <span class="c1"># For small sequence length can try batch of 32 or higher.</span>
-<span class="n">batches</span> <span class="o">=</span> <span class="mi">32</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">32</span>
 
 <span class="c1"># Pad or truncate text sequences to a specific length</span>
 <span class="c1"># if `None` it will use maximum sequence of word piece tokens allowed by model.</span>
@@ -1139,7 +1139,7 @@ the test as validation. In practice NEVER USE THE TEST DATA FOR VALIDATION!</str
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created `train_dataset` with </span><span class="si">%d</span><span class="s1"> examples!&#39;</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">))</span>
 
 <span class="c1"># Move pytorch dataset into dataloader.</span>
-<span class="n">train_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batches</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">train_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created `train_dataloader` with </span><span class="si">%d</span><span class="s1"> batches!&#39;</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">train_dataloader</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">()</span>
@@ -1153,7 +1153,7 @@ the test as validation. In practice NEVER USE THE TEST DATA FOR VALIDATION!</str
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created `valid_dataset` with </span><span class="si">%d</span><span class="s1"> examples!&#39;</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">valid_dataset</span><span class="p">))</span>
 
 <span class="c1"># Move pytorch dataset into dataloader.</span>
-<span class="n">valid_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">valid_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batches</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">valid_dataloader</span> <span class="o">=</span> <span class="n">DataLoader</span><span class="p">(</span><span class="n">valid_dataset</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Created `eval_dataloader` with </span><span class="si">%d</span><span class="s1"> batches!&#39;</span><span class="o">%</span><span class="nb">len</span><span class="p">(</span><span class="n">valid_dataloader</span><span class="p">))</span>
 </code></pre></div>
 <strong>Output:</strong>

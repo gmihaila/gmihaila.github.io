@@ -125,7 +125,7 @@ Declare parameters used for this notebook:
 
 * `set_seed(123)` - Always good to set a fixed seed for reproducibility.
 * `epochs` - Number of training epochs (authors recommend between 2 and 4).
-* `batches` - Number of batches - depending on the max sequence length and GPU memory. For 512 sequence length a batch of 10 USUALY works without cuda memory issues. For small sequence length can try batch of 32 or higher.
+* `batch_size` - Number of batches - depending on the max sequence length and GPU memory. For 512 sequence length a batch of 10 USUALY works without cuda memory issues. For small sequence length can try batch of 32 or higher.
 * `max_length` - Pad or truncate text sequences to a specific length. I will set it to 60 to speed up training.
 * `device` - Look for gpu to use. Will use `cpu` by default if no `gpu` found.
 * `model_name_or_path` - Name of transformers model - will use already pretrained model. Path of transformer model - will load your own model from local disk. I always like to start off with `bert-base-cased`: *12-layer, 768-hidden, 12-heads, 109M parameters. Trained on cased English text.*
@@ -159,7 +159,7 @@ epochs = 4
 # Number of batches - depending on the max sequence length and GPU memory.
 # For 512 sequence length batch of 10 works without cuda memory issues.
 # For small sequence length can try batch of 32 or higher.
-batches = 32
+batch_size = 32
 
 # Pad or truncate text sequences to a specific length
 # if `None` it will use maximum sequence of word piece tokens allowed by model.
@@ -597,7 +597,7 @@ train_dataset = MovieReviewsDataset(path='/content/aclImdb/train',
 print('Created `train_dataset` with %d examples!'%len(train_dataset))
 
 # Move pytorch dataset into dataloader.
-train_dataloader = DataLoader(train_dataset, batch_size=batches, shuffle=True)
+train_dataloader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 print('Created `train_dataloader` with %d batches!'%len(train_dataloader))
 
 print()
@@ -611,7 +611,7 @@ valid_dataset =  MovieReviewsDataset(path='/content/aclImdb/test',
 print('Created `valid_dataset` with %d examples!'%len(valid_dataset))
 
 # Move pytorch dataset into dataloader.
-valid_dataloader = DataLoader(valid_dataset, batch_size=batches, shuffle=False)
+valid_dataloader = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False)
 print('Created `eval_dataloader` with %d batches!'%len(valid_dataloader))
 ```
 **Output:**
