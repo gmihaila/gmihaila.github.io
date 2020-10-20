@@ -1206,7 +1206,9 @@ Created <span class="sb">`</span>eval_dataloader<span class="sb">`</span> with <
                   <span class="p">)</span>
 
 <span class="c1"># Total number of training steps is number of batches * number of epochs.</span>
-<span class="n">total_steps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">)</span> <span class="o">*</span> <span class="n">epochs</span>
+<span class="c1"># `train_dataloader` contains batched data so `len(train_dataloader)` gives </span>
+<span class="c1"># us the number of batches.</span>
+<span class="n">total_steps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_dataloader</span><span class="p">)</span> <span class="o">*</span> <span class="n">epochs</span>
 
 <span class="c1"># Create the learning rate scheduler.</span>
 <span class="n">scheduler</span> <span class="o">=</span> <span class="n">get_linear_schedule_with_warmup</span><span class="p">(</span><span class="n">optimizer</span><span class="p">,</span> 

@@ -674,7 +674,9 @@ optimizer = AdamW(model.parameters(),
                   )
 
 # Total number of training steps is number of batches * number of epochs.
-total_steps = len(train_dataset) * epochs
+# `train_dataloader` contains batched data so `len(train_dataloader)` gives 
+# us the number of batches.
+total_steps = len(train_dataloader) * epochs
 
 # Create the learning rate scheduler.
 scheduler = get_linear_schedule_with_warmup(optimizer, 
