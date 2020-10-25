@@ -4,8 +4,8 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/pretrain_transformers_pytorch.ipynb) &nbsp;
 [![Generic badge](https://img.shields.io/badge/GitHub-Source-greensvg)](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/pretrain_transformers_pytorch.ipynb)
-[![Generic badge](https://img.shields.io/badge/Download-Notebook-red.svg)](https://www.dropbox.com/s/h13v19ns3oig2rl/finetune_transformers_pytorch.ipynb?dl=1)
-[![Generic badge](https://img.shields.io/badge/Article-Medium-black.svg)](https://medium.com/@gmihaila/fine-tune-transformers-in-pytorch-using-transformers-57b40450635)
+[![Generic badge](https://img.shields.io/badge/Download-Notebook-red.svg)](https://www.dropbox.com/s/kst4ylgsgmqlfs9/pretrain_transformers_pytorch.ipynb?dl=0)
+[![Generic badge](https://img.shields.io/badge/Article-Medium-black.svg)](https://gmihaila.medium.com/pretrain-transformers-models-in-pytorch-using-transformers-ecaaec00fbaa)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
@@ -19,15 +19,18 @@ This notebook is used to pretrain transformers models using [Huggingface](https:
 
 **What do I mean by *pretrain transformers*? The [definition of pretraining](https://www.merriam-webster.com/dictionary/pretraining) is *to train in advance*. That is exactly what I mean! Train a transformer model to use it as a pretrained transformers model which can be used to fine-tune it on a specific task!**
 
+**I also use the term fine-tune where I mean to continue training a pretrained model on a custom dataset. I know it is confusing and I hope I'm not making it worse. 
+At the end of the day you are training a transformer model that was previously trained or not!**
+
 With the AutoClasses functionality we can reuse the code on a large number of transformers models!
 
 This notebook is designed to:
 
-* **Use an already pretrained transformers model and fine-tune it on your custom dataset.**
+* **Use an already pretrained transformers model and fine-tune (continue training) it on your custom dataset.**
 
-* **Train a transformer model from scratch on a custom dataset.** This requires an already trained tokenizer. This notebook will use by default the pretrained tokenizer if a already trained tokenizer is no provided.
+* **Train a transformer model from scratch on a custom dataset.** This requires an already trained (pretrained) tokenizer. This notebook will use by default the pretrained tokenizer if an already trained tokenizer is no provided.
 
-This notebook is **very heavily inspired** from the Hugging Face script used for training language models: [transformers/tree/master/examples/language-modeling](https://github.com/huggingface/transformers/tree/master/examples/language-modeling). I basically adapted that script to work nicely in a notebook with a lot more comments.
+This notebook is **heavily inspired** from the Hugging Face script used for training language models: [transformers/tree/master/examples/language-modeling](https://github.com/huggingface/transformers/tree/master/examples/language-modeling). I basically adapted that script to work nicely in a notebook with a lot more comments.
 
 **Notes from [transformers/tree/master/examples/language-modeling](https://github.com/huggingface/transformers/tree/master/examples/language-modeling):** *Fine-tuning the library models for language modeling on a text file (GPT, GPT-2, CTRL, BERT, RoBERTa, XLNet).
 GPT, GPT-2 and CTRL are fine-tuned using a causal language modeling (CLM) loss. BERT and RoBERTa are fine-tuned
@@ -42,18 +45,18 @@ Since I am using PyTorch to fine-tune our transformers models any knowledge on P
 
 Knowing a little bit about the [transformers](https://github.com/huggingface/transformers) library helps too.
 
-In this notebook **I am using raw text data to train / fine-tune transformers models** (if I use a pretrained model I like to call this *extended pretraining* since I 'continue' the original training of the model on a custom dataset). There is no need for labeled data since we are not doing classification. The Transformers library handles the text files in same way as the original implementation of each model.
+In this notebook **I am using raw text data to pretrain / train / fine-tune transformers models**. There is no need for labeled data since we are not doing classification. The Transformers library handles the text files in same way as the original implementation of each model did.
 
 <br>
 
 ## **How to use this notebook?**
 
 
-Like with every project, I built this notebook with reusability in mind. This notebook pulls the custom dataset form `.txt` files. Since the dataset does not come in a single `.txt` file I created a custom function `movie_reviews_to_file` that reads the dataset and creates the `text` file. The way I load the `.txt` files can be easily reused for any other dataset.
+Like with every project, I built this notebook with reusability in mind. This notebook uses a custom dataset from `.txt` files. Since the dataset does not come in a single `.txt` file I created a custom function `movie_reviews_to_file` that reads the dataset and creates the `text` file. The way I load the `.txt` files can be easily reused for any other dataset.
 
 The only modifications needed to use your own dataset will be in the paths provided to the train `.txt` file and evaluation `.txt` file.
 
-All parameters that can be changed are under the **Parameters Setup** section. Each parameter is nicely commented and structured to be as intuitive as possible.
+All parameters that need to be changed are under the **Parameters Setup** section. Each parameter is nicely commented and structured to be as intuitive as possible.
 
 <br>
 

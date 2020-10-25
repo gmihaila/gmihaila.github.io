@@ -638,25 +638,27 @@
 <h2 id="pretrain-67-transformers-models-on-your-custom-dataset"><strong>Pretrain 67 transformers models on your custom dataset.</strong><a class="headerlink" href="#pretrain-67-transformers-models-on-your-custom-dataset" title="Permanent link"></a></h2>
 <p><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/pretrain_transformers_pytorch.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> &nbsp;
 <a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/pretrain_transformers_pytorch.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a>
-<a href="https://www.dropbox.com/s/h13v19ns3oig2rl/finetune_transformers_pytorch.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a>
-<a href="https://medium.com/@gmihaila/fine-tune-transformers-in-pytorch-using-transformers-57b40450635"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a>
+<a href="https://www.dropbox.com/s/kst4ylgsgmqlfs9/pretrain_transformers_pytorch.ipynb?dl=0"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a>
+<a href="https://gmihaila.medium.com/pretrain-transformers-models-in-pytorch-using-transformers-ecaaec00fbaa"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a>
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a></p>
 <p><br></p>
 <p><strong>Disclaimer:</strong> <em>The format of this tutorial notebook is very similar with my other tutorial notebooks. This is done intentionally in order to keep readers familiar with my format.</em></p>
 <p><br></p>
 <p>This notebook is used to pretrain transformers models using <a href="https://huggingface.co/transformers/">Huggingface</a> on your own custom dataset.</p>
 <p><strong>What do I mean by <em>pretrain transformers</em>? The <a href="https://www.merriam-webster.com/dictionary/pretraining">definition of pretraining</a> is <em>to train in advance</em>. That is exactly what I mean! Train a transformer model to use it as a pretrained transformers model which can be used to fine-tune it on a specific task!</strong></p>
+<p><strong>I also use the term fine-tune where I mean to continue training a pretrained model on a custom dataset. I know it is confusing and I hope I'm not making it worse. 
+At the end of the day you are training a transformer model that was previously trained or not!</strong></p>
 <p>With the AutoClasses functionality we can reuse the code on a large number of transformers models!</p>
 <p>This notebook is designed to:</p>
 <ul>
 <li>
-<p><strong>Use an already pretrained transformers model and fine-tune it on your custom dataset.</strong></p>
+<p><strong>Use an already pretrained transformers model and fine-tune (continue training) it on your custom dataset.</strong></p>
 </li>
 <li>
-<p><strong>Train a transformer model from scratch on a custom dataset.</strong> This requires an already trained tokenizer. This notebook will use by default the pretrained tokenizer if a already trained tokenizer is no provided.</p>
+<p><strong>Train a transformer model from scratch on a custom dataset.</strong> This requires an already trained (pretrained) tokenizer. This notebook will use by default the pretrained tokenizer if an already trained tokenizer is no provided.</p>
 </li>
 </ul>
-<p>This notebook is <strong>very heavily inspired</strong> from the Hugging Face script used for training language models: <a href="https://github.com/huggingface/transformers/tree/master/examples/language-modeling">transformers/tree/master/examples/language-modeling</a>. I basically adapted that script to work nicely in a notebook with a lot more comments.</p>
+<p>This notebook is <strong>heavily inspired</strong> from the Hugging Face script used for training language models: <a href="https://github.com/huggingface/transformers/tree/master/examples/language-modeling">transformers/tree/master/examples/language-modeling</a>. I basically adapted that script to work nicely in a notebook with a lot more comments.</p>
 <p><strong>Notes from <a href="https://github.com/huggingface/transformers/tree/master/examples/language-modeling">transformers/tree/master/examples/language-modeling</a>:</strong> <em>Fine-tuning the library models for language modeling on a text file (GPT, GPT-2, CTRL, BERT, RoBERTa, XLNet).
 GPT, GPT-2 and CTRL are fine-tuned using a causal language modeling (CLM) loss. BERT and RoBERTa are fine-tuned
 using a masked language modeling (MLM) loss. XLNet is fine-tuned using a permutation language modeling (PLM) loss.</em></p>
@@ -664,12 +666,12 @@ using a masked language modeling (MLM) loss. XLNet is fine-tuned using a permuta
 <h2 id="what-should-i-know-for-this-notebook"><strong>What should I know for this notebook?</strong><a class="headerlink" href="#what-should-i-know-for-this-notebook" title="Permanent link"></a></h2>
 <p>Since I am using PyTorch to fine-tune our transformers models any knowledge on PyTorch is very useful.</p>
 <p>Knowing a little bit about the <a href="https://github.com/huggingface/transformers">transformers</a> library helps too.</p>
-<p>In this notebook <strong>I am using raw text data to train / fine-tune transformers models</strong> (if I use a pretrained model I like to call this <em>extended pretraining</em> since I 'continue' the original training of the model on a custom dataset). There is no need for labeled data since we are not doing classification. The Transformers library handles the text files in same way as the original implementation of each model.</p>
+<p>In this notebook <strong>I am using raw text data to pretrain / train / fine-tune transformers models</strong>. There is no need for labeled data since we are not doing classification. The Transformers library handles the text files in same way as the original implementation of each model did.</p>
 <p><br></p>
 <h2 id="how-to-use-this-notebook"><strong>How to use this notebook?</strong><a class="headerlink" href="#how-to-use-this-notebook" title="Permanent link"></a></h2>
-<p>Like with every project, I built this notebook with reusability in mind. This notebook pulls the custom dataset form <code>.txt</code> files. Since the dataset does not come in a single <code>.txt</code> file I created a custom function <code>movie_reviews_to_file</code> that reads the dataset and creates the <code>text</code> file. The way I load the <code>.txt</code> files can be easily reused for any other dataset.</p>
+<p>Like with every project, I built this notebook with reusability in mind. This notebook uses a custom dataset from <code>.txt</code> files. Since the dataset does not come in a single <code>.txt</code> file I created a custom function <code>movie_reviews_to_file</code> that reads the dataset and creates the <code>text</code> file. The way I load the <code>.txt</code> files can be easily reused for any other dataset.</p>
 <p>The only modifications needed to use your own dataset will be in the paths provided to the train <code>.txt</code> file and evaluation <code>.txt</code> file.</p>
-<p>All parameters that can be changed are under the <strong>Parameters Setup</strong> section. Each parameter is nicely commented and structured to be as intuitive as possible.</p>
+<p>All parameters that need to be changed are under the <strong>Parameters Setup</strong> section. Each parameter is nicely commented and structured to be as intuitive as possible.</p>
 <p><br></p>
 <h2 id="what-transformers-models-work-with-this-notebook"><strong>What transformers models work with this notebook?</strong><a class="headerlink" href="#what-transformers-models-work-with-this-notebook" title="Permanent link"></a></h2>
 <p>A lot of people will probably use it for Bert. When there is a need to run a different transformer model architecture, which one would work with this code?
