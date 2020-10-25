@@ -20,7 +20,7 @@ nav:
 
         - PytorchText: tutorial_notebooks/pytorchtext.md
 
-        - Pretrain Transformers: tutorial_notebooks/pretrain_transformer.md
+        - Pretrain Transformers: tutorial_notebooks/pretrain_transformers_pytorch.md
 
         - Finetune Transformers: tutorial_notebooks/finetune_transformers_pytorch.md
 
