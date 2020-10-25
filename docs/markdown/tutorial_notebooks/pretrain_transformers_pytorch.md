@@ -17,6 +17,8 @@
 
 This notebook is used to pretrain transformers models using [Huggingface](https://huggingface.co/transformers/) on your own custom dataset.
 
+**What do I mean by *pretrain transformers*? The [definition of pretraining](https://www.merriam-webster.com/dictionary/pretraining) is *to train in advance*. That is exactly what I mean! Train a transformer model to use it as a pretrained transformers model which can be used to fine-tune it on a specific task!**
+
 With the AutoClasses functionality we can reuse the code on a large number of transformers models!
 
 This notebook is designed to:
