@@ -173,9 +173,45 @@ with open('filename.pickle', 'rb') as handle:
 How to ask user for input value to a variable. In the case of a password variable how to ask for a password variable.
 
 ```python
-
+from getpass import getpass
+# Populate variables from user inputs.
+user = input('User name: ')
+password = getpass('Password: ')
 ```
-**Details:**
+**Details:** Code adapted from StackOverflow [Methods for using Git with Google Colab](https://stackoverflow.com/a/57539179/11281368)
+
+
+## **Notebook Private Repo Clone**
+
+How to clone a private repo. Will need to login and ask for password. This snippet can be ran multiple times because it first check if the repo was cloned already.
+
+```python
+import os
+from getpass import getpass
+# Check if repo wasn't already cloned
+if not os.path.isdir('/content/github_repo'):
+  # Use GitHub username.
+  u = 'github_username'
+  # Ask user for GitHub password.
+  p = getpass('GitHub password: ')
+  # Clone repo.
+  !git clone https://$u:$p@github.com/github_username/github_repo.git
+  # Remove password variable.
+  p = ''
+```
+**Details:** Code adapted from StackOverflow [Methods for using Git with Google Colab](https://stackoverflow.com/a/57539179/11281368)
+
+
+## **Import Module Given Path**
+
+How to import a module from a local path. Make it act as a installed library.
+
+```python
+import sys
+# Append module path.
+sys.path.append('/path/to/module')
+```
+**Details:** After that we can use `import module.stuff`. Code adapted from StackOverflow [Adding a path to sys.path (over using imp)](https://stackoverflow.com/a/129374/11281368).
 
 
 

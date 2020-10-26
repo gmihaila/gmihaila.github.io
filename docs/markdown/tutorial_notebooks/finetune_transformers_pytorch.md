@@ -73,7 +73,7 @@ When I learn from a tutorial I always try to replicate the results. I believe it
 
 <br>
 
-### **Downloads**
+## **Downloads**
 
 Download the *Large Movie Review Dataset* and unzip it locally.
 
@@ -87,7 +87,7 @@ Download the *Large Movie Review Dataset* and unzip it locally.
 
 <br>
 
-### **Installs**
+## **Installs**
 
 * **[transformers](https://github.com/huggingface/transformers)** library needs to be installed to use all the awesome code from Hugging Face. To get the latest version I will install it straight from GitHub.
 
@@ -115,7 +115,7 @@ Download the *Large Movie Review Dataset* and unzip it locally.
 
 <br>
 
-### **Imports**
+## **Imports**
 
 Import all needed libraries for this notebook.
 
@@ -180,7 +180,7 @@ n_labels = len(labels_ids)
 
 <br>
 
-### **Helper Functions**
+## **Helper Functions**
 
 I like to keep all Classes and functions that will be used in this notebook under this section to help maintain a clean look of the notebook:
 
@@ -528,7 +528,7 @@ def validation(dataloader, device_):
 
 <br>
 
-### **Load Model and Tokenizer**
+## **Load Model and Tokenizer**
 
 Loading the three essential parts of the pretrained transformers: *configuration*, *tokenizer* and *model*. I also need to load the
 model on the device I'm planning to use (GPU / CPU).
@@ -570,7 +570,7 @@ print('Model loaded to `%s`'%device)
 
 <br>
 
-### **Dataset and DataLoader**
+## **Dataset and DataLoader**
 
 This is wehere I create the PyTorch **Dataset** and **DataLoader** objects that will be used to feed data into our model. 
 
@@ -644,7 +644,7 @@ print('Created `eval_dataloader` with %d batches!'%len(valid_dataloader))
 
 <br>
 
-### **Train**
+## **Train**
 
 I create an optimizer and scheduler that will be used by PyTorch in training.
 
@@ -754,7 +754,7 @@ It looks like a little over one epoch is enough training for this model and data
 
 <br>
 
-### **Evaluate**
+## **Evaluate**
 
 When dealing with classification it's useful to look at precision recall and f1 score. 
 Another good thing to look at when evaluating the model is the confusion matrix.
