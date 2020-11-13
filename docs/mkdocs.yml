@@ -11,14 +11,14 @@ docs_dir: markdown
 
 nav:
     - About: index.md
-    
+
     - Activities: activities/activities.md
-    
+
     - Useful Code: useful/useful.md
-    
+
     - Tutorial Notebooks:
 
-        - PytorchText: tutorial_notebooks/pytorchtext.md
+        - PyTorchText BucketIterator: tutorial_notebooks/pytorchtext_bucketiterator.md
 
         - Pretrain Transformers: tutorial_notebooks/pretrain_transformers_pytorch.md
 
@@ -94,7 +94,7 @@ markdown_extensions:
     - pymdownx.details:
     - pymdownx.tabbed:
 
-    
+
 theme:
     name: material
     custom_dir: theme
@@ -109,7 +109,7 @@ theme:
     font:
         text: Roboto
         code: Roboto Mono
-        
+
 extra:
     manifest: manifest.webmanifest
     social:
@@ -118,12 +118,12 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/mihailageorge
 
-    
+
 extra_css:
     - assets/pymdownx-extras/extra.css
 
 extra_javascript:
     - assets/pymdownx-extras/extra.js
-    
+
 plugins:
     - search
