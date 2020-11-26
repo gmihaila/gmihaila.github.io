@@ -35,14 +35,18 @@ He is currently working towards his doctoral thesis in casual dialog generation 
 
 -------------------------
 
-## **Contact**
+## **Contact** 🎣
 
-:cat: GitHub: [gmihaila](https://github.com/gmihaila){:target="_blank"}
+🦊 GitHub: [gmihaila](https://github.com/gmihaila)
 
-:necktie: LinkedIn: [mihailageorge](https://www.linkedin.com/in/mihailageorge){:target="_blank"}
+🌐 Website: [gmihaila.github.io](https://gmihaila.github.io/)
 
-:mailbox_with_mail: Email: [georgemihaila@my.unt.edu.com](mailto:georgemihaila@my.unt.edu.com?subject=GitHub%20Website)
+👔 LinkedIn: [mihailageorge](https://www.linkedin.com/in/mihailageorge/)
 
-:busts_in_silhouette: Schedule meeting: [calendly.com/georgemihaila](https://calendly.com/georgemihaila){:target="_blank"}
+📓 Medium: [@gmihaila](https://gmihaila.medium.com)
+
+📬 Email: [georgemihaila@my.unt.edu.com](mailto:georgemihaila@my.unt.edu.com?subject=GitHub%20Website)
+
+👤 Schedule meeting: [calendly.com/georgemihaila](https://calendly.com/georgemihaila){:target="_blank"}
 
 <br>

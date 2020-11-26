@@ -24,6 +24,8 @@ nav:
 
         - Finetune Transformers: tutorial_notebooks/finetune_transformers_pytorch.md
 
+        - GPT2 Finetune Classification: tutorial_notebooks/gpt2_finetune_classification.md
+
     - Resume: resume/resume.md
 
 markdown_extensions:
