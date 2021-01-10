@@ -2216,3 +2216,28 @@ outputs = bert_for_sequence_classification_model(**input_sequences)
 
 ![bert_inner_workings](https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings.png)
 
+
+
+## **Final Note**
+
+If you made it this far **Congrats!** 🎊 and **Thank you!** 🙏 for your interest in my tutorial!
+
+I've been using this code for a while now and I feel it got to a point where is nicely documented and easy to follow.
+
+Of course is easy for me to follow because I built it. That is why any feedback is welcome and it helps me improve my future tutorials!
+
+If you see something wrong please let me know by opening an issue on my [ml_things GitHub repository](https://github.com/gmihaila/ml_things/issues)!
+
+A lot of tutorials out there are mostly a one-time thing and are not being maintained. I plan on keeping my tutorials up to date as much as I can.
+
+## **Contact** 🎣
+
+🦊 GitHub: [gmihaila](https://github.com/gmihaila)
+
+🌐 Website: [gmihaila.github.io](https://gmihaila.github.io/)
+
+👔 LinkedIn: [mihailageorge](https://medium.com/r/?url=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fmihailageorge)
+
+📬 Email: [georgemihaila@my.unt.edu.com](mailto:georgemihaila@my.unt.edu.com?subject=GitHub%20Website)
+
+<br>
