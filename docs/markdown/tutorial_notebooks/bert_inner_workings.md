@@ -5,9 +5,10 @@
 
 <br>
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb) &nbsp;
-[![Generic badge](https://img.shields.io/badge/GitHub-Source-greensvg)](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb)
-[![Generic badge](https://img.shields.io/badge/Article-Medium-black.svg)](https://gmihaila.medium.com/gpt2-for-text-classification-using-hugging-face-transformers-574555451832)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb) &nbsp;
+[![Generic badge](https://img.shields.io/badge/GitHub-Source-greensvg)](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb)
+[![Generic badge](https://img.shields.io/badge/Download-Notebook-red.svg)](https://www.dropbox.com/s/jeftyo6cebfkma2/bert_inner_workings.ipynb?dl=1)
+[![Generic badge](https://img.shields.io/badge/Article-Medium-black.svg)](https://gmihaila.medium.com/%EF%B8%8F-bert-inner-workings-1c3054cd1591)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 <br>
@@ -172,11 +173,11 @@ We encoded our positive and negative sentiments into:
 
 
 ```python
-# array of text we want to classify
+# Array of text we want to classify
 input_texts = ['I love cats!',
               "He hates pineapple pizza."]
 
-# senitmen labels
+# Senitmen labels
 labels = [1, 0]
 ```
 
@@ -198,23 +199,23 @@ Using our newly created `tokenizer` we'll use it on our two sentence dataset and
 
 
 ```python
-# create BertTokenizer
+# Create BertTokenizer.
 tokenizer = BertTokenizer.from_pretrained('bert-base-cased')
 
-# create input sequence using tokenizer
+# Create input sequence using tokenizer.
 input_sequences = tokenizer(text=input_texts, add_special_tokens=True, padding=True, truncation=True, return_tensors='pt')
 
-# since input_sequence is a dictionary we can also add the labels to it
-# want to make sure all values ar tensors
+# Since input_sequence is a dictionary we can also add the labels to it
+# want to make sure all values ar tensors.
 input_sequences.update({'labels':torch.tensor(labels)})
 
-# the tokenizer will return a dictionary of three: input_ids, attention_mask and token_type_ids
-# let's do a pretty print
+# The tokenizer will return a dictionary of three: input_ids, attention_mask and token_type_ids.
+# Let's do a pretty print.
 print('PRETTY PRINT OF `input_sequences` UPDATED WITH `labels`:')
 [print('%s : %s\n'%(k,v)) for k,v in input_sequences.items()];
 
-# lets see how the text looks like after Bert Tokenizer
-# we see the special tokens added
+# Lets see how the text looks like after Bert Tokenizer.
+# We see the special tokens added.
 print('ORIGINAL TEXT:')
 [print(example) for example in input_texts];
 print('\nTEXT AFTER USING `BertTokenizer`:')
@@ -1720,7 +1721,7 @@ Put together **[BertEmbeddings](https://github.com/huggingface/transformers/blob
 Now perform a `forward` pass using previous output layer as input.
 
 <details>
-<summary>Show BertPooler Diagram</summary>
+<summary>Show BertModel Diagram</summary>
 
 <figure>
   <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_model.png" />

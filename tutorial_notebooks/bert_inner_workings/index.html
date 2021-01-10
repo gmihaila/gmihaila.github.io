@@ -933,9 +933,10 @@
                 <h1 id="-bert-inner-workings"><strong>⚙️ Bert Inner Workings</strong><a class="headerlink" href="#-bert-inner-workings" title="Permanent link"></a></h1>
 <h2 id="lets-look-at-how-an-input-flows-through-bert"><strong>Let's look at how an input flows through Bert.</strong><a class="headerlink" href="#lets-look-at-how-an-input-flows-through-bert" title="Permanent link"></a></h2>
 <p><br></p>
-<p><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> &nbsp;
-<a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a>
-<a href="https://gmihaila.medium.com/gpt2-for-text-classification-using-hugging-face-transformers-574555451832"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a>
+<p><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> &nbsp;
+<a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a>
+<a href="https://www.dropbox.com/s/jeftyo6cebfkma2/bert_inner_workings.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a>
+<a href="https://gmihaila.medium.com/%EF%B8%8F-bert-inner-workings-1c3054cd1591"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a>
 <a href="https://opensource.org/licenses/Apache-2.0"><img alt="License" src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a></p>
 <p><br></p>
 <p><strong>Disclaimer:</strong> <em>The format of this tutorial notebook is very similar to my other tutorial notebooks. This is done intentionally in order to keep readers familiar with my format.</em></p>
@@ -1046,11 +1047,11 @@ Building wheel for sacremoses (setup.py) ... done
 <p>We encoded our positive and negative sentiments into:
 * 0 - for negative sentiments.
 * 1 - for positive sentiments.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># array of text we want to classify</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Array of text we want to classify</span>
 <span class="n">input_texts</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I love cats!&#39;</span><span class="p">,</span>
               <span class="s2">&quot;He hates pineapple pizza.&quot;</span><span class="p">]</span>
 
-<span class="c1"># senitmen labels</span>
+<span class="c1"># Senitmen labels</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </code></pre></div>
 
@@ -1066,23 +1067,23 @@ Building wheel for sacremoses (setup.py) ... done
 
 </details>
 
-<div class="highlight"><pre><span></span><code><span class="c1"># create BertTokenizer</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create BertTokenizer.</span>
 <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-cased&#39;</span><span class="p">)</span>
 
-<span class="c1"># create input sequence using tokenizer</span>
+<span class="c1"># Create input sequence using tokenizer.</span>
 <span class="n">input_sequences</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="n">input_texts</span><span class="p">,</span> <span class="n">add_special_tokens</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">truncation</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s1">&#39;pt&#39;</span><span class="p">)</span>
 
-<span class="c1"># since input_sequence is a dictionary we can also add the labels to it</span>
-<span class="c1"># want to make sure all values ar tensors</span>
+<span class="c1"># Since input_sequence is a dictionary we can also add the labels to it</span>
+<span class="c1"># want to make sure all values ar tensors.</span>
 <span class="n">input_sequences</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;labels&#39;</span><span class="p">:</span><span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">labels</span><span class="p">)})</span>
 
-<span class="c1"># the tokenizer will return a dictionary of three: input_ids, attention_mask and token_type_ids</span>
-<span class="c1"># let&#39;s do a pretty print</span>
+<span class="c1"># The tokenizer will return a dictionary of three: input_ids, attention_mask and token_type_ids.</span>
+<span class="c1"># Let&#39;s do a pretty print.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;PRETTY PRINT OF `input_sequences` UPDATED WITH `labels`:&#39;</span><span class="p">)</span>
 <span class="p">[</span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> : </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">input_sequences</span><span class="o">.</span><span class="n">items</span><span class="p">()];</span>
 
-<span class="c1"># lets see how the text looks like after Bert Tokenizer</span>
-<span class="c1"># we see the special tokens added</span>
+<span class="c1"># Lets see how the text looks like after Bert Tokenizer.</span>
+<span class="c1"># We see the special tokens added.</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;ORIGINAL TEXT:&#39;</span><span class="p">)</span>
 <span class="p">[</span><span class="nb">print</span><span class="p">(</span><span class="n">example</span><span class="p">)</span> <span class="k">for</span> <span class="n">example</span> <span class="ow">in</span> <span class="n">input_texts</span><span class="p">];</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">TEXT AFTER USING `BertTokenizer`:&#39;</span><span class="p">)</span>
@@ -2488,7 +2489,7 @@ First Token [CLS] Tanh Activation Function:
 <p>Put together <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L165">BertEmbeddings</a></strong> layer, <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L512">BertEncoder</a></strong> layer and <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L601">BertPooler</a></strong> layer to create the <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L815">BertModel</a></strong> layer.</p>
 <p>Now perform a <code>forward</code> pass using previous output layer as input.</p>
 <details>
-<summary>Show BertPooler Diagram</summary>
+<summary>Show BertModel Diagram</summary>
 
 <figure>
   <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_model.png" />
