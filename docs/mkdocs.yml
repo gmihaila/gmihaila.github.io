@@ -18,6 +18,8 @@ nav:
 
     - Tutorial Notebooks:
 
+        - Bert Inner Workings: tutorial_notebooks/bert_inner_workings.md
+
         - PyTorchText BucketIterator: tutorial_notebooks/pytorchtext_bucketiterator.md
 
         - Pretrain Transformers: tutorial_notebooks/pretrain_transformers_pytorch.md
