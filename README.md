@@ -45,6 +45,17 @@ git push origin master
   
 * All in one:
 
+<!---
+
+mkdocs build --config-file docs/mkdocs.yml
+cp -rf docs/site/* .
+rm -rf docs/site
+git add --all
+git commit -m "Updates to Website"
+git push origin master
+
+-->
+
   ```bash
   mkdocs build --config-file docs/mkdocs.yml
   cp -rf docs/site/* .

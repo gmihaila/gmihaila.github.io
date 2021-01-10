@@ -187,6 +187,7 @@ Creating the `tokenizer` is pretty standard when using the Transformers library.
 Using our newly created `tokenizer` we'll use it on our two sentence dataset and create the `input_sequence` that will be used as input for our Bert model.
 
 
+<!---
 <details>
 <summary>Show Bert Tokenizer Diagram</summary>
 
@@ -195,7 +196,7 @@ Using our newly created `tokenizer` we'll use it on our two sentence dataset and
 </figure>
 
 </details>
-
+-->
 
 
 ```python
@@ -381,6 +382,9 @@ The `forward` pass uses following layers:
   `self.dropout = nn.Dropout(config.hidden_dropout_prob)`
 
 
+
+<!---
+
 <details>
 
 <summary>Show Bert Embeddings Diagram</summary>
@@ -390,7 +394,7 @@ The `forward` pass uses following layers:
 </figure>
 
 </details>
-
+-->
 
 
 
@@ -580,6 +584,8 @@ The `forward` pass uses:
   `self.dropout = nn.Dropout(config.attention_probs_dropout_prob)`
 
 
+<!---
+
 <details>
 <summary>Show BertSelfAttention Diagram</summary>
 
@@ -588,7 +594,7 @@ The `forward` pass uses:
 </figure>
 
 </details>
-
+-->
 
 
 ```python
@@ -860,6 +866,10 @@ The `forward` pass uses:
 
   `self.dropout = nn.Dropout(config.hidden_dropout_prob)`
 
+
+
+<!---
+
 <details>
 <summary>Show BertSelfOutput Diagram</summary>
 
@@ -868,6 +878,8 @@ The `forward` pass uses:
 </figure>
 
 </details>
+
+-->
 
 ```python
 class BertSelfOutput(torch.nn.Module):
@@ -918,6 +930,8 @@ Put together **[BertSelfAttention](https://github.com/huggingface/transformers/b
 
 Now perform a `forward` pass using previous output layer as input.
 
+<!---
+
 <details>
 <summary>Show BertAttention Diagram</summary>
 
@@ -926,6 +940,8 @@ Now perform a `forward` pass using previous output layer as input.
 </figure>
 
 </details>
+
+-->
 
 ```python
 class BertAttention(torch.nn.Module):
@@ -1058,6 +1074,9 @@ The `forward` pass uses:
 
   `self.dense = nn.Linear(config.hidden_size, config.intermediate_size)`
 
+
+
+<!---
 <details>
 <summary>Show BertIntermediate Diagram</summary>
 
@@ -1066,6 +1085,7 @@ The `forward` pass uses:
 </figure>
 
 </details>
+-->
 
 ```python
 class BertIntermediate(torch.nn.Module):
@@ -1126,6 +1146,10 @@ The `forward` pass uses:
 
   `self.dropout = nn.Dropout(config.hidden_dropout_prob)`
 
+
+
+<!---
+
 <details>
 <summary>Show BertOutput Diagram</summary>
 
@@ -1134,6 +1158,8 @@ The `forward` pass uses:
 </figure>
 
 </details>
+
+-->
 
 ```python
 class BertOutput(torch.nn.Module):
@@ -1186,6 +1212,10 @@ Put together **[BertAttention](https://github.com/huggingface/transformers/blob/
 
 Now perform a `forward` pass using previous output layer as input.
 
+
+
+<!---
+
 <details>
 <summary>Show BertLayer Diagram</summary>
 
@@ -1195,6 +1225,7 @@ Now perform a `forward` pass using previous output layer as input.
 
 </details>
 
+-->
 
 ```python
 class BertLayer(torch.nn.Module):
@@ -1380,6 +1411,8 @@ Put together 12 of the **[BertLayer](https://github.com/huggingface/transformers
 Now perform a `forward` pass using previous output layer as input.
 
 
+<!---
+
 <details>
 <summary>Show BertEncoder Diagram</summary>
 
@@ -1390,6 +1423,7 @@ Now perform a `forward` pass using previous output layer as input.
 
 </details>
 
+-->
 
 ```python
 class BertEncoder(torch.nn.Module):
@@ -1657,6 +1691,10 @@ The `forward` pass uses:
 
   `self.activation = torch.nn.Tanh()`
 
+
+
+<!---
+
 <details>
 <summary>Show BertPooler Diagram</summary>
 
@@ -1666,6 +1704,7 @@ The `forward` pass uses:
 
 </details>
 
+-->
 
 
 ```python
@@ -1720,6 +1759,10 @@ Put together **[BertEmbeddings](https://github.com/huggingface/transformers/blob
 
 Now perform a `forward` pass using previous output layer as input.
 
+
+
+<!---
+
 <details>
 <summary>Show BertPooler Diagram</summary>
 
@@ -1729,7 +1772,7 @@ Now perform a `forward` pass using previous output layer as input.
 
 
 </details>
-
+-->
 
 ```python
 class BertModel(BertPreTrainedModel):

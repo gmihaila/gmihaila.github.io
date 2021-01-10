@@ -1057,15 +1057,6 @@ Building wheel for sacremoses (setup.py) ... done
 <h2 id="bert-tokenizer"><strong>Bert Tokenizer</strong><a class="headerlink" href="#bert-tokenizer" title="Permanent link"></a></h2>
 <p>Creating the <code>tokenizer</code> is pretty standard when using the Transformers library.</p>
 <p>Using our newly created <code>tokenizer</code> we'll use it on our two sentence dataset and create the <code>input_sequence</code> that will be used as input for our Bert model.</p>
-<details>
-<summary>Show Bert Tokenizer Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_tokenizer.png" />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="c1"># create BertTokenizer</span>
 <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;bert-base-cased&#39;</span><span class="p">)</span>
 
@@ -1221,16 +1212,6 @@ FORWARD PASS OUTPUT: SequenceClassifierOutput(loss=tensor(0.7454), logits=tensor
 <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html#dropout">torch.nn.Dropout</a> layer for dropout:</li>
 </ul>
 <p><code>self.dropout = nn.Dropout(config.hidden_dropout_prob)</code></p>
-<details>
-
-<summary>Show Bert Embeddings Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_embeddings.png"/>  
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertEmbeddings</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Construct the embeddings from word, position and token_type embeddings.&quot;&quot;&quot;</span>
 
@@ -1395,15 +1376,6 @@ Embeddings Dropout Layer:
 <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html#dropout">torch.nn.Dropout</a> layer for dropout:</li>
 </ul>
 <p><code>self.dropout = nn.Dropout(config.attention_probs_dropout_prob)</code></p>
-<details>
-<summary>Show BertSelfAttention Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_selfattention.png" />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertSelfAttention</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1668,15 +1640,6 @@ Context Reshaped:
 <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html#dropout">torch.nn.Dropout</a> layer for dropout:</li>
 </ul>
 <p><code>self.dropout = nn.Dropout(config.hidden_dropout_prob)</code></p>
-<details>
-<summary>Show BertSelfOutput Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_selfoutput.png"  />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertSelfOutput</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1722,15 +1685,6 @@ Hidden States Normalization Layer:
 <h6 id="-assemble-bertattention"># <strong>Assemble BertAttention</strong><a class="headerlink" href="#-assemble-bertattention" title="Permanent link"></a></h6>
 <p>Put together <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L212">BertSelfAttention</a></strong> layer and <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L337">BertSelfOutput</a></strong> layer to create the <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L351">BertAttention</a> layer</strong>.</p>
 <p>Now perform a <code>forward</code> pass using previous output layer as input.</p>
-<details>
-<summary>Show BertAttention Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_attention.png" />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertAttention</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1857,15 +1811,6 @@ Hidden States Normalization Layer:
 <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Linear.html#linear">torch.nn.Linear</a> layer: </li>
 </ul>
 <p><code>self.dense = nn.Linear(config.hidden_size, config.intermediate_size)</code></p>
-<details>
-<summary>Show BertIntermediate Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_intermediate.png" />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertIntermediate</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1920,15 +1865,6 @@ Hidden States Gelu Activation Function:
 <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Dropout.html#dropout">torch.nn.Dropout</a> layer for dropout:</li>
 </ul>
 <p><code>self.dropout = nn.Dropout(config.hidden_dropout_prob)</code></p>
-<details>
-<summary>Show BertOutput Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_output.png" />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertOutput</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -1974,15 +1910,6 @@ Hidden States Layer Normalization:
 <h6 id="assemble-bertlayer"><strong>Assemble BertLayer</strong><a class="headerlink" href="#assemble-bertlayer" title="Permanent link"></a></h6>
 <p>Put together <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L351">BertAttention</a></strong> layer, <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L400">BertIntermediate</a></strong> layer and <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L415">BertOutput</a></strong> layer to create the <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L429">BertLayer</a> layer</strong>.</p>
 <p>Now perform a <code>forward</code> pass using previous output layer as input.</p>
-<details>
-<summary>Show BertLayer Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_layer.png" />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertLayer</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -2161,16 +2088,6 @@ Hidden States Layer Normalization:
 <h5 id="assemble-bertencoder"><strong>Assemble BertEncoder</strong><a class="headerlink" href="#assemble-bertencoder" title="Permanent link"></a></h5>
 <p>Put together 12 of the <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L429">BertLayer</a></strong> layers ( in this setup <code>config.num_hidden_layers=12</code>) to create the <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L512">BertEncoder</a></strong> layer.</p>
 <p>Now perform a <code>forward</code> pass using previous output layer as input.</p>
-<details>
-<summary>Show BertEncoder Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_encoder.png" />
-</figure>
-
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertEncoder</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -2431,15 +2348,6 @@ Hidden States Layer Normalization:
 <li><a href="https://pytorch.org/docs/stable/generated/torch.nn.Tanh.html#tanh">torch.nn.Tanh</a> activation function layer: </li>
 </ul>
 <p><code>self.activation = torch.nn.Tanh()</code></p>
-<details>
-<summary>Show BertPooler Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_pooler.png" />
-</figure>
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertPooler</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
@@ -2487,16 +2395,6 @@ First Token [CLS] Tanh Activation Function:
 <h4 id="assemble-bertmodel"><strong>Assemble BertModel</strong><a class="headerlink" href="#assemble-bertmodel" title="Permanent link"></a></h4>
 <p>Put together <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L165">BertEmbeddings</a></strong> layer, <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L512">BertEncoder</a></strong> layer and <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L601">BertPooler</a></strong> layer to create the <strong><a href="https://github.com/huggingface/transformers/blob/d944966b19a4d6860bddc7cdc1ba928ca8a0da91/src/transformers/models/bert/modeling_bert.py#L815">BertModel</a></strong> layer.</p>
 <p>Now perform a <code>forward</code> pass using previous output layer as input.</p>
-<details>
-<summary>Show BertPooler Diagram</summary>
-
-<figure>
-  <img src="https://github.com/gmihaila/ml_things/raw/master/notebooks/pytorch/bert_inner_workings/bert_inner_workings_model.png" />
-</figure>
-
-
-</details>
-
 <div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">BertModel</span><span class="p">(</span><span class="n">BertPreTrainedModel</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    The model can behave as an encoder (with only self-attention) as well as a decoder, in which case a layer of</span>
