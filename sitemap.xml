@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/activities/activities/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/useful/useful/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/tutorial_notebooks/bert_inner_workings/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/tutorial_notebooks/pytorchtext_bucketiterator/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/tutorial_notebooks/pretrain_transformers_pytorch/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/tutorial_notebooks/finetune_transformers_pytorch/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/tutorial_notebooks/gpt2_finetune_classification/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://github.com/gmihaila/gmihaila.github.io/resume/resume/</loc>
-     <lastmod>2021-01-10</lastmod>
+     <lastmod>2021-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

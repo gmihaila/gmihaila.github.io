@@ -349,8 +349,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook-private-repo-clone" class="md-nav__link">
-    Notebook Private Repo Clone
+  <a href="#notebook-clone-private-repository-github" class="md-nav__link">
+    Notebook Clone private Repository GitHub
   </a>
   
 </li>
@@ -622,8 +622,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#notebook-private-repo-clone" class="md-nav__link">
-    Notebook Private Repo Clone
+  <a href="#notebook-clone-private-repository-github" class="md-nav__link">
+    Notebook Clone private Repository GitHub
   </a>
   
 </li>
@@ -795,22 +795,31 @@
 <span class="n">password</span> <span class="o">=</span> <span class="n">getpass</span><span class="p">(</span><span class="s1">&#39;Password: &#39;</span><span class="p">)</span>
 </code></pre></div>
 <strong>Details:</strong> Code adapted from StackOverflow <a href="https://stackoverflow.com/a/57539179/11281368">Methods for using Git with Google Colab</a></p>
-<h2 id="notebook-private-repo-clone"><strong>Notebook Private Repo Clone</strong><a class="headerlink" href="#notebook-private-repo-clone" title="Permanent link"></a></h2>
+<h2 id="notebook-clone-private-repository-github"><strong>Notebook Clone private Repository GitHub</strong><a class="headerlink" href="#notebook-clone-private-repository-github" title="Permanent link"></a></h2>
 <p>How to clone a private repo. Will need to login and ask for password. This snippet can be ran multiple times because it first check if the repo was cloned already.</p>
-<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
+<span class="c1"># Repository name.</span>
+<span class="n">repo</span> <span class="o">=</span> <span class="s1">&#39;gmihaila/ml_things&#39;</span>
+
+<span class="c1"># Remove .git extension if present.</span>
+<span class="n">repo</span> <span class="o">=</span> <span class="n">repo</span><span class="p">[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> <span class="k">if</span> <span class="s1">&#39;.git&#39;</span> <span class="ow">in</span> <span class="n">repo</span> <span class="k">else</span> <span class="n">repo</span>
 <span class="c1"># Check if repo wasn&#39;t already cloned</span>
-<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;/content/github_repo&#39;</span><span class="p">):</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;/content&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">repo</span><span class="p">))):</span>
   <span class="c1"># Use GitHub username.</span>
-  <span class="n">u</span> <span class="o">=</span> <span class="s1">&#39;github_username&#39;</span>
+  <span class="n">u</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;GitHub username: &#39;</span><span class="p">)</span>
   <span class="c1"># Ask user for GitHub password.</span>
   <span class="n">p</span> <span class="o">=</span> <span class="n">getpass</span><span class="p">(</span><span class="s1">&#39;GitHub password: &#39;</span><span class="p">)</span>
   <span class="c1"># Clone repo.</span>
-  <span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">$</span><span class="n">u</span><span class="p">:</span><span class="err">$</span><span class="n">p</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">github_username</span><span class="o">/</span><span class="n">github_repo</span><span class="o">.</span><span class="n">git</span>
+  <span class="err">!</span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="err">$</span><span class="n">u</span><span class="p">:</span><span class="err">$</span><span class="n">p</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="err">$</span><span class="n">repo</span>
   <span class="c1"># Remove password variable.</span>
   <span class="n">p</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="c1"># Make sure repo is up to date - pull.</span>
+  <span class="err">!</span><span class="n">git</span> <span class="o">-</span><span class="n">C</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">dialogue_dataset</span> <span class="n">pull</span>
 </code></pre></div>
-<strong>Details:</strong> Code adapted from StackOverflow <a href="https://stackoverflow.com/a/57539179/11281368">Methods for using Git with Google Colab</a></p>
+
+<p><strong>Details:</strong> Code adapted from StackOverflow <a href="https://stackoverflow.com/a/57539179/11281368">Methods for using Git with Google Colab</a></p>
 <h2 id="import-module-given-path"><strong>Import Module Given Path</strong><a class="headerlink" href="#import-module-given-path" title="Permanent link"></a></h2>
 <p>How to import a module from a local path. Make it act as a installed library.</p>
 <p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>

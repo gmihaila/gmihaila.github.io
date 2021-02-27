@@ -181,24 +181,33 @@ password = getpass('Password: ')
 **Details:** Code adapted from StackOverflow [Methods for using Git with Google Colab](https://stackoverflow.com/a/57539179/11281368)
 
 
-## **Notebook Private Repo Clone**
+## **Notebook Clone private Repository GitHub**
 
 How to clone a private repo. Will need to login and ask for password. This snippet can be ran multiple times because it first check if the repo was cloned already.
 
 ```python
 import os
 from getpass import getpass
+# Repository name.
+repo = 'gmihaila/ml_things'
+
+# Remove .git extension if present.
+repo = repo[:-4] if '.git' in repo else repo
 # Check if repo wasn't already cloned
-if not os.path.isdir('/content/github_repo'):
+if not os.path.isdir(os.path.join('/content', os.path.basename(repo))):
   # Use GitHub username.
-  u = 'github_username'
+  u = input('GitHub username: ')
   # Ask user for GitHub password.
   p = getpass('GitHub password: ')
   # Clone repo.
-  !git clone https://$u:$p@github.com/github_username/github_repo.git
+  !git clone https://$u:$p@github.com/$repo
   # Remove password variable.
   p = ''
+else:
+  # Make sure repo is up to date - pull.
+  !git -C /content/dialogue_dataset pull
 ```
+
 **Details:** Code adapted from StackOverflow [Methods for using Git with Google Colab](https://stackoverflow.com/a/57539179/11281368)
 
 
@@ -257,3 +266,18 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 **Details:** Adapted from Stack Overflow [How to check if pytorch is using the GPU?](https://stackoverflow.com/questions/48152674/how-to-check-if-pytorch-is-using-the-gpu).
 
 <br>
+
+
+
+<!---
+TEMPLATE
+
+## **Title**
+
+Description.
+
+```python
+# YOUR CODE HERE
+```
+**Details:** Code adapted from StackOverflow []().
+-->
