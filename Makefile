@@ -12,3 +12,4 @@ docs:
 	git commit -m "Updates to Website"
 	git push origin master
 	echo $"Website updated!"
+
