@@ -7,7 +7,7 @@ George is a PhD candidate at University of North Texas, in the Department of Com
 
 He worked three summers for State Farm as a Data Scientist (DS) and Machine Learning (ML) Engineer, and two years combined of DS and ML Engineer for the University of north Texas High Performance Computing center. He has more than 5 years of combined experience in Natural Language Processing (NLP), Computer Vision (CV), Deep Learning (DL), Reinforcement Learning (RL) and Machine Learning Operations (MLOps).
 
-He was the technical reviewer for the book **Transformers for Natural Language Processing**. This was the **first book** to be published on Transformers model architecture for NLP.
+He was the technical reviewer for the book **Transformers for Natural Language Processing** by *Denis Rothman*. This was the **first book** to be published on Transformers model architecture for NLP.
 
 He is currently working towards his doctoral thesis in casual dialog generation with persona.
 
