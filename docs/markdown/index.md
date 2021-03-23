@@ -3,13 +3,17 @@
 
 ![george_handsome](images/georgem.jpeg)
 
-George is a PhD candidate at University of North Texas, in the Department of Computer Science. He received his Bachelors Degree in Electrical Engineering in his home-country, Romania, and he got his Masters Degree in Computer Science in the United States. 
+George is a PhD candidate at University of North Texas, in the Department of Computer Science. He received his bachelor’s degree in Electrical Engineering in his home-country, Romania, and he got his master’s degree in Computer Science in the United States. 
 
-He worked three summers for State Farm as a Data Scientist (DS) and Machine Learning (ML) Engineer, and he has more than 4 years of experience in Natural Language Processing (NLP), Computer Vision (CV), Deep Learning (DL) and Reinforcement Learning (RL). 
+He worked three summers for State Farm as a Data Scientist (DS) and Machine Learning (ML) Engineer, and two years combined of DS and ML Engineer for the University of north Texas High Performance Computing center. He has more than 5 years of combined experience in Natural Language Processing (NLP), Computer Vision (CV), Deep Learning (DL), Reinforcement Learning (RL) and Machine Learning Operations (MLOps).
+
+He was the technical reviewer for the book **Transformers for Natural Language Processing**. This was the **first book** to be published on Transformers model architecture for NLP.
 
 He is currently working towards his doctoral thesis in casual dialog generation with persona.
 
-**Competencies:** *data science, machine learning, deep learning, high performance computing, Tensorflow2.0, PyTorch, Python, R.*
+In his free time George likes to work on AI related tutorials and projects.
+
+**Competencies:** *data science, machine learning, deep learning, high performance computing, mlops, Tensorflow2.0+, PyTorch, Python, R.*
 
 -------------------------
 
@@ -27,11 +31,6 @@ He is currently working towards his doctoral thesis in casual dialog generation 
 
 *Jan 2017 - Present*
 
--------------------------
-
-## **:books: Reading**
-
-[How Not to Be Wrong: The Power of Mathematical Thinking](https://www.amazon.com/dp/0143127535/ref=cm_sw_em_r_mt_dp_U_9UQ4EbJG0NDEX) by [Jordan Ellenberg](https://www.amazon.com/Jordan-Ellenberg/e/B001K8IUCG/ref=dp_byline_cont_book_1)
 
 -------------------------
 
