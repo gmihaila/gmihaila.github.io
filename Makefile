@@ -3,11 +3,11 @@
 # Global variables
 PYTHON_INTERPRETER = python3
 
-# Check that docs can build
-test:
+# Run docs locally.
+servedocs:
 	cd docs && mkdocs serve
 
-# Check that docs can build
+# Check that docs can build.
 docs:
 	mkdocs build --config-file docs/mkdocs.yml
 	cp -rf docs/site/* .
