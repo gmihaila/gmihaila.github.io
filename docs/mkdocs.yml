@@ -1,3 +1,4 @@
+# Set up navigation: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
 site_name: George Mihaila
 site_url: https://github.com/gmihaila/gmihaila.github.io
 repo_name: 'Machine Learning Things'
@@ -101,15 +102,25 @@ markdown_extensions:
 
 theme:
     name: material
-    custom_dir: theme
     icon:
-        logo: material/book-open-page-variant
+        logo: octicons/cpu-24
+        repo: fontawesome/brands/github
     language: en
     features:
         - instant
+        - header.autohide
+        - search.highlight
+        - search.share
+        - search.suggest
+        - navigation.top
+#        - navigation.sections
+        - navigation.expand
+#        - navigation.tabs
+#        - toc.integrate # table of contents is rendered as part of the navigation
     palette:
-        primary: black
-        accent: black
+      scheme: slate
+      primary: black
+      accent: black
     font:
         text: Roboto
         code: Roboto Mono
@@ -119,15 +130,13 @@ extra:
     social:
     - icon: fontawesome/brands/github
       link: https://github.com/gmihaila
+      name: gmihaila
+    - icon: fontawesome/brands/medium
+      link: https://gmihaila.medium.com/
+      name: gmihaila
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/mihailageorge
-
-
-extra_css:
-    - assets/pymdownx-extras/extra.css
-
-extra_javascript:
-    - assets/pymdownx-extras/extra.js
+      name: mihailageorge
 
 plugins:
     - search

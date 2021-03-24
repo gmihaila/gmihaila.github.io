@@ -1,7 +1,11 @@
-.PHONY: docs
+.PHONY: test docs
 
 # Global variables
 PYTHON_INTERPRETER = python3
+
+# Check that docs can build
+test:
+	cd docs && mkdocs serve
 
 # Check that docs can build
 docs:
