@@ -15,12 +15,21 @@ All files needed to build website are under `docs/`.
 ## Install required packages
 
 ```bash
-$pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## Building documentation
 
+Check `$ make help` for more info.
+
+### Rebuild docs automatically and push to github:
+
+```bash
+$ make servedocs
+```
+
+### Rebuild docs automatically and display locally:
+
 ```bash
 $ make docs
 ```
-
