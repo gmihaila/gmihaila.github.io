@@ -150,7 +150,7 @@ from transformers import (set_seed,
 # Set seed for reproducibility.
 set_seed(123)
 
-# Number of training epochs (authors recommend between 2 and 4).
+# Number of training epochs (authors on fine-tuning Bert recommend between 2 and 4).
 epochs = 4
 
 # Number of batches - depending on the max sequence length and GPU memory.
