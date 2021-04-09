@@ -1,5 +1,24 @@
 # **:surfer: Activities**
 
+## **[Tutorial: Text Classification using GPT2 and Pytorch](https://www.aicamp.ai/event/eventdetails/W2021040910)**
+
+:computer: **[Code](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb){:target="_blank"}** | :movie_camera: **[Slides](https://gmihaila.github.io/presentations/gpt2_text_classification.html){:target="_blank"}**
+
+:calendar: **april 09, 2021** |
+*Zoom*
+
+* Text classification is a very common problem that needs solving when dealing with text data.
+* We’ve all seen and know how to use Encoder Transformer models like Bert and RoBerta for text classification but did you know you can use a Decoder Transformer model like GPT2 for text classification?
+* In this tutorial, I will walk you through on how to use GPT2 from HuggingFace for text classification.
+* We will start with downloading customized dataset, installing required componments, selecting pre-trained models, and then train the model. we will finally evaluate the results and how to optimize further.
+
+
+**Duration:** *1 Hour 45 Minutes*
+
+-------------------------
+
+
+
 ## **[GPU Technology Conference (GTC)](https://www.nvidia.com/en-us/gtc/)**
 
 :computer: **[Code](https://github.com/gmihaila/gtc2020_instructor_training){:target="_blank"}** | :movie_camera: **[Slides](https://gmihaila.github.io/presentations/gtc2020.html){:target="_blank"}**
