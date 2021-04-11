@@ -2,7 +2,8 @@
 
 ## **[Tutorial: Text Classification using GPT2 and Pytorch](https://www.aicamp.ai/event/eventdetails/W2021040910)**
 
-:computer: **[Code](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb){:target="_blank"}** | :movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/activities/text_classification_using_gpt2_and_pytorch/slides.html){:target="_blank"}**
+:computer: **[Code](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb){:target="_blank"}** | 
+:movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/activities/text_classification_using_gpt2_and_pytorch/slides.html){:target="_blank"}**
 
 :calendar: **april 09, 2021** |
 *Zoom*
@@ -21,7 +22,8 @@
 
 ## **[GPU Technology Conference (GTC)](https://www.nvidia.com/en-us/gtc/)**
 
-:computer: **[Code](https://github.com/gmihaila/gtc2020_instructor_training){:target="_blank"}** | :movie_camera: **[Slides](https://gmihaila.github.io/presentations/gtc2020.html){:target="_blank"}**
+:computer: **[Code](https://github.com/gmihaila/gtc2020_instructor_training){:target="_blank"}** | 
+:movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/presentations/gtc2020/slides.html){:target="_blank"}**
 
 :calendar: **march 20-22, 2020** |
 *San Jose California*
@@ -38,7 +40,7 @@
 ## **Find New Sentiments in Text Data**
 
 :computer: **[Code](https://github.com/gmihaila/unt_hpc/tree/master/workshops/march_3_2019){:target="_blank"}** | 
-:movie_camera: **[Slides](https://gmihaila.github.io/presentations/find_new_sentiment.html){:target="_blank"}**
+:movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/presentations/find_new_sentiment/slides.html){:target="_blank"}**
 
 :calendar: **march 3, 2020** |
 *University of North Texas DP F223*
@@ -57,7 +59,7 @@
 ## **Intro to using Git Lab**
 
 :computer: **[Info](https://unt-rits.github.io/){:target="_blank"}** | 
-:movie_camera: **[Slides](https://gmihaila.github.io/presentations/talon_gitlab_intro.html){:target="_blank"}**
+:movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/presentations/talon_gitlab_intro/slides.html){:target="_blank"}**
 
 :calendar: **may 3, 2019** |
 *University of North Texas DP F285*
@@ -72,7 +74,7 @@
 ## **Intro to Word Embeddings - NLP Tools on Talon**
 
 :computer: **[Info](https://unt-rits.github.io/){:target="_blank"}** | 
-:movie_camera: **[Slides](https://gmihaila.github.io/presentations/talon_word_emb_intro.html){:target="_blank"}**
+:movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/presentations/talon_word_emb_intro/slides.html){:target="_blank"}**
 
 :calendar: **may 2, 2019** |
 *University of North Texas DP F223*
@@ -87,7 +89,7 @@
 ## **Using Python and Jupyter Notebooks on Talon**
 
 :computer: **[Info](https://unt-rits.github.io/){:target="_blank"}** | 
-:movie_camera: **[Slides](https://gmihaila.github.io/presentations/talon_python_jupyter.html){:target="_blank"}**
+:movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/presentations/talon_python_jupyter/slides.html){:target="_blank"}**
 
 :calendar: **may 1, 2019** |
 *University of North Texas DP F223*
@@ -102,7 +104,7 @@
 ## **Machine Learning - Neural Networks on Talon**
 
 :computer: **[Info](https://unt-rits.github.io){:target="_blank"}** | 
-:movie_camera: **[Slides](https://gmihaila.github.io/presentations/deep_learning_workshop.html){:target="_blank"}**
+:movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/presentations/deep_learning_workshop/slides.html){:target="_blank"}**
 
 :calendar: **november 30, 2018** |
 *University of North Texas GAB 535*
