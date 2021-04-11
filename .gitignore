@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+# Ignore any Marp files.
+marp
+
 # C extensions
 *.so
 

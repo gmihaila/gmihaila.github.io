@@ -1,6 +1,8 @@
 # Global variables
 PYTHON_INTERPRETER = python3
 
+export PATH := $(shell pwd)/:$(PATH)
+
 .PHONY: clean-build
 clean-build: ## Remove build artifacts
 	@echo "+ $@"
@@ -28,6 +30,19 @@ servedocs: ## Rebuild docs automatically and push to github.
 	git commit -m "Updates to Website"
 	git push origin master
 	@echo "Website updated! Check it out: https://gmihaila.github.io "
+
+.PHONY: marp
+marp: ## Download Marp locally and setup.
+	bash setup_marp.sh
+	@echo "Use ./marp --help"
+
+.PHONY: servemarp
+servemarp: ## Serve Marp locally.
+	./marp -s ./docs/markdown/presentations
+
+.PHONY: presentations
+presentations: ## Serve Marp locally.
+	./marp --input-dir ./docs/markdown/presentations/
 
 .PHONY: help
 help: ## Display make help.

@@ -2,7 +2,7 @@
 
 ## **[Tutorial: Text Classification using GPT2 and Pytorch](https://www.aicamp.ai/event/eventdetails/W2021040910)**
 
-:computer: **[Code](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb){:target="_blank"}** | :movie_camera: **[Slides](https://gmihaila.github.io/presentations/gpt2_text_classification.html){:target="_blank"}**
+:computer: **[Code](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb){:target="_blank"}** | :movie_camera: **[Slides](https://gmihaila.github.io/docs/markdown/activities/text_classification_using_gpt2_and_pytorch/slides.html){:target="_blank"}**
 
 :calendar: **april 09, 2021** |
 *Zoom*
