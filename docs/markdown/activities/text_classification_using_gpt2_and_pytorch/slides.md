@@ -1,6 +1,6 @@
 ---
-title: Markdow presentatioin
-description: An example slide deck created using Marpi
+title: Text Classification using GPT-2
+description: Text classification is a very common problem that needs solving when dealing with text data. We’ve all seen and know how to use Encoder Transformer models like Bert and RoBerta for text classification but did you know you can use a Decoder Transformer model like GPT2 for text classification? In this tutorial, I will walk you through on how to use GPT2 from HuggingFace for text classification.
 theme: default
 _class: lead
 paginate: true

@@ -4,6 +4,7 @@ __pycache__/
 
 # Ignore any Marp files.
 marp
+activities.html
 
 # C extensions
 *.so
