@@ -31,18 +31,18 @@ servedocs: ## Rebuild docs automatically and push to github.
 	git push origin master
 	@echo "Website updated! Check it out: https://gmihaila.github.io "
 
-.PHONY: marp
-marp: ## Download Marp locally and setup.
+.PHONY: setup_marp
+setup_marp: ## Download Marp locally and setup.
 	bash setup_marp.sh
 	@echo "Use ./marp --help"
 
-.PHONY: servemarp
-servemarp: ## Serve Marp locally.
-	./marp -s ./docs/markdown/presentations
+.PHONY: marp
+marp: ## Serve Marp locally.
+	./marp -s ./docs/markdown/activities
 
-.PHONY: presentations
-presentations: ## Serve Marp locally.
-	./marp --input-dir ./docs/markdown/presentations/
+.PHONY: servemarp
+servemarp: ## Convert markdowns to slides using Marp.
+	./marp --input-dir ./docs/markdown/activities/
 
 .PHONY: help
 help: ## Display make help.

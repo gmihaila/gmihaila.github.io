@@ -269,7 +269,7 @@ Encode text into numbers.
 ---
 # Inner Workings
 
-- [Detailed diagram]()
+- [Detailed diagram](https://gmihaila.github.io/docs/markdown/activities/text_classification_using_gpt2_and_pytorch/gpt2_inner_workings.html)
 
 
 
