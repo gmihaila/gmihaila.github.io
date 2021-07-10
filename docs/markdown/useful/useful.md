@@ -281,3 +281,14 @@ Description.
 ```
 **Details:** Code adapted from StackOverflow []().
 -->
+
+## **Get all files paths**
+
+How to get all files paths from a folder with multiple subpaths.
+
+```python
+from pathlib import Path
+result = list(Path(".").rglob("*.[tT][xX][tT]"))
+```
+**Details:** The `"*.[tT][xX][tT]"` is for `.txt` extension where letters can vary (.txt or .TXT). Code adapted from StackOverflow [Recursive sub folder search and return files in a list python
+](https://stackoverflow.com/a/18394205).
