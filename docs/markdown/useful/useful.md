@@ -301,6 +301,7 @@ logging.basicConfig(
 )
 
 logging.info("This is a test")
+
 ```
 **Details:** This is a perfect setup to log everything in both log file and stdout at the same time. Code adapted from StackOverflow [Making Python loggers output all messages to stdout in addition to log file
 ](https://stackoverflow.com/a/44760039).
