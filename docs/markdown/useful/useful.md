@@ -265,9 +265,46 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 ```
 **Details:** Adapted from Stack Overflow [How to check if pytorch is using the GPU?](https://stackoverflow.com/questions/48152674/how-to-check-if-pytorch-is-using-the-gpu).
 
+
+
+
+
+## **Get all files paths**
+
+How to get all files paths from a folder with multiple subpaths.
+
+```python
+from pathlib import Path
+result = list(Path(".").rglob("*.[tT][xX][tT]"))
+```
+**Details:** The `"*.[tT][xX][tT]"` is for `.txt` extension where letters can vary (.txt or .TXT). Code adapted from StackOverflow [Recursive sub folder search and return files in a list python
+](https://stackoverflow.com/a/18394205).
+
+
+## **Title**
+
+Logging in both log file and stdout.
+
+```python
+import logging
+import sys
+
+file_handler = logging.FileHandler(filename='tmp.log')
+stdout_handler = logging.StreamHandler(sys.stdout)
+handlers = [file_handler, stdout_handler]
+
+logging.basicConfig(
+    level=logging.INFO, 
+    format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s',
+    handlers=handlers
+)
+
+logging.info("This is a test")
+```
+**Details:** This is a perfect setup to logeverything in both log file and stdout at the same time. Code adapted from StackOverflow [Making Python loggers output all messages to stdout in addition to log file
+](https://stackoverflow.com/a/44760039).
+
 <br>
-
-
 
 <!---
 TEMPLATE
@@ -281,14 +318,3 @@ Description.
 ```
 **Details:** Code adapted from StackOverflow []().
 -->
-
-## **Get all files paths**
-
-How to get all files paths from a folder with multiple subpaths.
-
-```python
-from pathlib import Path
-result = list(Path(".").rglob("*.[tT][xX][tT]"))
-```
-**Details:** The `"*.[tT][xX][tT]"` is for `.txt` extension where letters can vary (.txt or .TXT). Code adapted from StackOverflow [Recursive sub folder search and return files in a list python
-](https://stackoverflow.com/a/18394205).
