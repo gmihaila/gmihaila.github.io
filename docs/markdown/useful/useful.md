@@ -289,19 +289,20 @@ Logging in both log file and stdout.
 import logging
 import sys
 
-file_handler = logging.FileHandler(filename='tmp.log')
+# Setup logging to show in stdout and log file.
+file_handler = logging.FileHandler('{}.log'.format(os.path.splitext(__file__)[0]))
 stdout_handler = logging.StreamHandler(sys.stdout)
 handlers = [file_handler, stdout_handler]
-
 logging.basicConfig(
-    level=logging.INFO, 
-    format='[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s',
-    handlers=handlers
+    format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+    datefmt="%m/%d/%Y %H:%M:%S",
+    handlers=handlers,
+    level=logging.DEBUG,
 )
 
 logging.info("This is a test")
 ```
-**Details:** This is a perfect setup to logeverything in both log file and stdout at the same time. Code adapted from StackOverflow [Making Python loggers output all messages to stdout in addition to log file
+**Details:** This is a perfect setup to log everything in both log file and stdout at the same time. Code adapted from StackOverflow [Making Python loggers output all messages to stdout in addition to log file
 ](https://stackoverflow.com/a/44760039).
 
 <br>
