@@ -163,7 +163,7 @@ img[alt~="center"] {
 * It's based on open-source.
 * Was founded in 2016 by Clement Delangue, Julien Chaumond, Thomas Wolf.
 * Contains thousands of language models on 22 tasks.
-* Most model implementations come in Tensroflow 2 and PyTorch.
+* Most model implementations come in TensorFlow 2 and PyTorch.
 * Contains 449+ datasets on various NLP tasks.
 * Let's check it out [huggingface.co](https://huggingface.co).
 
