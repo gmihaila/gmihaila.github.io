@@ -68,7 +68,7 @@ img[alt~="center"] {
 ## How I got here?
 
 * Neural networks are the reason I started my PhD in computer science. 
-* The professor I talked asked me if I wanted to work on natural language processing and neural networks. 
+* The professor I talked with asked me if I wanted to work on natural language processing and neural networks. 
 * The notion of neural networks sounded very exciting to me. 
 * That’s when I knew **that** is what I want to do for my career.
 
@@ -78,7 +78,7 @@ img[alt~="center"] {
 
 ## In my free time
 
-* I like to share my knowledge on NLP: I write tutorials from scratch on state-of-the-art language models like Bert and GPT2 with over 10k views. Check them out [here](https://gmihaila.medium.com).
+* I like to share my knowledge on NLP: I wrote tutorials from scratch on state-of-the-art language models like Bert and GPT2 with over 10k views. Check them out [here](https://gmihaila.medium.com).
 * Contribute to open-source – Hugging Face Transformer and Dataset library.
 * Technical reviewer for one of the first books published on transformers models for NLP. The book is called **Transformers for NLP in Python**, by *Denis Rothman*.
 * Technical reviewer for the next edition of the **Transformers for NLP in Python** book.
