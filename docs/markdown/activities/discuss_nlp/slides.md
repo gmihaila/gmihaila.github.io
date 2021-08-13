@@ -79,7 +79,7 @@ img[alt~="center"] {
 ## In my free time
 
 * I like to share my knowledge on NLP: I wrote tutorials from scratch on state-of-the-art language models like Bert and GPT2 with over 10k views. Check them out [here](https://gmihaila.medium.com).
-* Contribute to open-source – Hugging Face Transformer and Dataset library.
+* Contribute to open-source – Hugging Face `Transformers` and `Datasets`.
 * Technical reviewer for one of the first books published on transformers models for NLP. The book is called **Transformers for NLP in Python**, by *Denis Rothman*.
 * Technical reviewer for the next edition of the **Transformers for NLP in Python** book.
 * I delivered a webinar on my tutorial **GPT2 for Text Classification** with 300+ participants.
