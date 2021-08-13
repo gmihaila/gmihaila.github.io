@@ -404,6 +404,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-all-files-paths" class="md-nav__link">
+    Get all files paths
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    Title
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -680,6 +694,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-all-files-paths" class="md-nav__link">
+    Get all files paths
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    Title
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -870,6 +898,33 @@
 <p><div class="highlight"><pre><span></span><code><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
 </code></pre></div>
 <strong>Details:</strong> Adapted from Stack Overflow <a href="https://stackoverflow.com/questions/48152674/how-to-check-if-pytorch-is-using-the-gpu">How to check if pytorch is using the GPU?</a>.</p>
+<h2 id="get-all-files-paths"><strong>Get all files paths</strong><a class="headerlink" href="#get-all-files-paths" title="Permanent link"></a></h2>
+<p>How to get all files paths from a folder with multiple subpaths.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">rglob</span><span class="p">(</span><span class="s2">&quot;*.[tT][xX][tT]&quot;</span><span class="p">))</span>
+</code></pre></div>
+<strong>Details:</strong> The <code>"*.[tT][xX][tT]"</code> is for <code>.txt</code> extension where letters can vary (.txt or .TXT). Code adapted from StackOverflow <a href="https://stackoverflow.com/a/18394205">Recursive sub folder search and return files in a list python
+</a>.</p>
+<h2 id="title"><strong>Title</strong><a class="headerlink" href="#title" title="Permanent link"></a></h2>
+<p>Logging in both log file and stdout.</p>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># Setup logging to show in stdout and log file.</span>
+<span class="n">file_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">FileHandler</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">.log&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">stdout_handler</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">StreamHandler</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+<span class="n">handlers</span> <span class="o">=</span> <span class="p">[</span><span class="n">file_handler</span><span class="p">,</span> <span class="n">stdout_handler</span><span class="p">]</span>
+<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
+    <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">%(asctime)s</span><span class="s2"> - </span><span class="si">%(levelname)s</span><span class="s2"> - </span><span class="si">%(name)s</span><span class="s2"> - </span><span class="si">%(message)s</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="n">datefmt</span><span class="o">=</span><span class="s2">&quot;%m/</span><span class="si">%d</span><span class="s2">/%Y %H:%M:%S&quot;</span><span class="p">,</span>
+    <span class="n">handlers</span><span class="o">=</span><span class="n">handlers</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;This is a test&quot;</span><span class="p">)</span>
+</code></pre></div>
+<strong>Details:</strong> This is a perfect setup to log everything in both log file and stdout at the same time. Code adapted from StackOverflow <a href="https://stackoverflow.com/a/44760039">Making Python loggers output all messages to stdout in addition to log file
+</a>.</p>
 <p><br></p>
                 
               

@@ -1,0 +1,664 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Discussion around my research in NLP and around the HuggingFace library.">
+      
+      
+      
+      
+        <link rel="canonical" href="https://github.com/gmihaila/gmihaila.github.io/activities/discuss_nlp/slides/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
+    
+    
+      
+        <title>Discuss NLP & 🤗 Library - George Mihaila</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2c0c5eaf.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="manifest" href="../../../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="black">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#discuss-nlp---library" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="George Mihaila" class="md-header__button md-logo" aria-label="George Mihaila" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.75 8a.75.75 0 0 0-.75.75v6.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-6.5a.75.75 0 0 0-.75-.75h-6.5zm.75 6.5v-5h5v5h-5z"/><path fill-rule="evenodd" d="M15.25 1a.75.75 0 0 1 .75.75V4h2.25c.966 0 1.75.784 1.75 1.75V8h2.25a.75.75 0 0 1 0 1.5H20v5h2.25a.75.75 0 0 1 0 1.5H20v2.25A1.75 1.75 0 0 1 18.25 20H16v2.25a.75.75 0 0 1-1.5 0V20h-5v2.25a.75.75 0 0 1-1.5 0V20H5.75A1.75 1.75 0 0 1 4 18.25V16H1.75a.75.75 0 0 1 0-1.5H4v-5H1.75a.75.75 0 0 1 0-1.5H4V5.75C4 4.784 4.784 4 5.75 4H8V1.75a.75.75 0 0 1 1.5 0V4h5V1.75a.75.75 0 0 1 .75-.75zm3 17.5a.25.25 0 0 0 .25-.25V5.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h12.5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            George Mihaila
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Discuss NLP & 🤗 Library
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/gmihaila/machine_learning_things/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Machine Learning Things
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="George Mihaila" class="md-nav__button md-logo" aria-label="George Mihaila" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8.75 8a.75.75 0 0 0-.75.75v6.5c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75v-6.5a.75.75 0 0 0-.75-.75h-6.5zm.75 6.5v-5h5v5h-5z"/><path fill-rule="evenodd" d="M15.25 1a.75.75 0 0 1 .75.75V4h2.25c.966 0 1.75.784 1.75 1.75V8h2.25a.75.75 0 0 1 0 1.5H20v5h2.25a.75.75 0 0 1 0 1.5H20v2.25A1.75 1.75 0 0 1 18.25 20H16v2.25a.75.75 0 0 1-1.5 0V20h-5v2.25a.75.75 0 0 1-1.5 0V20H5.75A1.75 1.75 0 0 1 4 18.25V16H1.75a.75.75 0 0 1 0-1.5H4v-5H1.75a.75.75 0 0 1 0-1.5H4V5.75C4 4.784 4.784 4 5.75 4H8V1.75a.75.75 0 0 1 1.5 0V4h5V1.75a.75.75 0 0 1 .75-.75zm3 17.5a.25.25 0 0 0 .25-.25V5.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h12.5z"/></svg>
+
+    </a>
+    George Mihaila
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/gmihaila/machine_learning_things/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Machine Learning Things
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../activities/" class="md-nav__link">
+        Activities
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../useful/useful/" class="md-nav__link">
+        Useful Code
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Tutorial Notebooks
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tutorial Notebooks" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tutorial Notebooks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial_notebooks/bert_inner_workings/" class="md-nav__link">
+        Bert Inner Workings
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial_notebooks/pytorchtext_bucketiterator/" class="md-nav__link">
+        PyTorchText BucketIterator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial_notebooks/pretrain_transformers_pytorch/" class="md-nav__link">
+        Pretrain Transformers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial_notebooks/finetune_transformers_pytorch/" class="md-nav__link">
+        Finetune Transformers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tutorial_notebooks/gpt2_finetune_classification/" class="md-nav__link">
+        GPT2 Finetune Classification
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resume/resume/" class="md-nav__link">
+        Resume
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/gmihaila/machine_learning_things/tree/master/docs/src/markdown/activities/discuss_nlp/slides.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+<h1 id="discuss-nlp---library"> Discuss NLP &amp; 🤗 Library<a class="headerlink" href="#discuss-nlp---library" title="Permanent link"></a></h1>
+<p><br/><br/></p>
+<p><strong>George Mihaila</strong></p>
+<p><em>PhD Candidate Computer Science</em>
+<em>University of North Texas</em></p>
+<p><br/></p>
+<hr />
+<h1 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Permanent link"></a></h1>
+<ul>
+<li>This is not a thorough tutorial on NLP.</li>
+<li>This is not a thorough tutorial on the Hugging Face Library.</li>
+<li>This presentation is to encourage curiosity and further exploration of NLP and the Hugging Face Library.</li>
+</ul>
+<hr />
+<h1 id="agenda">Agenda<a class="headerlink" href="#agenda" title="Permanent link"></a></h1>
+<ul>
+<li>About me 💬</li>
+<li>Natural Language Processing 📖</li>
+<li>Chatbots with Attitude 🗣️</li>
+<li>Topic Shift Detection 🕵️‍</li>
+<li>Identify Innovation 💡</li>
+<li>🤔 🤗 ⚙️</li>
+<li>My Tutorials 📚</li>
+<li>Conclusion 🤔</li>
+<li>Questions 🖐</li>
+<li>Contact 🎣</li>
+</ul>
+<p><br></p>
+<hr />
+<h1 id="about-me-">About me 💬<a class="headerlink" href="#about-me-" title="Permanent link"></a></h1>
+<ul>
+<li>PhD candidate in computer science at University of North Texas (UNT).</li>
+<li>Research area in Natural Language Processing (NLP) with focus on dialogue generation with persona.</li>
+<li>Four years of combined experience in research and industry on various Artificial Intelligence (AI) and Machine Learning (ML) projects. Check my resume <a href="https://gmihaila.github.io/resume/resume/">here</a>.</li>
+<li><strong>Interest areas:</strong> <code>Neural Networks</code>, <code>Deep Learning</code>, <code>Natural Language Processing</code>, <code>Reinforcement Learning</code>, <code>Computer Vision</code>,
+<code>Scaling Machine Learning</code>.</li>
+</ul>
+<hr />
+<h1 id="about-me-_1">About me 💬<a class="headerlink" href="#about-me-_1" title="Permanent link"></a></h1>
+<h2 id="how-i-got-here">How I got here?<a class="headerlink" href="#how-i-got-here" title="Permanent link"></a></h2>
+<ul>
+<li>Neural networks are the reason I started my PhD in computer science. </li>
+<li>The professor I talked asked me if I wanted to work on natural language processing and neural networks. </li>
+<li>The notion of neural networks sounded very exciting to me. </li>
+<li>That’s when I knew <strong>that</strong> is what I want to do for my career.</li>
+</ul>
+<hr />
+<h1 id="about-me-_2">About me 💬<a class="headerlink" href="#about-me-_2" title="Permanent link"></a></h1>
+<h2 id="in-my-free-time">In my free time<a class="headerlink" href="#in-my-free-time" title="Permanent link"></a></h2>
+<ul>
+<li>I like to share my knowledge on NLP: I write tutorials from scratch on state-of-the-art language models like Bert and GPT2 with over 10k views. Check them out <a href="https://gmihaila.medium.com">here</a>.</li>
+<li>Contribute to open-source – Hugging Face Transformer and Dataset library.</li>
+<li>Technical reviewer for one of the first books published on transformers models for NLP. The book is called <strong>Transformers for NLP in Python</strong>, by <em>Denis Rothman</em>.</li>
+<li>Technical reviewer for the next edition of the <strong>Transformers for NLP in Python</strong> book.</li>
+<li>I delivered a webinar on my tutorial <strong>GPT2 for Text Classification</strong> with 300+ participants.</li>
+<li>My personal project <a href="https://github.com/gmihaila/ml_things">ML Things</a> for things I find useful and speed up my work with ML. </li>
+</ul>
+<hr />
+<h1 id="natural-language-processing-">Natural Language Processing 📖<a class="headerlink" href="#natural-language-processing-" title="Permanent link"></a></h1>
+<h2 id="wikipedia">Wikipedia<a class="headerlink" href="#wikipedia" title="Permanent link"></a></h2>
+<p><strong>Natural language processing (NLP)</strong> is a subfield of linguistics, computer science, and artificial intelligence <strong>concerned with the interactions between computers and human language</strong> &hellip;</p>
+<p>&hellip; The result is a computer capable of <strong>"understanding"</strong> the contents of documents, including the contextual nuances of the language within them.</p>
+<hr />
+<h1 id="chatbots-with-attitude-">Chatbots with Attitude 🗣️<a class="headerlink" href="#chatbots-with-attitude-" title="Permanent link"></a></h1>
+<h2 id="research">Research<a class="headerlink" href="#research" title="Permanent link"></a></h2>
+<ul>
+<li>My main research area is in NLP with focus on dialogue generation with persona. </li>
+<li>I use the Friends TV corpus to train language models that can capture each of the main six characters personas. </li>
+<li>Imagine a chatbot that sounds like Joey or Chandler. </li>
+<li>This will make chatbots systems more engaging and allow shifting personas depending on a customer's mood.</li>
+<li>It can significantly increase customer experience.</li>
+</ul>
+<hr />
+<h1 id="chatbots-with-attitude-_1">Chatbots with Attitude 🗣️<a class="headerlink" href="#chatbots-with-attitude-_1" title="Permanent link"></a></h1>
+<h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link"></a></h2>
+<ul>
+<li>Create dataset around each of the six main character in the form of <code>context - response</code> pairs from all ten seasons.</li>
+<li><strong>Context:</strong> dialogue history of target character or other characters.</li>
+<li><strong>Response:</strong> sentence that target character responds.</li>
+<li>Train data: <code>Season 1 - Season 8</code></li>
+<li>Validation data: <code>Season 9</code></li>
+<li>Test data: <code>Season: 10</code></li>
+</ul>
+<hr />
+<h1 id="chatbots-with-attitude-_2">Chatbots with Attitude 🗣️<a class="headerlink" href="#chatbots-with-attitude-_2" title="Permanent link"></a></h1>
+<h2 id="model">Model<a class="headerlink" href="#model" title="Permanent link"></a></h2>
+<ul>
+<li>Use GPT-2 to generate responses as baseline model.</li>
+<li>Fine-tune GPT-2 on each of the six main characters dataset (six different GPT-2 models)</li>
+<li>Use special token separator between context and response <code>&lt;SPEAKER&gt;</code>.</li>
+</ul>
+<hr />
+<h1 id="chatbots-with-attitude-_3">Chatbots with Attitude 🗣️<a class="headerlink" href="#chatbots-with-attitude-_3" title="Permanent link"></a></h1>
+<h2 id="evaluation">Evaluation<a class="headerlink" href="#evaluation" title="Permanent link"></a></h2>
+<ul>
+<li>Use Bilingual Evaluation Understudy (BLEU) score to evaluate model performance (higher is better).</li>
+<li>Evaluate each of the six models on each of the six characters validation data.</li>
+<li>Each of the six models should have the highest BLEU score on their target character's validation data and lower on other character's validation data.</li>
+</ul>
+<hr />
+<h1 id="topic-shift-detection-">Topic Shift Detection 🕵️‍<a class="headerlink" href="#topic-shift-detection-" title="Permanent link"></a></h1>
+<ul>
+<li>Detect sudden topic shift in dialogue conversation.</li>
+<li>Help determine when a conversation changes topic and find out which topic is a speaker more interested in.</li>
+<li>Use similar <code>context-response</code> format data to classify if the response is in a different topic or not.</li>
+</ul>
+<hr />
+<h1 id="identify-innovation-">Identify Innovation 💡<a class="headerlink" href="#identify-innovation-" title="Permanent link"></a></h1>
+<ul>
+<li>Use patent data to automatically detect fintech innovations.</li>
+<li><em>Identifying FinTech Innovations Using BERT</em> full paper published in <strong>IEEE Big Data 2020</strong>.</li>
+<li>Classify a patent abstract into six types of fintech categories. Check more <a href="https://github.com/gmihaila/fintech_patents">here</a>.</li>
+</ul>
+<hr />
+<h1 id="--">🤔 🤗 ⚙️<a class="headerlink" href="#--" title="Permanent link"></a></h1>
+<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link"></a></h2>
+<ul>
+<li>Hugging Face is a company that offer state-of-the art models and solutions in NLP.</li>
+<li>It's based on open-source.</li>
+<li>Was founded in 2016 by Clement Delangue, Julien Chaumond, Thomas Wolf.</li>
+<li>Contains thousands of language models on 22 tasks.</li>
+<li>Most model implementations come in Tensroflow 2 and PyTorch.</li>
+<li>Contains 449+ datasets on various NLP tasks.</li>
+<li>Let's check it out <a href="https://huggingface.co">huggingface.co</a>.</li>
+</ul>
+<hr />
+<h1 id="--_1">🤔 🤗 ⚙️<a class="headerlink" href="#--_1" title="Permanent link"></a></h1>
+<h2 id="transformers">Transformers<a class="headerlink" href="#transformers" title="Permanent link"></a></h2>
+<ul>
+<li>Library dedicated to transformers models architectures.</li>
+<li>Contains models implementation, tokenizers and pre-trained weights from published papers.</li>
+<li>Let's check it out <a href="https://huggingface.co/transformers/quicktour.html">huggingface.co/transformers</a></li>
+<li>Let's check their GitHub out <a href="https://github.com/huggingface/transformers">github.com/huggingface/transformers</a></li>
+</ul>
+<hr />
+<h1 id="--_2">🤔 🤗 ⚙️<a class="headerlink" href="#--_2" title="Permanent link"></a></h1>
+<h2 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link"></a></h2>
+<ul>
+<li>Library dedicated to popular NLP datasets for various tasks: summarization, sentiment, dialogue, etc.</li>
+<li>Contains efficient loading and formatting of large datasets.</li>
+<li>Let's check their documentation out <a href="https://huggingface.co/docs/datasets/">huggingface.co/docs/datasets/</a></li>
+</ul>
+<hr />
+<h1 id="my-tutorials-">My Tutorials 📚<a class="headerlink" href="#my-tutorials-" title="Permanent link"></a></h1>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+<th align="left">Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong><img alt="🍇" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f347.svg" title=":grapes:" /> Better Batches with PyTorchText BucketIterator</strong></td>
+<td align="left"><em>How to use PyTorchText BucketIterator to sort text data for better batching.</em></td>
+<td align="left"><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/pytorchtext_bucketiterator.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> <a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/pytorchtext_bucketiterator.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a> <a href="https://www.dropbox.com/s/7gyq6qup6y43z9b/pytorchtext_bucketiterator.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a> <a href="https://gmihaila.medium.com/better-batches-with-pytorchtext-bucketiterator-12804a545e2a"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a> <a href="https://gmihaila.github.io/tutorial_notebooks/pytorchtext_bucketiterator/"><img alt="Generic badge" src="https://img.shields.io/badge/Blog-Post-blue.svg" /></a></td>
+</tr>
+<tr>
+<td align="left"><strong><img alt="🐶" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f436.svg" title=":dog:" /> Pretrain Transformers Models in PyTorch using Hugging Face Transformers</strong></td>
+<td align="left"><em>Pretrain 67 transformers models on your custom dataset.</em></td>
+<td align="left"><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/pretrain_transformers_pytorch.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> <a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/pretrain_transformers_pytorch.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a> <a href="https://www.dropbox.com/s/rkq79hwzhqa6x8k/pretrain_transformers_pytorch.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a> <a href="https://gmihaila.medium.com/pretrain-transformers-models-in-pytorch-using-transformers-ecaaec00fbaa"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a> <a href="https://gmihaila.github.io/tutorial_notebooks/pretrain_transformers_pytorch/"><img alt="Generic badge" src="https://img.shields.io/badge/Blog-Post-blue.svg" /></a></td>
+</tr>
+<tr>
+<td align="left"><strong><img alt="🎻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f3bb.svg" title=":violin:" /> Fine-tune Transformers in PyTorch using Hugging Face Transformers</strong></td>
+<td align="left"><em>Complete tutorial on how to fine-tune 73 transformer models for text classification — no code changes necessary!</em></td>
+<td align="left"><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/finetune_transformers_pytorch.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> <a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/finetune_transformers_pytorch.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a> <a href="https://www.dropbox.com/s/tsqicfqgt8v87ae/finetune_transformers_pytorch.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a> <a href="https://medium.com/@gmihaila/fine-tune-transformers-in-pytorch-using-transformers-57b40450635"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a> <a href="https://gmihaila.github.io/tutorial_notebooks/finetune_transformers_pytorch/"><img alt="Generic badge" src="https://img.shields.io/badge/Blog-Post-blue.svg" /></a></td>
+</tr>
+<tr>
+<td align="left"><strong>⚙️ Bert Inner Workings in PyTorch using Hugging Face Transformers</strong></td>
+<td align="left"><em>Complete tutorial on how an input flows through Bert.</em></td>
+<td align="left"><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> <a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a> <a href="https://www.dropbox.com/s/jeftyo6cebfkma2/bert_inner_workings.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a> <a href="https://gmihaila.medium.com/%EF%B8%8F-bert-inner-workings-1c3054cd1591"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a> <a href="https://gmihaila.github.io/tutorial_notebooks/bert_inner_workings/"><img alt="Generic badge" src="https://img.shields.io/badge/Blog-Post-blue.svg" /></a></td>
+</tr>
+<tr>
+<td align="left"><strong>🎱 GPT2 For Text Classification using Hugging Face 🤗 Transformers</strong></td>
+<td align="left"><em>Complete tutorial on how to use GPT2 for text classification.</em></td>
+<td align="left"><a href="https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a> <a href="https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb"><img alt="Generic badge" src="https://img.shields.io/badge/GitHub-Source-greensvg" /></a> <a href="https://www.dropbox.com/s/6t6kvlewoabwxqw/gpt2_finetune_classification.ipynb?dl=1"><img alt="Generic badge" src="https://img.shields.io/badge/Download-Notebook-red.svg" /></a> <a href="https://gmihaila.medium.com/gpt2-for-text-classification-using-hugging-face-transformers-574555451832"><img alt="Generic badge" src="https://img.shields.io/badge/Article-Medium-black.svg" /></a> <a href="https://gmihaila.github.io/tutorial_notebooks/gpt2_finetune_classification/"><img alt="Generic badge" src="https://img.shields.io/badge/Blog-Post-blue.svg" /></a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="conclusion-">Conclusion 🤔<a class="headerlink" href="#conclusion-" title="Permanent link"></a></h1>
+<ul>
+<li>You learned a little bit about myself.</li>
+<li>Learned more about <strong>Hugging Face</strong>.</li>
+<li>Learned how to navigate the <strong>Transformers</strong> library.</li>
+<li>Know about the <strong>Datasets</strong> library.</li>
+</ul>
+<hr />
+<h1 id="questions-">Questions 🖐<a class="headerlink" href="#questions-" title="Permanent link"></a></h1>
+<ul>
+<li>What did you learn today?</li>
+<li>What motivated you in this presentation?</li>
+<li>Do you have any questions?</li>
+</ul>
+<hr />
+<h1 id="contact-">Contact 🎣<a class="headerlink" href="#contact-" title="Permanent link"></a></h1>
+<p>Let's stay in touch!</p>
+<p>🦊 GitHub: <a href="https://github.com/gmihaila">gmihaila</a></p>
+<p>🌐 Website: <a href="https://gmihaila.github.io/">gmihaila.github.io</a></p>
+<p>👔 LinkedIn: <a href="https://www.linkedin.com/in/mihailageorge/">mihailageorge</a></p>
+<p>📓 Medium: <a href="https://gmihaila.medium.com">@gmihaila</a></p>
+<p>📬 Email: <a href="mailto:georgemihaila@my.unt.edu.com?subject=GitHub%20Website">georgemihaila@my.unt.edu.com</a></p>
+<p>👤 Schedule meeting: <a href="https://calendly.com/georgemihaila">calendly.com/georgemihaila</a></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2015 - 2020 <a href="https://github.com/gmihaila"  target="_blank" rel="noopener">George Mihaila</a>
+
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/gmihaila" target="_blank" rel="noopener" title="gmihaila" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://gmihaila.medium.com/" target="_blank" rel="noopener" title="gmihaila" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 32v448h448V32H0zm372.2 106.1l-24 23c-2.1 1.6-3.1 4.2-2.7 6.7v169.3c-.4 2.6.6 5.2 2.7 6.7l23.5 23v5.1h-118V367l24.3-23.6c2.4-2.4 2.4-3.1 2.4-6.7V199.8l-67.6 171.6h-9.1L125 199.8v115c-.7 4.8 1 9.7 4.4 13.2l31.6 38.3v5.1H71.2v-5.1l31.6-38.3c3.4-3.5 4.9-8.4 4.1-13.2v-133c.4-3.7-1-7.3-3.8-9.8L75 138.1V133h87.3l67.4 148L289 133.1h83.2v5z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/in/mihailageorge" target="_blank" rel="noopener" title="mihailageorge" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["instant", "header.autohide", "search.highlight", "search.share", "search.suggest", "navigation.top", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.a1c7c35e.min.js"></script>
+      
+    
+  </body>
+</html>

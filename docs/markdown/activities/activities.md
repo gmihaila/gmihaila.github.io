@@ -1,5 +1,22 @@
 # **:surfer: Activities**
 
+
+## **[Discuss about NLP & Hugging Face Library]()**
+
+:notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/text_classification_using_gpt2_and_pytorch/slides.html){:target="_blank"}** |
+
+:calendar: **august 13, 2021** |
+*Plano, TX*
+
+* Present myself and my current research projects.
+* Show a general overview of the Hugging Face main libraries: **Transformers** and **Datasets**.
+* Encourage curiosity in NLP and state-of-the-art language models.
+* How to use latest transformers models in NLP.
+
+**Duration:** *2 Hours*
+
+-------------------------
+
 ## **[Tutorial: Text Classification using GPT2 and Pytorch](https://www.aicamp.ai/event/eventdetails/W2021040910)**
 
 :computer: **[Code](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb){:target="_blank"}** | 
