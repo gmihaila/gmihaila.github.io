@@ -45,7 +45,7 @@ img[alt~="center"] {
 * Identify Innovation 💡
 * 🤔 🤗 ⚙️
 * My Tutorials 📚
-* Conclusion 🤔
+* Conclusions 🤔
 * Questions 🖐
 * Contact 🎣
 
@@ -200,7 +200,7 @@ img[alt~="center"] {
 
 
 ---
-# Conclusion 🤔
+# Conclusions 🤔
 
 * You learned a little bit about myself.
 * Learned more about **Hugging Face**.
