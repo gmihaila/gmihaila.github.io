@@ -3,7 +3,7 @@
 
 ## **[Discuss about NLP & Hugging Face Library]()**
 
-:notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/text_classification_using_gpt2_and_pytorch/slides.html){:target="_blank"}** |
+:notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/discuss_nlp/slides.html){:target="_blank"}** |
 
 :calendar: **august 13, 2021** |
 *Plano, TX*
