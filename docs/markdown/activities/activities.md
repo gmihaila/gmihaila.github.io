@@ -1,7 +1,7 @@
 # **:surfer: Activities**
 
 
-## **[Discuss about NLP & Hugging Face Library]()**
+## **Discuss about NLP & Hugging Face Library**
 
 :notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/discuss_nlp/slides.html){:target="_blank"}**
 
