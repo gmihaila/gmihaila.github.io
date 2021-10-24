@@ -58,6 +58,26 @@ args = parser.parse_args()
 **Details:** `import argparse` and use `python script.py --argument something` when running script.
 
 
+## **Create Arguments from Dictionary**
+
+Create `argparse` arguments from dicitonary.
+
+```python
+import argparse
+
+PARAMETERS= {
+        "lm": "bert",
+        "bert_model_name": "bert-large-cased",
+        "bert_model_dir":
+        "pre-trained_language_models/bert/cased_L-24_H-1024_A-16",
+        "bert_vocab_name": "vocab.txt",
+        "batch_size": 32
+        }
+args = argparse.Namespace(**PARAMETERS)
+```
+**Details:** Code adapted from GitHub [LAMA](https://github.com/facebookresearch/LAMA).
+
+
 ## **Doctest**
 
 How to run a simple unittesc using function documentaiton. Useful when need to do unittest inside notebook:
@@ -305,27 +325,6 @@ logging.info("This is a test")
 ```
 **Details:** This is a perfect setup to log everything in both log file and stdout at the same time. Code adapted from StackOverflow [Making Python loggers output all messages to stdout in addition to log file
 ](https://stackoverflow.com/a/44760039).
-
-
-
-## **Create Arguments from Dictionary**
-
-Create `argparse` arguments from dicitonary.
-
-```python
-import argparse
-
-PARAMETERS= {
-        "lm": "bert",
-        "bert_model_name": "bert-large-cased",
-        "bert_model_dir":
-        "pre-trained_language_models/bert/cased_L-24_H-1024_A-16",
-        "bert_vocab_name": "vocab.txt",
-        "batch_size": 32
-        }
-args = argparse.Namespace(**PARAMETERS)
-```
-**Details:** Code adapted from GitHub [LAMA](https://github.com/facebookresearch/LAMA).
 
 
 
