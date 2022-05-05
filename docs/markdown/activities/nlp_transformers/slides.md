@@ -344,8 +344,8 @@ most of spectators are all over the world. Really... Are you forgetting that Cin
 ---
 # Try it out yourself
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb) &nbsp;
-[![Generic badge](https://img.shields.io/badge/GitHub-Source-greensvg)](https://github.com/gmihaila/ml_things/blob/master/notebooks/pytorch/bert_inner_workings.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gmihaila/gmihaila.github.io/blob/master/docs/markdown/activities/nlp_transformers/nlp_with_transformers_sentiment_analysis.ipynb) &nbsp;
+[![Generic badge](https://img.shields.io/badge/GitHub-Source-greensvg)](https://github.com/gmihaila/gmihaila.github.io/blob/master/docs/markdown/activities/nlp_transformers/nlp_with_transformers_sentiment_analysis.ipynb)
 
 
 ---
