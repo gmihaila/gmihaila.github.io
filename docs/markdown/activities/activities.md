@@ -1,6 +1,22 @@
 # **:surfer: Activities**
 
 
+
+## **NLP & Transformers**
+
+:notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/nlp_transformers/slides.html){:target="_blank"}**
+
+:calendar: **may 5, 2022** |
+*University of North Texas DP*
+
+* Present an intro on NLP and Transformers.
+* Using text embedding and clustering methods to find new sentiments in text data.
+* Use imdb movie reviews dataset and see how positive-negative sentiments can be used to find other sentiments.
+
+**Duration:** *1 Hour*
+
+-------------------------
+
 ## **Discuss about NLP & Hugging Face Library**
 
 :notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/discuss_nlp/slides.html){:target="_blank"}**
