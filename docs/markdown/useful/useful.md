@@ -327,6 +327,38 @@ logging.info("This is a test")
 ](https://stackoverflow.com/a/44760039).
 
 
+<br>
+
+
+## **Compressed JSON Lines text file**
+
+From the JSON Lines [documentation](https://jsonlines.org):  JSON Lines text format, also called newline-delimited JSON. JSON Lines is a convenient format for storing structured data that may be processed one record at a time.
+
+As a bonus I will compress the JSON Line text file to save storage. Since this file can be read line by line, it does not need to be loaded entirely into memory!
+
+```python
+import gzip
+import json
+
+dicitionary_file = "dictionary_list.jsonl.gz"
+dictionary_list = [{"user": "admin",
+                    "age": 20},
+                   {"user": "me",
+                    "age": 25,
+                    "notes": "this is a test"}]
+
+with gzip.open(filename=dicitionary_file, mode="w") as file_object:
+  for dictionary_entry in dictionary_list:
+    dictionary_entry_json_string = f"{json.dumps(dictionary_entry)}\n"
+    dictionary_entry_json_byte = dictionary_entry_json_string.encode('utf-8')
+    file_object.write(dictionary_entry_json_byte)
+
+with gzip.open(filename=dicitionary_file, mode="rb") as file_object:
+  for entry in file_object:
+    print(f"FILE LINE: {json.loads(entry.decode('utf-8'))}")
+```
+
+**Details:** Code adapted from StackOverflow [Python 3, read/write compressed json objects from/to gzip file](https://stackoverflow.com/a/39451012).
 
 <br>
 
