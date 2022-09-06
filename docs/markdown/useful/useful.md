@@ -362,8 +362,22 @@ with gzip.open(filename=dicitionary_file, mode="rb") as file_object:
 
 <br>
 
+
+## **List of lists to list (flatten list)**
+
+Flatten a list of lists into a single list of values. **Note:** *This only works for listst nested in a list, it does not work for more nested lists.* 
+
+```python
+import itertools
+list2d = [[1,2,3], [4,5,6], [7], [8,9]]
+list(itertools.chain(*list2d))
+```
+**Details:** Code adapted from StackOverflow [How do I make a flat list out of a list of lists?](https://stackoverflow.com/a/953097).
+
 <!---
 TEMPLATE
+
+<br>
 
 ## **Title**
 
