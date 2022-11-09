@@ -1,7 +1,7 @@
 # **:surfer: Activities**
 
 
-## *Skills for AI Jobs and Interviews**
+## **Skills for AI Jobs and Interviews**
 
 :notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/ai_jobs/slides.html){:target="_blank"}**
 
@@ -13,11 +13,11 @@
 
 **Duration:** *1 Hour*
 
+https://gmihaila.github.io/docs/markdown/activities/ai_jobs/slides.html
 -------------------------
 
 ## **NLP & Transformers**
 
-:notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/nlp_transformers/slides.html){:target="_blank"}**
 
 :calendar: **may 5, 2022** |
 *University of North Texas DP*
