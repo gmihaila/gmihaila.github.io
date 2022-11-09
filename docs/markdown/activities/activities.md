@@ -6,7 +6,7 @@
 :notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/ai_jobs/slides.html){:target="_blank"}**
 
 :calendar: **nov 9, 2022** |
-*University of North Texas DP*
+*University of North Texas DP E265*
 
 * Discuss skills needed for AI jobs 
 * Help with AI jobs interviews.
