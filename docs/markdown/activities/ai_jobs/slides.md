@@ -47,6 +47,8 @@ img[alt~="center"] {
   * Visibility
 * How I got my AI Jobs? 🕵️
 * At the end of the day what really matters 💡
+* Conclusions 🤔
+* Contact 🎣
 
 <br>
 
@@ -156,7 +158,7 @@ img[alt~="center"] {
 ---
 # Technical Skills - Programming and coding
 
-* Top data science programming languages for 2022 ([DataCamp](https://www.datacamp.com/blog/top-programming-languages-for-data-scientists-in-2022)):
+Top data science programming languages for 2022 ([DataCamp](https://www.datacamp.com/blog/top-programming-languages-for-data-scientists-in-2022)):
     **Python**
     **R**
     **SQL**
