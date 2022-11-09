@@ -13,7 +13,6 @@
 
 **Duration:** *1 Hour*
 
-https://gmihaila.github.io/docs/markdown/activities/ai_jobs/slides.html
 -------------------------
 
 ## **NLP & Transformers**
