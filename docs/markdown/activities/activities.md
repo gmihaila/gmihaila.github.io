@@ -1,5 +1,18 @@
 # **:surfer: Activities**
 
+## **Skills for AI Jobs and Interviews 2**
+
+:notebook_with_decorative_cover: **[Slides](https://gmihaila.github.io/docs/markdown/activities/ai_jobs2/slides.html){:target="_blank"}**
+
+:calendar: **sep 2, 2024** |
+*University of North Texas DP <TBD>*
+
+* Discuss skills needed for AI jobs. 
+* Help with AI jobs interviews.
+
+**Duration:** *1 Hour*
+
+-------------------------
 
 ## **Skills for AI Jobs and Interviews**
 
@@ -8,7 +21,7 @@
 :calendar: **nov 9, 2022** |
 *University of North Texas DP E265*
 
-* Discuss skills needed for AI jobs 
+* Discuss skills needed for AI jobs.
 * Help with AI jobs interviews.
 
 **Duration:** *1 Hour*
